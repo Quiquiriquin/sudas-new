@@ -1,2 +1,2 @@
 // eslint-disable-next-line import/prefer-default-export
-export const API = 'http://localhost:4040/api/v1';
+export const API = 'http://143.198.138.18/api/v1';
