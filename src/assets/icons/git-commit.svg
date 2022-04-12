@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-git-commit);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-git-commit">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="git-commit" class="cls-1">
+    <g id="Group_2058" data-name="Group 2058">
+      <g id="git-commit-2" data-name="git-commit" transform="translate(1.958 1.962)">
+        <circle id="Ellipse_587" data-name="Ellipse 587" class="cls-2" cx="3.346" cy="3.346" r="3.346" transform="translate(6.692 6.692)"/>
+        <line id="Line_345" data-name="Line 345" class="cls-2" x2="4.977" transform="translate(0.878 10.038)"/>
+        <line id="Line_346" data-name="Line 346" class="cls-2" x2="4.977" transform="translate(14.228 10.038)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-lock);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-lock">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="lock" class="cls-1">
+    <g id="Group_2086" data-name="Group 2086">
+      <g id="lock-2" data-name="lock" transform="translate(1.091 1.091)">
+        <rect id="Rectangle_841" data-name="Rectangle 841" class="cls-2" width="16.364" height="10" rx="1.818" transform="translate(2.727 10)"/>
+        <path id="Path_6350" data-name="Path 6350" class="cls-2" d="M6.364,10V6.364a4.545,4.545,0,1,1,9.091,0V10"/>
+      </g>
+    </g>
+  </g>
+</svg>

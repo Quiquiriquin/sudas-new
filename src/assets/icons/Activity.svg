@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Activity);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Activity">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Activity" class="cls-1">
+    <path id="activity-2" data-name="activity" class="cls-2" d="M20,10.909H16.364l-2.727,8.182L8.182,2.727,5.455,10.909H1.818" transform="translate(1.091 1.091)"/>
+  </g>
+</svg>

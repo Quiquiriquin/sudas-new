@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-navigation-2);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-navigation-2">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="navigation-2" class="cls-1">
+    <g id="Group_2112" data-name="Group 2112">
+      <path id="navigation-2-2" data-name="navigation-2" class="cls-2" d="M11.429,1.9,18.1,20l-6.667-3.81L4.762,20Z" transform="translate(0.571 1.048)"/>
+    </g>
+  </g>
+</svg>

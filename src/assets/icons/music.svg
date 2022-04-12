@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-music);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-music">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="music" class="cls-1">
+    <g id="Group_2111" data-name="Group 2111">
+      <g id="music-2" data-name="music">
+        <path id="Path_6373" data-name="Path 6373" class="cls-2" d="M9,18V5L21,3V16"/>
+        <circle id="Ellipse_608" data-name="Ellipse 608" class="cls-2" cx="3" cy="3" r="3" transform="translate(3 15)"/>
+        <circle id="Ellipse_609" data-name="Ellipse 609" class="cls-2" cx="3" cy="3" r="3" transform="translate(15 13)"/>
+      </g>
+    </g>
+  </g>
+</svg>

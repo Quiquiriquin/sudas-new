@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-shopping-cart);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-shopping-cart">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="shopping-cart" class="cls-1">
+    <g id="Group_2156" data-name="Group 2156">
+      <g id="shopping-cart-2" data-name="shopping-cart" transform="translate(2 2.417)">
+        <circle id="Ellipse_625" data-name="Ellipse 625" class="cls-2" cx="0.833" cy="0.833" r="0.833" transform="translate(6.667 16.667)"/>
+        <circle id="Ellipse_626" data-name="Ellipse 626" class="cls-2" cx="0.833" cy="0.833" r="0.833" transform="translate(15.833 16.667)"/>
+        <path id="Path_6425" data-name="Path 6425" class="cls-2" d="M.833.833H4.167L6.4,11.992a1.667,1.667,0,0,0,1.667,1.342h8.1a1.667,1.667,0,0,0,1.667-1.342L19.167,5H5"/>
+      </g>
+    </g>
+  </g>
+</svg>

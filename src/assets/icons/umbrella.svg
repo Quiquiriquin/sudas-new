@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-umbrella);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-umbrella">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="umbrella" class="cls-1">
+    <g id="Group_2194" data-name="Group 2194">
+      <path id="umbrella-2" data-name="umbrella" class="cls-2" d="M19.167,10A9.208,9.208,0,0,0,.833,10ZM15,15.833a2.5,2.5,0,0,1-5,0V10" transform="translate(2 2)"/>
+    </g>
+  </g>
+</svg>

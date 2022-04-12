@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-youtube);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-youtube">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="youtube" class="cls-1">
+    <g id="Group_2219" data-name="Group 2219">
+      <g id="youtube-2" data-name="youtube" transform="translate(2 2.225)">
+        <path id="Path_6490" data-name="Path 6490" class="cls-2" d="M18.782,5.35a2.317,2.317,0,0,0-1.617-1.667A60.008,60.008,0,0,0,10,3.333a54.834,54.834,0,0,0-7.166.383A2.317,2.317,0,0,0,1.217,5.383,24.165,24.165,0,0,0,.833,9.791a24.165,24.165,0,0,0,.383,4.441,2.317,2.317,0,0,0,1.617,1.6A54.834,54.834,0,0,0,10,16.216a54.834,54.834,0,0,0,7.166-.383,2.317,2.317,0,0,0,1.617-1.667,24.165,24.165,0,0,0,.383-4.375,24.166,24.166,0,0,0-.383-4.441Z"/>
+        <path id="Path_6491" data-name="Path 6491" class="cls-2" d="M8.125,12.516l4.791-2.725L8.125,7.066Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-stop-circle);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-stop-circle">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="stop-circle" class="cls-1">
+    <g id="Group_2169" data-name="Group 2169">
+      <g id="stop-circle-2" data-name="stop-circle" transform="translate(1.091 1.091)">
+        <circle id="Ellipse_630" data-name="Ellipse 630" class="cls-2" cx="9.091" cy="9.091" r="9.091" transform="translate(1.818 1.818)"/>
+        <rect id="Rectangle_853" data-name="Rectangle 853" class="cls-2" width="5.455" height="5.455" transform="translate(8.182 8.182)"/>
+      </g>
+    </g>
+  </g>
+</svg>

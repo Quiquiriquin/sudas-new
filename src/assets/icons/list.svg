@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-list);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-list">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="list" class="cls-1">
+    <g id="Group_2084" data-name="Group 2084">
+      <g id="list-2" data-name="list">
+        <line id="Line_371" data-name="Line 371" class="cls-2" x2="13" transform="translate(8 6)"/>
+        <line id="Line_372" data-name="Line 372" class="cls-2" x2="13" transform="translate(8 12)"/>
+        <line id="Line_373" data-name="Line 373" class="cls-2" x2="13" transform="translate(8 18)"/>
+        <line id="Line_374" data-name="Line 374" class="cls-2" x2="0.01" transform="translate(3 6)"/>
+        <line id="Line_375" data-name="Line 375" class="cls-2" x2="0.01" transform="translate(3 12)"/>
+        <line id="Line_376" data-name="Line 376" class="cls-2" x2="0.01" transform="translate(3 18)"/>
+      </g>
+    </g>
+  </g>
+</svg>

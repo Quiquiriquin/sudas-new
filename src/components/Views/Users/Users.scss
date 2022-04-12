@@ -1,0 +1,35 @@
+.users-view {
+  .users-container {
+    grid-auto-rows: minmax(140px, 140px);
+    max-height: calc(100vh - 250px);
+    overflow: auto;
+    margin-right: -0.5rem;
+    padding-right: 0.5rem;
+  }
+  .filters {
+    .chip-filter {
+      padding: 0.375rem 1rem;
+      border-radius: 18px;
+      background: #F2F2F2;
+      border: 1px solid #F2F2F2;
+      box-shadow: 0px 3px 6px #3d4b5c26;
+
+      &:hover {
+        box-shadow: 0px 6px 12px #3d4b5c26;
+        cursor: pointer;
+      }
+      &.green {
+        border: 1px solid #34be44;
+        background: rgba(52, 190, 68, 0.1);
+      }
+      &.red {
+        border: 1px solid #ff5858;
+        background: rgba(255, 88, 88, 0.1);
+      }
+      &.yellow {
+        border: 1px solid #f2d146;
+        background: rgba(242, 209, 70, 0.1);
+      }
+    }
+  }
+}

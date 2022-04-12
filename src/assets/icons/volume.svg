@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-volume);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-volume">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="volume" class="cls-1">
+    <g id="Group_2211" data-name="Group 2211">
+      <path id="volume-2" data-name="volume" class="cls-2" d="M13.75,6.25l-6.25,5h-5v7.5h5l6.25,5Z" transform="translate(3.875 -3)"/>
+    </g>
+  </g>
+</svg>

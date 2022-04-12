@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Check_circle);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Check_circle">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Check_circle" data-name="Check circle" class="cls-1">
+    <g id="Group_1982" data-name="Group 1982">
+      <g id="check-circle" transform="translate(1.227 1.333)">
+        <path id="Path_6236" data-name="Path 6236" class="cls-2" d="M19.629,9.886v.821a8.922,8.922,0,1,1-5.291-8.155"/>
+        <path id="Path_6237" data-name="Path 6237" class="cls-2" d="M19.629,3.569,10.706,12.5,8.03,9.823"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,48 @@
+.react-tabs__tab--selected {
+  background: #fff !important;
+}
+
+.bodyCard p {
+  margin: 10px 0;
+}
+
+.unit-item,
+.biography-item {
+  background: #515383;
+  color: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.unit-item p,
+.biography-item p {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.content-list {
+  padding: 10px;
+  margin: 10px 0px 10px 20px;
+  border: 1px solid rgba(229, 231, 235, var(--tw-border-opacity));
+  border-radius: 10px;
+}
+
+.subcontent {
+  margin: 10px 0px 10px 60px;
+}
+
+.icon-btn {
+  height: 30px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 0px 5px;
+  color: #000;
+  border: 1px solid rgba(229, 231, 235, var(--tw-border-opacity));
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px 3px 6px #3d4b5c26;
+    background: rgba(229, 231, 235, var(--tw-border-opacity));
+  }
+}

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-twitch);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-twitch">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="twitch" class="cls-1">
+    <g id="Group_2191" data-name="Group 2191">
+      <path id="twitch-2" data-name="twitch" class="cls-2" d="M19.091,1.818H2.727V16.364H7.273V20l3.636-3.636h4.545l3.636-3.636ZM10,10V6.364M14.545,10V6.364" transform="translate(1.091 1.091)"/>
+    </g>
+  </g>
+</svg>

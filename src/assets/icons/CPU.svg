@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-CPU);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-CPU">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="CPU" class="cls-1">
+    <g id="Group_2019" data-name="Group 2019">
+      <g id="cpu-2" data-name="cpu" transform="translate(2 2)">
+        <rect id="Rectangle_827" data-name="Rectangle 827" class="cls-2" width="13.333" height="13.333" rx="1.667" transform="translate(3.333 3.333)"/>
+        <rect id="Rectangle_828" data-name="Rectangle 828" class="cls-2" width="5" height="5" transform="translate(7.5 7.5)"/>
+        <line id="Line_296" data-name="Line 296" class="cls-2" y2="2.5" transform="translate(7.5 0.833)"/>
+        <line id="Line_297" data-name="Line 297" class="cls-2" y2="2.5" transform="translate(12.5 0.833)"/>
+        <line id="Line_298" data-name="Line 298" class="cls-2" y2="2.5" transform="translate(7.5 16.667)"/>
+        <line id="Line_299" data-name="Line 299" class="cls-2" y2="2.5" transform="translate(12.5 16.667)"/>
+        <line id="Line_300" data-name="Line 300" class="cls-2" x2="2.5" transform="translate(16.667 7.5)"/>
+        <line id="Line_301" data-name="Line 301" class="cls-2" x2="2.5" transform="translate(16.667 11.667)"/>
+        <line id="Line_302" data-name="Line 302" class="cls-2" x2="2.5" transform="translate(0.833 7.5)"/>
+        <line id="Line_303" data-name="Line 303" class="cls-2" x2="2.5" transform="translate(0.833 11.667)"/>
+      </g>
+    </g>
+  </g>
+</svg>

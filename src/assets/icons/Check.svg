@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Check);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Check">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Check" class="cls-1">
+    <g id="Group_1984" data-name="Group 1984">
+      <path id="check-2" data-name="check" class="cls-2" d="M21.244,6.373,9.56,18.058,4.249,12.747" transform="translate(-0.747 0.004)"/>
+    </g>
+  </g>
+</svg>

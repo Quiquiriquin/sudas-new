@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-trending-down);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-trending-down">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="trending-down" class="cls-1">
+    <g id="Group_2186" data-name="Group 2186">
+      <g id="trending-down-2" data-name="trending-down" transform="translate(2.333 2.334)">
+        <path id="Path_6449" data-name="Path 6449" class="cls-2" d="M18.527,14.5,10.875,6.847,6.847,10.875.806,4.833"/>
+        <path id="Path_6450" data-name="Path 6450" class="cls-2" d="M13.694,14.5h4.833V9.666"/>
+      </g>
+    </g>
+  </g>
+</svg>

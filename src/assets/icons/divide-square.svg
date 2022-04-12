@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-divide-square);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-divide-square">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="divide-square" class="cls-1">
+    <g id="Group_2027" data-name="Group 2027">
+      <g id="divide-square-2" data-name="divide-square">
+        <rect id="Rectangle_830" data-name="Rectangle 830" class="cls-2" width="18" height="18" rx="2" transform="translate(3 3)"/>
+        <line id="Line_314" data-name="Line 314" class="cls-2" x2="8" transform="translate(8 12)"/>
+        <line id="Line_315" data-name="Line 315" class="cls-2" transform="translate(12 16)"/>
+        <line id="Line_316" data-name="Line 316" class="cls-2" transform="translate(12 8)"/>
+      </g>
+    </g>
+  </g>
+</svg>

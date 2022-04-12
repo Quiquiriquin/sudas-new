@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Arrow_up);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Arrow_up">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Arrow_up" data-name="Arrow up" class="cls-1">
+    <g id="Group_1962" data-name="Group 1962">
+      <g id="arrow-up" transform="translate(-2.262 -2.262)">
+        <line id="Line_255" data-name="Line 255" class="cls-2" y1="16.639" transform="translate(14.262 5.942)"/>
+        <path id="Path_6213" data-name="Path 6213" class="cls-2" d="M5.942,14.262l8.319-8.319,8.319,8.319"/>
+      </g>
+    </g>
+  </g>
+</svg>

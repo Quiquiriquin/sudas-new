@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-save);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-save">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="save" class="cls-1">
+    <g id="Group_2145" data-name="Group 2145">
+      <g id="save-2" data-name="save">
+        <path id="Path_6414" data-name="Path 6414" class="cls-2" d="M19,21H5a2,2,0,0,1-2-2V5A2,2,0,0,1,5,3H16l5,5V19A2,2,0,0,1,19,21Z"/>
+        <path id="Path_6415" data-name="Path 6415" class="cls-2" d="M17,21V13H7v8"/>
+        <path id="Path_6416" data-name="Path 6416" class="cls-2" d="M7,3V8h8"/>
+      </g>
+    </g>
+  </g>
+</svg>

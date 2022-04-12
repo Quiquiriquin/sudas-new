@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-refresh-cw);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-refresh-cw">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="refresh-cw" class="cls-1">
+    <g id="Group_2139" data-name="Group 2139">
+      <g id="refresh-cw-2" data-name="refresh-cw" transform="translate(2.333 2.333)">
+        <path id="Path_6399" data-name="Path 6399" class="cls-2" d="M18.528,3.222V8.056H13.695"/>
+        <path id="Path_6400" data-name="Path 6400" class="cls-2" d="M.806,16.111V11.278H5.639"/>
+        <path id="Path_6401" data-name="Path 6401" class="cls-2" d="M2.828,7.25A7.25,7.25,0,0,1,14.79,4.543l3.738,3.512M.806,11.278,4.543,14.79a7.25,7.25,0,0,0,11.963-2.707"/>
+      </g>
+    </g>
+  </g>
+</svg>

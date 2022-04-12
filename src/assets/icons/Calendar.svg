@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Calendar);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Calendar">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Calendar" class="cls-1">
+    <g id="Group_1978" data-name="Group 1978">
+      <g id="calendar-2" data-name="calendar" transform="translate(1.091 1.091)">
+        <rect id="Rectangle_824" data-name="Rectangle 824" class="cls-2" width="16.364" height="16.364" rx="1.818" transform="translate(2.727 3.636)"/>
+        <line id="Line_266" data-name="Line 266" class="cls-2" y2="3.636" transform="translate(14.545 1.818)"/>
+        <line id="Line_267" data-name="Line 267" class="cls-2" y2="3.636" transform="translate(7.273 1.818)"/>
+        <line id="Line_268" data-name="Line 268" class="cls-2" x2="16.364" transform="translate(2.727 9.091)"/>
+      </g>
+    </g>
+  </g>
+</svg>

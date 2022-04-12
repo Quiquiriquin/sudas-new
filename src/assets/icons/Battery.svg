@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Battery);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Battery">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Battery" class="cls-1">
+    <g id="Group_1968" data-name="Group 1968">
+      <g id="battery-2" data-name="battery" transform="translate(2 2)">
+        <rect id="Rectangle_822" data-name="Rectangle 822" class="cls-2" width="15" height="10" rx="1.667" transform="translate(0.833 5)"/>
+        <line id="Line_263" data-name="Line 263" class="cls-2" y1="1.667" transform="translate(19.167 9.167)"/>
+      </g>
+    </g>
+  </g>
+</svg>

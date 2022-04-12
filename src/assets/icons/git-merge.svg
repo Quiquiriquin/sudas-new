@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-git-merge);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-git-merge">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="git-merge" class="cls-1">
+    <g id="Group_2059" data-name="Group 2059">
+      <g id="git-merge-2" data-name="git-merge">
+        <circle id="Ellipse_588" data-name="Ellipse 588" class="cls-2" cx="3" cy="3" r="3" transform="translate(15 15)"/>
+        <circle id="Ellipse_589" data-name="Ellipse 589" class="cls-2" cx="3" cy="3" r="3" transform="translate(3 3)"/>
+        <path id="Path_6330" data-name="Path 6330" class="cls-2" d="M6,21V9a9,9,0,0,0,9,9"/>
+      </g>
+    </g>
+  </g>
+</svg>

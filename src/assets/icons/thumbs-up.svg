@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-thumbs-up);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-thumbs-up">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="thumbs-up" class="cls-1">
+    <g id="Group_2179" data-name="Group 2179">
+      <path id="thumbs-up-2" data-name="thumbs-up" class="cls-2" d="M12.727,8.182V4.545A2.727,2.727,0,0,0,10,1.818L6.364,10V20H16.618a1.818,1.818,0,0,0,1.818-1.545l1.255-8.182a1.818,1.818,0,0,0-1.818-2.091ZM6.364,20H3.636a1.818,1.818,0,0,1-1.818-1.818V11.818A1.818,1.818,0,0,1,3.636,10H6.364" transform="translate(1.233 1.091)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Align_Left);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Align_Left">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Align_Left" class="cls-1">
+    <g id="Group_1946" data-name="Group 1946">
+      <g id="align-left">
+        <line id="Line_216" data-name="Line 216" class="cls-2" x1="14" transform="translate(3 10)"/>
+        <line id="Line_217" data-name="Line 217" class="cls-2" x1="18" transform="translate(3 6)"/>
+        <line id="Line_218" data-name="Line 218" class="cls-2" x1="18" transform="translate(3 14)"/>
+        <line id="Line_219" data-name="Line 219" class="cls-2" x1="14" transform="translate(3 18)"/>
+      </g>
+    </g>
+  </g>
+</svg>

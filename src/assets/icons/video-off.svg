@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-video-off);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-video-off">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="video-off" class="cls-1">
+    <g id="Group_2205" data-name="Group 2205">
+      <g id="video-off-2" data-name="video-off" transform="translate(2.333 2.334)">
+        <path id="Path_6472" data-name="Path 6472" class="cls-2" d="M12.888,12.888v.806a1.611,1.611,0,0,1-1.611,1.611H2.417A1.611,1.611,0,0,1,.806,13.694V5.639A1.611,1.611,0,0,1,2.417,4.028H4.028m4.559,0h2.69a1.611,1.611,0,0,1,1.611,1.611v2.69l.806.806,4.833-3.5v8.055"/>
+        <line id="Line_495" data-name="Line 495" class="cls-2" x2="17.722" y2="17.722" transform="translate(0.806 0.806)"/>
+      </g>
+    </g>
+  </g>
+</svg>

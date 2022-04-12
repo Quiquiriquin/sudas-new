@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-slack);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-slack">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="slack" class="cls-1">
+    <g id="Group_2161" data-name="Group 2161">
+      <g id="slack-2" data-name="slack" transform="translate(1.091 1.091)">
+        <path id="Path_6430" data-name="Path 6430" class="cls-2" d="M13.182,9.091a1.362,1.362,0,0,1-1.364-1.364V3.182a1.364,1.364,0,0,1,2.727,0V7.727A1.362,1.362,0,0,1,13.182,9.091Z"/>
+        <path id="Path_6431" data-name="Path 6431" class="cls-2" d="M18.636,9.091H17.273V7.727a1.364,1.364,0,1,1,1.364,1.364Z"/>
+        <path id="Path_6432" data-name="Path 6432" class="cls-2" d="M8.636,12.727A1.362,1.362,0,0,1,10,14.091v4.545a1.364,1.364,0,0,1-2.727,0V14.091A1.362,1.362,0,0,1,8.636,12.727Z"/>
+        <path id="Path_6433" data-name="Path 6433" class="cls-2" d="M3.182,12.727H4.545v1.364a1.364,1.364,0,1,1-1.364-1.364Z"/>
+        <path id="Path_6434" data-name="Path 6434" class="cls-2" d="M12.727,13.182a1.362,1.362,0,0,1,1.364-1.364h4.545a1.364,1.364,0,0,1,0,2.727H14.091A1.362,1.362,0,0,1,12.727,13.182Z"/>
+        <path id="Path_6435" data-name="Path 6435" class="cls-2" d="M14.091,17.273H12.727v1.364a1.364,1.364,0,1,0,1.364-1.364Z"/>
+        <path id="Path_6436" data-name="Path 6436" class="cls-2" d="M9.091,8.636A1.362,1.362,0,0,0,7.727,7.273H3.182a1.364,1.364,0,1,0,0,2.727H7.727A1.362,1.362,0,0,0,9.091,8.636Z"/>
+        <path id="Path_6437" data-name="Path 6437" class="cls-2" d="M7.727,4.545H9.091V3.182A1.364,1.364,0,1,0,7.727,4.545Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-dollar-sign);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-dollar-sign">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="dollar-sign" class="cls-1">
+    <g id="Group_2029" data-name="Group 2029">
+      <g id="dollar-sign-2" data-name="dollar-sign" transform="translate(2 2)">
+        <line id="Line_318" data-name="Line 318" class="cls-2" y2="18.333" transform="translate(10 0.833)"/>
+        <path id="Path_6291" data-name="Path 6291" class="cls-2" d="M14.167,4.167H7.917a2.917,2.917,0,0,0,0,5.833h4.167a2.917,2.917,0,1,1,0,5.833H5"/>
+      </g>
+    </g>
+  </g>
+</svg>

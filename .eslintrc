@@ -1,0 +1,33 @@
+{
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "no-console": "off",
+    "prettier/prettier": ["error"],
+    "import/no-extraneous-dependencies": 0,
+    "react/jsx-filename-extension": 0,
+    "no-unused-vars": 0,
+    "import/prefer-default-export": "off",
+    "react/prop-types": 0,
+    "react/jsx-props-no-spreading": "off",
+    "import/no-dynamic-require": "off",
+    "react/jsx-wrap-multilines": 0,
+    "react/jsx-curly-newline": 0,
+    "jsx-a11y/label-has-associated-control": [
+      0
+    ],
+    "camelcase": "off",
+    "react/jsx-one-expression-per-line": [
+      0
+    ],
+    "jsx-a11y/no-static-element-interactions":[0],
+    "jsx-a11y/click-events-have-key-events" : [0],
+    "global-require": "off"
+  }
+}

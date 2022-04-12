@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-thermometer);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-thermometer">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="thermometer" class="cls-1">
+    <g id="Group_2177" data-name="Group 2177">
+      <path id="thermometer-2" data-name="thermometer" class="cls-2" d="M11.666,12.3V2.916a2.083,2.083,0,1,0-4.166,0V12.3a3.75,3.75,0,1,0,4.166,0Z" transform="translate(2.417 2)"/>
+    </g>
+  </g>
+</svg>

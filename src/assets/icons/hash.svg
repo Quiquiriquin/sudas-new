@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-hash);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-hash">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="hash" class="cls-1">
+    <g id="Group_2066" data-name="Group 2066">
+      <g id="hash-2" data-name="hash" transform="translate(0.124 0.124)">
+        <line id="Line_352" data-name="Line 352" class="cls-2" x2="15.835" transform="translate(3.959 8.907)"/>
+        <line id="Line_353" data-name="Line 353" class="cls-2" x2="15.835" transform="translate(3.959 14.845)"/>
+        <line id="Line_354" data-name="Line 354" class="cls-2" x1="1.979" y2="17.814" transform="translate(7.917 2.969)"/>
+        <line id="Line_355" data-name="Line 355" class="cls-2" x1="1.979" y2="17.814" transform="translate(13.855 2.969)"/>
+      </g>
+    </g>
+  </g>
+</svg>

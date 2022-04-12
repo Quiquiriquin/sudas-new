@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-credit-card);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-credit-card">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="credit-card" class="cls-1">
+    <g id="Group_2020" data-name="Group 2020">
+      <g id="credit-card-2" data-name="credit-card" transform="translate(2 2)">
+        <rect id="Rectangle_829" data-name="Rectangle 829" class="cls-2" width="18.333" height="13.333" rx="1.667" transform="translate(0.833 3.333)"/>
+        <line id="Line_304" data-name="Line 304" class="cls-2" x2="18.333" transform="translate(0.833 8.333)"/>
+      </g>
+    </g>
+  </g>
+</svg>

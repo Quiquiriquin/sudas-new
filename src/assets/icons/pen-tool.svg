@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-pen-tool);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-pen-tool">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="pen-tool" class="cls-1">
+    <g id="Group_2119" data-name="Group 2119">
+      <g id="pen-tool-2" data-name="pen-tool" transform="translate(1.478 1.477)">
+        <path id="Path_6376" data-name="Path 6376" class="cls-2" d="M10.707,16.954l6.246-6.246,2.677,2.677L13.384,19.63Z"/>
+        <path id="Path_6377" data-name="Path 6377" class="cls-2" d="M16.061,11.6,14.723,4.908,1.785,1.785,4.908,14.723,11.6,16.061Z"/>
+        <path id="Path_6378" data-name="Path 6378" class="cls-2" d="M1.785,1.785,8.554,8.554"/>
+        <circle id="Ellipse_611" data-name="Ellipse 611" class="cls-2" cx="1.785" cy="1.785" r="1.785" transform="translate(8.031 8.031)"/>
+      </g>
+    </g>
+  </g>
+</svg>

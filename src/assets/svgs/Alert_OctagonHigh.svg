@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Alert_Octagon);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #FF5858;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Alert_Octagon">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Alert_Octagon" class="cls-1">
+    <g id="Group_1942" data-name="Group 1942">
+      <g id="alert-octagon" transform="translate(1.091 1.091)">
+        <path id="Path_6196" data-name="Path 6196" class="cls-2" d="M7.145,1.818h7.527L20,7.145v7.527L14.673,20H7.145L1.818,14.673V7.145Z"/>
+        <line id="Line_204" data-name="Line 204" class="cls-2" y2="3.636" transform="translate(10.909 7.273)"/>
+        <line id="Line_205" data-name="Line 205" class="cls-2" x2="0.009" transform="translate(10.909 14.545)"/>
+      </g>
+    </g>
+  </g>
+</svg>

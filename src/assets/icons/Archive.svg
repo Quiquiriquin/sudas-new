@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Archive);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Archive">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Archive" class="cls-1">
+    <g id="Group_1950" data-name="Group 1950">
+      <g id="archive-2" data-name="archive" transform="translate(2 2)">
+        <path id="Path_6201" data-name="Path 6201" class="cls-2" d="M17.5,6.667V17.5H2.5V6.667"/>
+        <rect id="Rectangle_821" data-name="Rectangle 821" class="cls-2" width="18.333" height="4.167" transform="translate(0.833 2.5)"/>
+        <line id="Line_243" data-name="Line 243" class="cls-2" x2="3.333" transform="translate(8.333 10)"/>
+      </g>
+    </g>
+  </g>
+</svg>

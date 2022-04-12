@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Aperture);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Aperture">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Aperture" class="cls-1">
+    <g id="Group_1949" data-name="Group 1949">
+      <g id="aperture-2" data-name="aperture" transform="translate(1.386 1.386)">
+        <circle id="Ellipse_563" data-name="Ellipse 563" class="cls-2" cx="8.845" cy="8.845" r="8.845" transform="translate(1.769 1.769)"/>
+        <line id="Line_237" data-name="Line 237" class="cls-2" x2="5.077" y2="8.792" transform="translate(12.657 7.076)"/>
+        <line id="Line_238" data-name="Line 238" class="cls-2" x2="10.154" transform="translate(8.571 7.076)"/>
+        <line id="Line_239" data-name="Line 239" class="cls-2" y1="8.792" x2="5.077" transform="translate(6.527 1.822)"/>
+        <line id="Line_240" data-name="Line 240" class="cls-2" x1="5.077" y1="8.792" transform="translate(3.494 5.36)"/>
+        <line id="Line_241" data-name="Line 241" class="cls-2" x1="10.154" transform="translate(2.503 14.152)"/>
+        <line id="Line_242" data-name="Line 242" class="cls-2" x1="5.077" y2="8.792" transform="translate(9.623 10.614)"/>
+      </g>
+    </g>
+  </g>
+</svg>

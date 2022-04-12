@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Bell-off);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Bell-off">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Bell-off" class="cls-1">
+    <g id="Group_1969" data-name="Group 1969">
+      <g id="bell-off-2" data-name="bell-off" transform="translate(2.333 2.334)">
+        <path id="Path_6218" data-name="Path 6218" class="cls-2" d="M11.06,16.916a1.611,1.611,0,0,1-2.787,0"/>
+        <path id="Path_6219" data-name="Path 6219" class="cls-2" d="M15.007,10.472A14.411,14.411,0,0,1,14.5,6.444"/>
+        <path id="Path_6220" data-name="Path 6220" class="cls-2" d="M5.043,5.043a4.72,4.72,0,0,0-.209,1.4c0,5.639-2.417,7.25-2.417,7.25H13.694"/>
+        <path id="Path_6221" data-name="Path 6221" class="cls-2" d="M14.5,6.444A4.833,4.833,0,0,0,6.984,2.417"/>
+        <line id="Line_264" data-name="Line 264" class="cls-2" x2="17.722" y2="17.722" transform="translate(0.806 0.806)"/>
+      </g>
+    </g>
+  </g>
+</svg>

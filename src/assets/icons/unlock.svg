@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-unlock);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-unlock">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="unlock" class="cls-1">
+    <g id="Group_2196" data-name="Group 2196">
+      <g id="unlock-2" data-name="unlock" transform="translate(1.095 1.107)">
+        <rect id="Rectangle_862" data-name="Rectangle 862" class="cls-2" width="16.357" height="9.996" rx="1.817" transform="translate(2.726 9.996)"/>
+        <path id="Path_6457" data-name="Path 6457" class="cls-2" d="M6.361,10V6.361a4.544,4.544,0,0,1,9-.909"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-pause);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-pause">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="pause" class="cls-1">
+    <g id="Group_2118" data-name="Group 2118">
+      <g id="pause-2" data-name="pause" transform="translate(-1.333 -1.333)">
+        <rect id="Rectangle_844" data-name="Rectangle 844" class="cls-2" width="4.444" height="17.778" transform="translate(6.667 4.444)"/>
+        <rect id="Rectangle_845" data-name="Rectangle 845" class="cls-2" width="4.444" height="17.778" transform="translate(15.556 4.444)"/>
+      </g>
+    </g>
+  </g>
+</svg>

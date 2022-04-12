@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-gift);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-gift">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="gift" class="cls-1">
+    <g id="gift-2" data-name="gift" transform="translate(1.091 1.091)">
+      <path id="Path_6326" data-name="Path 6326" class="cls-2" d="M18.182,10.909V20H3.636V10.909"/>
+      <rect id="Rectangle_832" data-name="Rectangle 832" class="cls-2" width="18.182" height="4.545" transform="translate(1.818 6.364)"/>
+      <line id="Line_343" data-name="Line 343" class="cls-2" y1="13.636" transform="translate(10.909 6.364)"/>
+      <path id="Path_6327" data-name="Path 6327" class="cls-2" d="M10.909,6.364H6.818a2.273,2.273,0,1,1,0-4.545C10,1.818,10.909,6.364,10.909,6.364Z"/>
+      <path id="Path_6328" data-name="Path 6328" class="cls-2" d="M10.909,6.364H15a2.273,2.273,0,1,0,0-4.545C11.818,1.818,10.909,6.364,10.909,6.364Z"/>
+    </g>
+  </g>
+</svg>

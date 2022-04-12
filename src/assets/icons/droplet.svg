@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-droplet);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-droplet">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="droplet" class="cls-1">
+    <g id="Group_2033" data-name="Group 2033">
+      <path id="droplet-2" data-name="droplet" class="cls-2" d="M11.258,2.524l5.31,5.31a7.505,7.505,0,1,1-10.61,0Z" transform="translate(0.738 0.415)"/>
+    </g>
+  </g>
+</svg>

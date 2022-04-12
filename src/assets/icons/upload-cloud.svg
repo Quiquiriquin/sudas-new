@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-upload-cloud);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-upload-cloud">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="upload-cloud" class="cls-1">
+    <g id="Group_2197" data-name="Group 2197">
+      <g id="upload-cloud-2" data-name="upload-cloud" transform="translate(2.133 2.101)">
+        <path id="Path_6458" data-name="Path 6458" class="cls-2" d="M13.21,13.21l-3.3-3.3-3.3,3.3"/>
+        <line id="Line_488" data-name="Line 488" class="cls-2" y2="7.43" transform="translate(9.907 9.907)"/>
+        <path id="Path_6459" data-name="Path 6459" class="cls-2" d="M16.834,15.183A4.128,4.128,0,0,0,14.861,7.43h-1.04A6.6,6.6,0,1,0,2.477,13.457"/>
+        <path id="Path_6460" data-name="Path 6460" class="cls-2" d="M13.21,13.21l-3.3-3.3-3.3,3.3"/>
+      </g>
+    </g>
+  </g>
+</svg>

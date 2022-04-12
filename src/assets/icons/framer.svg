@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-framer);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-framer">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="framer" class="cls-1">
+    <path id="framer-2" data-name="framer" class="cls-2" d="M4.348,13.913V7.826H16.522V1.739H4.348L16.522,13.913H10.435m-6.087,0L10.435,20V13.913m-6.087,0h6.087" transform="translate(1.745 1.13)"/>
+  </g>
+</svg>

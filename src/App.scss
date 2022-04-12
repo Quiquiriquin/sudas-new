@@ -1,0 +1,266 @@
+@import url('https://use.typekit.net/rjm2njl.css');
+@import 'assets/styles/colors';
+@import 'assets/styles/colors';
+@import '~antd/dist/antd.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  //font-size: 16px;
+  font-family: 'sofia-pro', sans-serif;
+}
+
+.sofia-bold {
+  font-family: 'sofia-pro', sans-serif;
+  font-weight: 700;
+}
+
+.app-container {
+  height: 100vh;
+  //max-height: 100vh;
+  overflow: hidden;
+}
+
+@media (max-width: 1100px) {
+  .app-container {
+    height: 100%;
+  }
+}
+
+.Toastify__toast-container {
+  padding: 0 !important;
+  border-radius: 5px;
+  .Toastify__toast {
+    overflow: visible !important;
+    margin-bottom: 0 !important;
+    border-width: 1px;
+    border-style: solid;
+  }
+}
+
+.password-validations {
+  ul {
+    list-style: disc;
+
+    li {
+      &.validation-requirement {
+        color: #757575;
+        &.filled {
+          color: #34be44;
+        }
+        &.error {
+          color: #ff5858;
+        }
+        &.touched {
+          color: #000000;
+        }
+      }
+    }
+  }
+}
+
+// COLORS
+
+.color {
+  &.gray {
+    &._75 {
+      color: $brand-light-black;
+    }
+    &._60 {
+      color: #606060;
+    }
+  }
+}
+
+.verification-input {
+  --ReactInputVerificationCode-itemWidth: 3.125rem;
+  --ReactInputVerificationCode-itemHeight: 6.25rem;
+  margin: 0 auto;
+
+  .ReactInputVerificationCode__item {
+    position: relative;
+    color: #262626;
+    font-weight: 500;
+    transition: all 0.5s ease;
+  }
+
+  .ReactInputVerificationCode__item,
+  .ReactInputVerificationCode__item.is-active {
+    box-shadow: none;
+    border: 1px solid #b3b3b3;
+  }
+
+  .ReactInputVerificationCode__item:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -1px;
+    bottom: -1px;
+    right: 0;
+    height: 6.25rem;
+    width: 3.125rem;
+    border-radius: 5px;
+    transition: border 0.2s ease-out;
+    //background-color: #ebebeb;
+  }
+
+  .ReactInputVerificationCode__item.is-active:after {
+    border: 2px solid #5cc8bf;
+  }
+}
+
+// TOOLTIP
+
+.ant-tooltip-inner {
+  color: #606060 !important;
+  background-color: white !important;
+  font-size: 10px !important;
+  width: 100% !important;
+  box-shadow: 0px 0px 10px #0000004b !important;
+  border-radius: 5px !important;
+}
+
+// SCROLL
+
+/**************************
+
+SCROLL BAR STYL
+
+**************************/
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #f2f2f2 white;
+}
+
+/* Works on Chrome, Edge, and Safari */
+
+*::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+  scroll-padding: 10px;
+  //background: none;
+}
+
+*::-webkit-scrollbar-track {
+  //background: white;
+  background: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #a9b0bf;
+  border-radius: 20px;
+}
+
+* {
+  scroll-padding: 10px;
+}
+
+.hidde-scroll {
+  -ms-overflow-style: none; /* hide scrollbar in IE and Edge */
+  scrollbar-width: none; /* hide scrollbar in Firefox */
+}
+
+/* hide scrollbar in webkit browser */
+.hidde-scroll::-webkit-scrollbar,
+.hidde-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.add-container {
+  /*   color: #757575; */
+  color: $brand-black !important;
+  font-weight: bold;
+  height: fit-content;
+
+  & p {
+    line-height: initial;
+  }
+}
+
+// Teament popover
+
+.teament-popover {
+  min-width: 275px;
+
+  .ant-popover-inner {
+    border-radius: 5px;
+  }
+
+  .ant-popover-inner-content {
+    padding: 1.125rem 1.5rem !important;
+    overflow: auto;
+    max-height: 375px;
+    min-height: 375px;
+  }
+
+  &.members {
+    .ant-popover-inner-content {
+      width: 340px;
+    }
+  }
+
+  &.calendar {
+    .ant-popover-inner-content {
+      max-height: none;
+    }
+    max-width: 340px;
+
+    .react-calendar {
+      border: none !important;
+    }
+    .react-calendar__tile--active,
+    .react-calendar__tile--active:enabled:focus:hover {
+      background: $brand-blue !important;
+      border-radius: 5px;
+    }
+    .react-calendar__tile--now {
+      background: $brand-gray-e6;
+      border-radius: 5px;
+      color: #000000;
+    }
+    .react-calendar__tile:enabled:hover,
+    .react-calendar__tile:enabled:focus {
+      border-radius: 5px;
+    }
+
+    .react-calendar__tile:enabled:hover:not(.react-calendar__tile--active) {
+      background: $brand-gray-e6;
+    }
+  }
+}
+
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.animated-background {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: #f6f7f8;
+  background: linear-gradient(
+                  to right,
+                  #eeeeee 8%,
+                  #dddddd 18%,
+                  #eeeeee 33%
+  );
+  background-size: 700px 104px;
+  position: relative;
+  border: 2px solid transparent !important;
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+

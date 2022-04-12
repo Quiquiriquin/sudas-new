@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-facebook);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-facebook">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="facebook" class="cls-1">
+    <g id="Group_2040" data-name="Group 2040">
+      <path id="facebook-2" data-name="facebook" class="cls-2" d="M16.364,1.818H13.636A4.545,4.545,0,0,0,9.091,6.364V9.091H6.364v3.636H9.091V20h3.636V12.727h2.727l.909-3.636H12.727V6.364a.909.909,0,0,1,.909-.909h2.727Z" transform="translate(0.636 1.091)"/>
+    </g>
+  </g>
+</svg>

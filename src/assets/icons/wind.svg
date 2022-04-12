@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-wind);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-wind">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="wind" class="cls-1">
+    <g id="Group_2215" data-name="Group 2215">
+      <path id="wind-2" data-name="wind" class="cls-2" d="M8.7,4.166a1.815,1.815,0,1,1,1.28,3.095H1.815m9.612,10.356a1.815,1.815,0,1,0,1.28-3.095H1.815M16.092,7.016A2.269,2.269,0,1,1,17.7,10.891H1.815" transform="translate(1.092 1.153)"/>
+    </g>
+  </g>
+</svg>

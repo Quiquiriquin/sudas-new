@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Chevron_right);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Chevron_right">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Chevron_right" data-name="Chevron right" class="cls-1">
+    <g id="Group_1987" data-name="Group 1987">
+      <path id="chevron-right" class="cls-2" d="M12.139,24.278l8.093-8.093L12.139,8.093" transform="translate(-3.906 -4.185)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-share-2);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-share-2">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="share-2" class="cls-1">
+    <g id="Group_2151" data-name="Group 2151">
+      <g id="share-2-2" data-name="share-2" transform="translate(1.091 1.091)">
+        <circle id="Ellipse_622" data-name="Ellipse 622" class="cls-2" cx="2.727" cy="2.727" r="2.727" transform="translate(13.636 1.818)"/>
+        <circle id="Ellipse_623" data-name="Ellipse 623" class="cls-2" cx="2.727" cy="2.727" r="2.727" transform="translate(2.727 8.182)"/>
+        <circle id="Ellipse_624" data-name="Ellipse 624" class="cls-2" cx="2.727" cy="2.727" r="2.727" transform="translate(13.636 14.545)"/>
+        <line id="Line_435" data-name="Line 435" class="cls-2" x2="6.209" y2="3.618" transform="translate(7.809 12.282)"/>
+        <line id="Line_436" data-name="Line 436" class="cls-2" x1="6.2" y2="3.618" transform="translate(7.809 5.918)"/>
+      </g>
+    </g>
+  </g>
+</svg>

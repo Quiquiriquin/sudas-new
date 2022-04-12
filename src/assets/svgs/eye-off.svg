@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-eye-off);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-eye-off">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="eye-off" class="cls-1">
+    <g id="Group_2038" data-name="Group 2038">
+      <g id="eye-off-2" data-name="eye-off" transform="translate(2.333 2.334)">
+        <path id="Path_6303" data-name="Path 6303" class="cls-2" d="M14.451,14.451a8.112,8.112,0,0,1-4.785,1.659C4.028,16.111.806,9.666.806,9.666A14.862,14.862,0,0,1,4.882,4.882M7.975,3.415a7.347,7.347,0,0,1,1.692-.193c5.639,0,8.861,6.444,8.861,6.444a14.9,14.9,0,0,1-1.74,2.57m-5.413-.862A2.417,2.417,0,1,1,7.959,7.959"/>
+        <line id="Line_322" data-name="Line 322" class="cls-2" x2="17.722" y2="17.722" transform="translate(0.806 0.806)"/>
+      </g>
+    </g>
+  </g>
+</svg>

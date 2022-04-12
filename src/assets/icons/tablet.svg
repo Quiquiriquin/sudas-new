@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-tablet);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-tablet">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="tablet" class="cls-1">
+    <g id="Group_2173" data-name="Group 2173">
+      <g id="tablet-2" data-name="tablet" transform="translate(1.091 1.091)">
+        <rect id="Rectangle_854" data-name="Rectangle 854" class="cls-2" width="14.545" height="18.182" rx="1.818" transform="translate(3.636 1.818)"/>
+        <line id="Line_480" data-name="Line 480" class="cls-2" x2="0.009" transform="translate(10.909 16.364)"/>
+      </g>
+    </g>
+  </g>
+</svg>

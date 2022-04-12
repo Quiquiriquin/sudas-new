@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Chrome);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Chrome">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Chrome" class="cls-1">
+    <g id="Group_1993" data-name="Group 1993">
+      <g id="chrome-2" data-name="chrome" transform="translate(1.241 1.103)">
+        <circle id="Ellipse_571" data-name="Ellipse 571" class="cls-2" cx="8.966" cy="8.966" r="8.966" transform="translate(1.793 1.793)"/>
+        <circle id="Ellipse_572" data-name="Ellipse 572" class="cls-2" cx="3.586" cy="3.586" r="3.586" transform="translate(7.173 7.173)"/>
+        <line id="Line_271" data-name="Line 271" class="cls-2" x1="8.222" transform="translate(10.759 7.173)"/>
+        <line id="Line_272" data-name="Line 272" class="cls-2" x2="4.116" y2="7.119" transform="translate(3.542 5.434)"/>
+        <line id="Line_273" data-name="Line 273" class="cls-2" y1="7.119" x2="4.107" transform="translate(9.755 12.553)"/>
+      </g>
+    </g>
+  </g>
+</svg>

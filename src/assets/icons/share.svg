@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-share);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-share">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="share" class="cls-1">
+    <g id="Group_2152" data-name="Group 2152">
+      <g id="share-2" data-name="share" transform="translate(1.091 1.091)">
+        <path id="Path_6419" data-name="Path 6419" class="cls-2" d="M3.636,10.909v7.273A1.818,1.818,0,0,0,5.455,20H16.364a1.818,1.818,0,0,0,1.818-1.818V10.909"/>
+        <path id="Path_6420" data-name="Path 6420" class="cls-2" d="M14.545,5.455,10.909,1.818,7.273,5.455"/>
+        <line id="Line_437" data-name="Line 437" class="cls-2" y2="11.818" transform="translate(10.909 1.818)"/>
+      </g>
+    </g>
+  </g>
+</svg>

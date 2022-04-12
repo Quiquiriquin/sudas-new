@@ -1,0 +1,156 @@
+@import 'src/assets/styles/colors';
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 78px;
+  background: $primary;
+  padding: 6px 14px;
+  transition: all 0.8s ease-in-out;
+  z-index: 1;
+  &.active {
+    transition: all 0.8s ease-in-out;
+    width: 240px;
+    overflow-x: hidden;
+    .logo_content {
+      .logo {
+        opacity: 1;
+        transition: all 0.8s ease-in-out;
+      }
+    }
+
+    #menu {
+      left: 90%;
+    }
+
+    ul {
+      li {
+
+        a {
+          span {
+            visibility: visible;
+            pointer-events: all;
+          }
+        }
+
+        &:hover {
+          .tooltip {
+            display: none;
+          }
+        }
+      }
+    }
+
+  }
+
+
+  .logo_content {
+    .logo {
+      transition: all 0.8s ease-in-out;
+      opacity: 0;
+      color: #FFFFFF;
+      display: flex;
+      height: 50px;
+      width: 100%;
+      align-items: center;
+      pointer-events: none;
+
+      .logo-img {
+        max-width: 36px;
+      }
+
+      .logo_name {
+        margin-left: 0.5rem;
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  #menu {
+    cursor: pointer;
+    position: absolute;
+    fill: #FFFFFF;
+    top: 0.5rem;
+    left: 50%;
+    height: 30px;
+    width: 50px;
+    text-align: center;
+    line-height: 50px;
+    transform: translateX(-50%);
+  }
+
+  ul {
+    margin-top: 20px;
+
+    li {
+      list-style: none;
+      position: relative;
+      width: 100%;
+      height: 50px;
+      line-height: 50px;
+      margin-bottom: 1rem;
+
+      &:hover .tooltip {
+        top: 50%;
+        transition: all 0.8s ease;
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      .tooltip {
+        display: block;
+        pointer-events: none;
+        opacity: 0;
+        position: absolute;
+        height: 35px;
+        left: 80px;
+        width: 122px;
+        background: lighten($primary, 15%);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        line-height: 35px;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 6px;
+        color: $white;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        transition: all 0.4s ease;
+        color: #FFFFFF;
+        max-height: 50px;
+        span {
+          visibility: hidden;
+          pointer-events: none;
+        }
+
+        &.active {
+          background: lighten($primary, 15%);
+          border-radius: 12px;
+        }
+
+        &:hover {
+          color: $secondary;
+          background: lighten($primary, 15%);
+          border-radius: 12px;
+        }
+        box-icon {
+          height: 30px;
+          min-width: 50px;
+          border-radius: 12px;
+          line-height: 50px;
+          text-align: center;
+          fill: #FFFFFF;
+        }
+      }
+
+    }
+
+  }
+
+}

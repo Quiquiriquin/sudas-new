@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-zoom-in);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-zoom-in">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="zoom-in" class="cls-1">
+    <g id="Group_2222" data-name="Group 2222">
+      <g id="zoom-in-2" data-name="zoom-in" transform="translate(0.041 0.041)">
+        <circle id="Ellipse_649" data-name="Ellipse 649" class="cls-2" cx="7.838" cy="7.838" r="7.838" transform="translate(2.939 2.939)"/>
+        <line id="Line_511" data-name="Line 511" class="cls-2" x1="4.262" y1="4.262" transform="translate(16.312 16.312)"/>
+        <line id="Line_512" data-name="Line 512" class="cls-2" y2="5.878" transform="translate(10.777 7.838)"/>
+        <line id="Line_513" data-name="Line 513" class="cls-2" x2="5.878" transform="translate(7.838 10.777)"/>
+      </g>
+    </g>
+  </g>
+</svg>

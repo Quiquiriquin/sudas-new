@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-TV);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-TV">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="TV" class="cls-1">
+    <g id="Group_2190" data-name="Group 2190">
+      <g id="tv-2" data-name="tv" transform="translate(1.292 1.477)">
+        <rect id="Rectangle_861" data-name="Rectangle 861" class="cls-2" width="17.846" height="13.384" rx="1.785" transform="translate(1.785 6.246)"/>
+        <path id="Path_6454" data-name="Path 6454" class="cls-2" d="M15.169,1.785,10.707,6.246,6.246,1.785"/>
+      </g>
+    </g>
+  </g>
+</svg>

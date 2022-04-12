@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="Group_2414" data-name="Group 2414" transform="translate(-80)">
+    <circle id="Ellipse_555" data-name="Ellipse 555" cx="16" cy="16" r="16" transform="translate(80)" fill="#d4d4d4"/>
+    <g id="coffee" transform="translate(89.333 8)">
+      <path id="Path_6167" data-name="Path 6167" d="M18,8h.762a3.127,3.127,0,0,1,3.048,3.2,3.127,3.127,0,0,1-3.048,3.2H18" transform="translate(-5.81 -2.4)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="Path_6168" data-name="Path 6168" d="M2,8H14.19v7.2a3.127,3.127,0,0,1-3.048,3.2h-6.1A3.127,3.127,0,0,1,2,15.2Z" transform="translate(-2 -2.4)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="Path_6169" data-name="Path 6169" d="M6,1V3.4" transform="translate(-2.952 -1)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="Path_6170" data-name="Path 6170" d="M10,1V3.4" transform="translate(-3.905 -1)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+      <path id="Path_6171" data-name="Path 6171" d="M14,1V3.4" transform="translate(-4.857 -1)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

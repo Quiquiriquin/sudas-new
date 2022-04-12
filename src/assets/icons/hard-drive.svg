@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-hard-drive);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-hard-drive">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="hard-drive" class="cls-1">
+    <g id="hard-drive-2" data-name="hard-drive" transform="translate(1.091 1.091)">
+      <line id="Line_349" data-name="Line 349" class="cls-2" x1="18.182" transform="translate(1.818 10.909)"/>
+      <path id="Path_6333" data-name="Path 6333" class="cls-2" d="M4.955,4.645,1.818,10.909v5.455a1.818,1.818,0,0,0,1.818,1.818H18.182A1.818,1.818,0,0,0,20,16.364V10.909L16.864,4.645a1.818,1.818,0,0,0-1.627-1.009H6.582A1.818,1.818,0,0,0,4.955,4.645Z"/>
+      <line id="Line_350" data-name="Line 350" class="cls-2" x2="0.009" transform="translate(5.455 14.545)"/>
+      <line id="Line_351" data-name="Line 351" class="cls-2" x2="0.009" transform="translate(9.091 14.545)"/>
+    </g>
+  </g>
+</svg>

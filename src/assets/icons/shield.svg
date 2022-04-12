@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-shield);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-shield">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="shield" class="cls-1">
+    <g id="Group_2154" data-name="Group 2154">
+      <path id="shield-2" data-name="shield" class="cls-2" d="M10.909,20s7.273-3.636,7.273-9.091V4.545L10.909,1.818,3.636,4.545v6.364C3.636,16.364,10.909,20,10.909,20Z" transform="translate(1.091 1.091)"/>
+    </g>
+  </g>
+</svg>

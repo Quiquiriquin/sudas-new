@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-life-buoy);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-life-buoy">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="life-buoy" class="cls-1">
+    <g id="Group_2080" data-name="Group 2080">
+      <g id="life-buoy-2" data-name="life-buoy" transform="translate(1.091 1.091)">
+        <circle id="Ellipse_596" data-name="Ellipse 596" class="cls-2" cx="9.091" cy="9.091" r="9.091" transform="translate(1.818 1.818)"/>
+        <circle id="Ellipse_597" data-name="Ellipse 597" class="cls-2" cx="3.636" cy="3.636" r="3.636" transform="translate(7.273 7.273)"/>
+        <line id="Line_365" data-name="Line 365" class="cls-2" x2="3.855" y2="3.855" transform="translate(4.482 4.482)"/>
+        <line id="Line_366" data-name="Line 366" class="cls-2" x2="3.855" y2="3.855" transform="translate(13.482 13.482)"/>
+        <line id="Line_367" data-name="Line 367" class="cls-2" y1="3.855" x2="3.855" transform="translate(13.482 4.482)"/>
+        <line id="Line_368" data-name="Line 368" class="cls-2" y1="3.209" x2="3.209" transform="translate(13.482 5.127)"/>
+        <line id="Line_369" data-name="Line 369" class="cls-2" y1="3.855" x2="3.855" transform="translate(4.482 13.482)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-film);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-film">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="film" class="cls-1">
+    <g id="Group_2048" data-name="Group 2048">
+      <g id="film-2" data-name="film" transform="translate(1.091 1.091)">
+        <rect id="Rectangle_831" data-name="Rectangle 831" class="cls-2" width="18.182" height="18.182" rx="1.982" transform="translate(1.818 1.818)"/>
+        <line id="Line_330" data-name="Line 330" class="cls-2" y2="18.182" transform="translate(6.364 1.818)"/>
+        <line id="Line_331" data-name="Line 331" class="cls-2" y2="18.182" transform="translate(15.455 1.818)"/>
+        <line id="Line_332" data-name="Line 332" class="cls-2" x2="18.182" transform="translate(1.818 10.909)"/>
+        <line id="Line_333" data-name="Line 333" class="cls-2" x2="4.545" transform="translate(1.818 6.364)"/>
+        <line id="Line_334" data-name="Line 334" class="cls-2" x2="4.545" transform="translate(1.818 15.455)"/>
+        <line id="Line_335" data-name="Line 335" class="cls-2" x2="4.545" transform="translate(15.455 15.455)"/>
+        <line id="Line_336" data-name="Line 336" class="cls-2" x2="4.545" transform="translate(15.455 6.364)"/>
+      </g>
+    </g>
+  </g>
+</svg>

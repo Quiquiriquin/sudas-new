@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-sun);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-sun">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="sun" class="cls-1">
+    <g id="Group_2170" data-name="Group 2170">
+      <g id="sun-2" data-name="sun" transform="translate(2 2)">
+        <circle id="Ellipse_631" data-name="Ellipse 631" class="cls-2" cx="4.167" cy="4.167" r="4.167" transform="translate(5.833 5.833)"/>
+        <line id="Line_460" data-name="Line 460" class="cls-2" y2="1.667" transform="translate(10 0.833)"/>
+        <line id="Line_461" data-name="Line 461" class="cls-2" y2="1.667" transform="translate(10 17.5)"/>
+        <line id="Line_462" data-name="Line 462" class="cls-2" x2="1.183" y2="1.183" transform="translate(3.517 3.517)"/>
+        <line id="Line_463" data-name="Line 463" class="cls-2" x2="1.183" y2="1.183" transform="translate(15.3 15.3)"/>
+        <line id="Line_464" data-name="Line 464" class="cls-2" x2="1.667" transform="translate(0.833 10)"/>
+        <line id="Line_465" data-name="Line 465" class="cls-2" x2="1.667" transform="translate(17.5 10)"/>
+        <line id="Line_466" data-name="Line 466" class="cls-2" y1="1.183" x2="1.183" transform="translate(3.517 15.3)"/>
+        <line id="Line_467" data-name="Line 467" class="cls-2" y1="1.183" x2="1.183" transform="translate(15.3 3.517)"/>
+      </g>
+    </g>
+  </g>
+</svg>

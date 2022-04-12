@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-search);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-search">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="search" class="cls-1">
+    <g id="Group_2147" data-name="Group 2147">
+      <g id="search-2" data-name="search" transform="translate(0.041 0.041)">
+        <circle id="Ellipse_620" data-name="Ellipse 620" class="cls-2" cx="7.838" cy="7.838" r="7.838" transform="translate(2.939 2.939)"/>
+        <line id="Line_431" data-name="Line 431" class="cls-2" x1="4.262" y1="4.262" transform="translate(16.312 16.312)"/>
+      </g>
+    </g>
+  </g>
+</svg>

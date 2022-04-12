@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Camera);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Camera">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Camera" class="cls-1">
+    <g id="Group_1980" data-name="Group 1980">
+      <g id="camera-2" data-name="camera" transform="translate(2 2)">
+        <path id="Path_6234" data-name="Path 6234" class="cls-2" d="M19.167,15.833A1.667,1.667,0,0,1,17.5,17.5H2.5A1.667,1.667,0,0,1,.833,15.833V6.667A1.667,1.667,0,0,1,2.5,5H5.833L7.5,2.5h5L14.167,5H17.5a1.667,1.667,0,0,1,1.667,1.667Z"/>
+        <circle id="Ellipse_570" data-name="Ellipse 570" class="cls-2" cx="3.333" cy="3.333" r="3.333" transform="translate(6.667 7.5)"/>
+      </g>
+    </g>
+  </g>
+</svg>

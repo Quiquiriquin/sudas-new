@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-git-branch);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-git-branch">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="git-branch" class="cls-1">
+    <g id="git-branch-2" data-name="git-branch">
+      <line id="Line_344" data-name="Line 344" class="cls-2" y2="12" transform="translate(6 3)"/>
+      <circle id="Ellipse_585" data-name="Ellipse 585" class="cls-2" cx="3" cy="3" r="3" transform="translate(15 3)"/>
+      <circle id="Ellipse_586" data-name="Ellipse 586" class="cls-2" cx="3" cy="3" r="3" transform="translate(3 15)"/>
+      <path id="Path_6329" data-name="Path 6329" class="cls-2" d="M18,9a9,9,0,0,1-9,9"/>
+    </g>
+  </g>
+</svg>

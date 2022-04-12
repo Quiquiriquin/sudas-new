@@ -1,0 +1,46 @@
+
+ul.ks-cboxtags {
+    list-style: none;
+    padding: 20px;
+}
+ul.ks-cboxtags li{
+  // display: inline;
+  margin: 10px 0;
+}
+ul.ks-cboxtags li label{
+    margin: 0.543rem;
+    padding: 0.375rem 1rem;
+    border-radius: 18px;
+    background: #f2f2f2;
+    box-shadow: 0px 3px 6px #3d4b5c26;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: all .2s;
+}
+
+ul.ks-cboxtags li label {
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+ul.ks-cboxtags li input[type="checkbox"]:checked + label {
+    border: 1px solid #34be44;
+    background: rgba(52, 190, 68, 0.1);
+    transition: all .2s;
+}
+
+ul.ks-cboxtags li input[type="checkbox"] {
+  display: absolute;
+}
+ul.ks-cboxtags li input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkmark{
+ margin: 5px 0px 0px 6px;  
+}

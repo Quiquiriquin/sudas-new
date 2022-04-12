@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-smile);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-smile">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="smile" class="cls-1">
+    <g id="Group_2165" data-name="Group 2165">
+      <g id="smile-2" data-name="smile" transform="translate(1.091 1.091)">
+        <circle id="Ellipse_628" data-name="Ellipse 628" class="cls-2" cx="9.091" cy="9.091" r="9.091" transform="translate(1.818 1.818)"/>
+        <path id="Path_6438" data-name="Path 6438" class="cls-2" d="M7.273,12.727a4.909,4.909,0,0,0,3.636,1.818,4.909,4.909,0,0,0,3.636-1.818"/>
+        <line id="Line_457" data-name="Line 457" class="cls-2" x2="0.009" transform="translate(8.182 8.182)"/>
+        <line id="Line_458" data-name="Line 458" class="cls-2" x2="0.009" transform="translate(13.636 8.182)"/>
+      </g>
+    </g>
+  </g>
+</svg>

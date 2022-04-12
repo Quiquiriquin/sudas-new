@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-hexagon);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-hexagon">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="hexagon" class="cls-1">
+    <g id="Group_2070" data-name="Group 2070">
+      <path id="hexagon-2" data-name="hexagon" class="cls-2" d="M19.04,14.506V7.253a1.813,1.813,0,0,0-.907-1.569L11.786,2.058a1.813,1.813,0,0,0-1.813,0L3.627,5.685A1.813,1.813,0,0,0,2.72,7.253v7.253a1.813,1.813,0,0,0,.907,1.569L9.973,19.7a1.813,1.813,0,0,0,1.813,0l6.347-3.627A1.813,1.813,0,0,0,19.04,14.506Z" transform="translate(1.12 1.12)"/>
+    </g>
+  </g>
+</svg>

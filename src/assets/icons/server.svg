@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-server);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-server">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="server" class="cls-1">
+    <g id="Group_2149" data-name="Group 2149">
+      <g id="server-2" data-name="server" transform="translate(1.091 1.091)">
+        <rect id="Rectangle_848" data-name="Rectangle 848" class="cls-2" width="18.182" height="7.273" rx="1.818" transform="translate(1.818 1.818)"/>
+        <rect id="Rectangle_849" data-name="Rectangle 849" class="cls-2" width="18.182" height="7.273" rx="1.818" transform="translate(1.818 12.727)"/>
+        <line id="Line_433" data-name="Line 433" class="cls-2" x2="0.009" transform="translate(5.455 5.455)"/>
+        <line id="Line_434" data-name="Line 434" class="cls-2" x2="0.009" transform="translate(5.455 16.364)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Power);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Power">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Power" class="cls-1">
+    <g id="Group_2135" data-name="Group 2135">
+      <g id="power-2" data-name="power" transform="translate(1.097 1.091)">
+        <path id="Path_6392" data-name="Path 6392" class="cls-2" d="M16.689,6.036a8.181,8.181,0,1,1-11.571,0"/>
+        <line id="Line_427" data-name="Line 427" class="cls-2" y2="9.09" transform="translate(10.908 1.818)"/>
+      </g>
+    </g>
+  </g>
+</svg>

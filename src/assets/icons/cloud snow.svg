@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-cloud_snow);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-cloud_snow">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="cloud_snow" data-name="cloud snow" class="cls-1">
+    <g id="Group_2001" data-name="Group 2001">
+      <g id="cloud-snow" transform="translate(2.123 2.084)">
+        <path id="Path_6255" data-name="Path 6255" class="cls-2" d="M16.53,14.53a4.133,4.133,0,0,0-1.653-7.918H13.836a6.612,6.612,0,1,0-10.53,6.819"/>
+        <line id="Line_284" data-name="Line 284" class="cls-2" x2="0.008" transform="translate(6.612 13.224)"/>
+        <line id="Line_285" data-name="Line 285" class="cls-2" x2="0.008" transform="translate(6.612 16.53)"/>
+        <line id="Line_286" data-name="Line 286" class="cls-2" x2="0.008" transform="translate(9.918 14.877)"/>
+        <line id="Line_287" data-name="Line 287" class="cls-2" x2="0.008" transform="translate(9.918 18.183)"/>
+        <line id="Line_288" data-name="Line 288" class="cls-2" x2="0.008" transform="translate(13.224 13.224)"/>
+        <line id="Line_289" data-name="Line 289" class="cls-2" x2="0.008" transform="translate(13.224 16.53)"/>
+      </g>
+    </g>
+  </g>
+</svg>

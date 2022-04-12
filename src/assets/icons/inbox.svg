@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-inbox);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-inbox">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="inbox" class="cls-1">
+    <g id="Group_2073" data-name="Group 2073">
+      <g id="inbox-2" data-name="inbox" transform="translate(1.091 1.091)">
+        <path id="Path_6340" data-name="Path 6340" class="cls-2" d="M20,10.909H14.545l-1.818,2.727H9.091L7.273,10.909H1.818"/>
+        <path id="Path_6341" data-name="Path 6341" class="cls-2" d="M4.955,4.645,1.818,10.909v5.455a1.818,1.818,0,0,0,1.818,1.818H18.182A1.818,1.818,0,0,0,20,16.364V10.909L16.864,4.645a1.818,1.818,0,0,0-1.627-1.009H6.582A1.818,1.818,0,0,0,4.955,4.645Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

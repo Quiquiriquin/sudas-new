@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {
+  useContext,
+  useEffect,
+  useReducer,
+  useState,
+} from 'react';
+import './App.scss';
+import { QueryClient, QueryClientProvider } from 'react-query';
+import NiceModal from '@ebay/nice-modal-react';
+import { ThemeProvider } from 'styled-components';
+import authReducer from './auth/authReducer';
+import {
+  GeneralContext,
+  GeneralProvider,
+} from './context/GeneralContext';
+import AppRouter from './routers/AppRouter';
+import {
+  SessionContext,
+  SessionProvider,
+} from './context/SessionContext';
+import { getSessionCookie } from './helpers/Sessions';
 
-function App() {
+const App = () => {
+  const { themes, selectedTheme, updateUser } =
+    useContext(GeneralContext);
+  const { updateSession } = useContext(SessionContext);
+  const [session, setSession] = useState(getSessionCookie());
+
+  useEffect(() => {
+    updateSession(getSessionCookie());
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      setSession(getSessionCookie());
+      updateUser(getSessionCookie());
+    };
+  }, [session]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={themes[selectedTheme] || themes.teament}>
+      <NiceModal.Provider>
+        <GeneralProvider>
+          <AppRouter />
+        </GeneralProvider>
+      </NiceModal.Provider>
+    </ThemeProvider>
   );
-}
+};
 
 export default App;

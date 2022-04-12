@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-zap-off);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-zap-off">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="zap-off" class="cls-1">
+    <g id="Group_2220" data-name="Group 2220">
+      <g id="zap-off-2" data-name="zap-off" transform="translate(2.333 2.334)">
+        <path id="Path_6492" data-name="Path 6492" class="cls-2" d="M10,5.437l.475-3.826L8.514,3.963"/>
+        <path id="Path_6493" data-name="Path 6493" class="cls-2" d="M14.959,10.4l1.957-2.344h-4.3"/>
+        <path id="Path_6494" data-name="Path 6494" class="cls-2" d="M6.444,6.444,2.417,11.277h7.25l-.806,6.444,4.028-4.833"/>
+        <line id="Line_510" data-name="Line 510" class="cls-2" x2="17.722" y2="17.722" transform="translate(0.806 0.806)"/>
+      </g>
+    </g>
+  </g>
+</svg>

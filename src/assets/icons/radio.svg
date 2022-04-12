@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-radio);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-radio">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="radio" class="cls-1">
+    <g id="Group_2137" data-name="Group 2137">
+      <g id="radio-2" data-name="radio" transform="translate(1.089 1.089)">
+        <circle id="Ellipse_616" data-name="Ellipse 616" class="cls-2" cx="1.819" cy="1.819" r="1.819" transform="translate(9.093 9.093)"/>
+        <path id="Path_6395" data-name="Path 6395" class="cls-2" d="M14.767,7.056a5.456,5.456,0,0,1,0,7.72m-7.711-.009a5.456,5.456,0,0,1,0-7.72M17.34,4.483a9.093,9.093,0,0,1,0,12.857m-12.857,0a9.093,9.093,0,0,1,0-12.857"/>
+      </g>
+    </g>
+  </g>
+</svg>

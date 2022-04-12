@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-mouse-pointer);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-mouse-pointer">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="mouse-pointer" class="cls-1">
+    <g id="Group_2109" data-name="Group 2109">
+      <g id="mouse-pointer-2" data-name="mouse-pointer" transform="translate(-0.108 -0.109)">
+        <path id="Path_6367" data-name="Path 6367" class="cls-2" d="M3.163,3.163l7.454,17.891,2.646-7.791,7.791-2.646Z"/>
+        <path id="Path_6368" data-name="Path 6368" class="cls-2" d="M13.706,13.706l6.326,6.326"/>
+      </g>
+    </g>
+  </g>
+</svg>

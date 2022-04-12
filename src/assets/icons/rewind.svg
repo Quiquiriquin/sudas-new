@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-rewind);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-rewind">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="rewind" class="cls-1">
+    <g id="Group_2141" data-name="Group 2141">
+      <g id="rewind-2" data-name="rewind" transform="translate(1.091 1.091)">
+        <path id="Path_6406" data-name="Path 6406" class="cls-2" d="M10,17.273,1.818,10.909,10,4.545Z"/>
+        <path id="Path_6407" data-name="Path 6407" class="cls-2" d="M20,17.273l-8.182-6.364L20,4.545Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

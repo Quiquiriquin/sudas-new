@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-disc);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-disc">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="disc" class="cls-1">
+    <g id="Group_2025" data-name="Group 2025">
+      <g id="disc-2" data-name="disc" transform="translate(1.091 1.091)">
+        <circle id="Ellipse_577" data-name="Ellipse 577" class="cls-2" cx="9.091" cy="9.091" r="9.091" transform="translate(1.818 1.818)"/>
+        <circle id="Ellipse_578" data-name="Ellipse 578" class="cls-2" cx="2.727" cy="2.727" r="2.727" transform="translate(8.182 8.182)"/>
+      </g>
+    </g>
+  </g>
+</svg>

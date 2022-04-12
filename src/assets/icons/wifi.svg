@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-wifi);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-wifi">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="wifi" class="cls-1">
+    <g id="Group_2214" data-name="Group 2214">
+      <g id="wifi-2" data-name="wifi" transform="translate(1.993 1.575)">
+        <path id="Path_6486" data-name="Path 6486" class="cls-2" d="M4.17,10.466a9.173,9.173,0,0,1,11.742,0"/>
+        <path id="Path_6487" data-name="Path 6487" class="cls-2" d="M1.184,7.505a13.343,13.343,0,0,1,17.646,0"/>
+        <path id="Path_6488" data-name="Path 6488" class="cls-2" d="M7.113,13.435a5,5,0,0,1,5.8,0"/>
+        <line id="Line_501" data-name="Line 501" class="cls-2" x2="0.008" transform="translate(10.007 16.679)"/>
+      </g>
+    </g>
+  </g>
+</svg>

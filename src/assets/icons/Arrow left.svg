@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Arrow_left);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Arrow_left">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Arrow_left" data-name="Arrow left" class="cls-1">
+    <g id="Group_1956" data-name="Group 1956">
+      <g id="arrow-left" transform="translate(-2.262 -2.262)">
+        <line id="Line_249" data-name="Line 249" class="cls-2" x1="16.639" transform="translate(5.942 14.262)"/>
+        <path id="Path_6207" data-name="Path 6207" class="cls-2" d="M14.262,22.581,5.942,14.262l8.319-8.319"/>
+      </g>
+    </g>
+  </g>
+</svg>

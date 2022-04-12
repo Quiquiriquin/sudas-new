@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-map-pin);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-map-pin">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="map-pin" class="cls-1">
+    <g id="Group_2090" data-name="Group 2090">
+      <g id="map-pin-2" data-name="map-pin" transform="translate(2 2)">
+        <path id="Path_6357" data-name="Path 6357" class="cls-2" d="M17.5,8.333c0,5.833-7.5,10.833-7.5,10.833s-7.5-5-7.5-10.833a7.5,7.5,0,1,1,15,0Z"/>
+        <circle id="Ellipse_599" data-name="Ellipse 599" class="cls-2" cx="2.5" cy="2.5" r="2.5" transform="translate(7.5 5.833)"/>
+      </g>
+    </g>
+  </g>
+</svg>

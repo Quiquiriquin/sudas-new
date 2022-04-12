@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-cloud_off);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-cloud_off">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="cloud_off" data-name="cloud off" class="cls-1">
+    <g id="Group_1999" data-name="Group 1999">
+      <g id="cloud-off" transform="translate(2.333 2.334)">
+        <path id="Path_6253" data-name="Path 6253" class="cls-2" d="M18.213,13.654a4.028,4.028,0,0,0-3.713-5.6H13.485A6.444,6.444,0,0,0,7.806,3.222m-3.778.806A6.444,6.444,0,0,0,7.25,16.111H14.5a4.028,4.028,0,0,0,1.369-.242"/>
+        <line id="Line_280" data-name="Line 280" class="cls-2" x2="17.722" y2="17.722" transform="translate(0.806 0.806)"/>
+      </g>
+    </g>
+  </g>
+</svg>

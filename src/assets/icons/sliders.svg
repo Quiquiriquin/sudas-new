@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-sliders);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-sliders">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="sliders" class="cls-1">
+    <g id="Group_2163" data-name="Group 2163">
+      <g id="sliders-2" data-name="sliders" transform="translate(2 2)">
+        <line id="Line_447" data-name="Line 447" class="cls-2" y1="5.833" transform="translate(3.333 11.667)"/>
+        <line id="Line_448" data-name="Line 448" class="cls-2" y1="5.833" transform="translate(3.333 2.5)"/>
+        <line id="Line_449" data-name="Line 449" class="cls-2" y1="7.5" transform="translate(10 10)"/>
+        <line id="Line_450" data-name="Line 450" class="cls-2" y1="4.167" transform="translate(10 2.5)"/>
+        <line id="Line_451" data-name="Line 451" class="cls-2" y1="4.167" transform="translate(16.667 13.333)"/>
+        <line id="Line_452" data-name="Line 452" class="cls-2" y1="7.5" transform="translate(16.667 2.5)"/>
+        <line id="Line_453" data-name="Line 453" class="cls-2" x2="5" transform="translate(0.833 11.667)"/>
+        <line id="Line_454" data-name="Line 454" class="cls-2" x2="5" transform="translate(7.5 6.667)"/>
+        <line id="Line_455" data-name="Line 455" class="cls-2" x2="5" transform="translate(14.167 13.333)"/>
+      </g>
+    </g>
+  </g>
+</svg>

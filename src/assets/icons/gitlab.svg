@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-gitlab);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-gitlab">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="gitlab" class="cls-1">
+    <g id="Group_2062" data-name="Group 2062">
+      <path id="gitlab-2" data-name="gitlab" class="cls-2" d="M18.818,11.956,9.97,18.386,1.122,11.956a.7.7,0,0,1-.249-.781L1.886,8.034l2.027-6.24A.349.349,0,0,1,4,1.662a.357.357,0,0,1,.482,0,.349.349,0,0,1,.091.15L6.605,8.034h6.73l2.027-6.24a.349.349,0,0,1,.091-.133.357.357,0,0,1,.482,0,.349.349,0,0,1,.091.15l2.027,6.24,1.055,3.124a.7.7,0,0,1-.291.781Z" transform="translate(2.014 2.051)"/>
+    </g>
+  </g>
+</svg>

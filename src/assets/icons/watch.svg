@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-watch);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-watch">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="watch" class="cls-1">
+    <g id="Group_2212" data-name="Group 2212">
+      <g id="watch-2" data-name="watch" transform="translate(2 2)">
+        <circle id="Ellipse_647" data-name="Ellipse 647" class="cls-2" cx="5.833" cy="5.833" r="5.833" transform="translate(4.167 4.167)"/>
+        <path id="Path_6479" data-name="Path 6479" class="cls-2" d="M10,7.5V10l1.25,1.25"/>
+        <path id="Path_6480" data-name="Path 6480" class="cls-2" d="M13.758,14.458l-.292,3.192A1.667,1.667,0,0,1,11.8,19.167H8.192A1.667,1.667,0,0,1,6.525,17.65l-.292-3.192m.008-8.917L6.533,2.35A1.667,1.667,0,0,1,8.192.833h3.625A1.667,1.667,0,0,1,13.483,2.35l.292,3.192"/>
+      </g>
+    </g>
+  </g>
+</svg>

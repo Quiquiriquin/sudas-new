@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Codesandbox);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Codesandbox">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Codesandbox" class="cls-1">
+    <g id="Group_2005" data-name="Group 2005">
+      <g id="codesandbox-2" data-name="codesandbox" transform="translate(1.145 1.122)">
+        <path id="Path_6261" data-name="Path 6261" class="cls-2" d="M19,14.473V7.237a1.809,1.809,0,0,0-.9-1.565L11.76,2.053a1.809,1.809,0,0,0-1.809,0L3.618,5.672a1.809,1.809,0,0,0-.9,1.565v7.237a1.809,1.809,0,0,0,.9,1.565L9.95,19.657a1.809,1.809,0,0,0,1.809,0l6.332-3.618A1.809,1.809,0,0,0,19,14.473Z"/>
+        <path id="Path_6262" data-name="Path 6262" class="cls-2" d="M6.784,3.808,10.855,6.16l4.071-2.352"/>
+        <path id="Path_6263" data-name="Path 6263" class="cls-2" d="M6.784,17.9V13.207L2.714,10.855"/>
+        <path id="Path_6264" data-name="Path 6264" class="cls-2" d="M19,10.855l-4.071,2.352V17.9"/>
+        <path id="Path_6265" data-name="Path 6265" class="cls-2" d="M2.958,6.3l7.9,4.568,7.9-4.568"/>
+        <line id="Line_292" data-name="Line 292" class="cls-2" y1="9.118" transform="translate(10.855 10.855)"/>
+      </g>
+    </g>
+  </g>
+</svg>

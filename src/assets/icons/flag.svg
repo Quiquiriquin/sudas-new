@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-flag);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-flag">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="flag" class="cls-1">
+    <g id="Group_2050" data-name="Group 2050">
+      <g id="flag-2" data-name="flag" transform="translate(1.091 1.091)">
+        <path id="Path_6322" data-name="Path 6322" class="cls-2" d="M3.636,13.636s.909-.909,3.636-.909,4.545,1.818,7.273,1.818,3.636-.909,3.636-.909V2.727s-.909.909-3.636.909S10,1.818,7.273,1.818s-3.636.909-3.636.909Z"/>
+        <line id="Line_337" data-name="Line 337" class="cls-2" y1="6.364" transform="translate(3.636 13.636)"/>
+      </g>
+    </g>
+  </g>
+</svg>

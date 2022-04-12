@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-database);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-database">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="database" class="cls-1">
+    <g id="Group_2023" data-name="Group 2023">
+      <g id="database-2" data-name="database" transform="translate(1.091 1.091)">
+        <ellipse id="Ellipse_576" data-name="Ellipse 576" class="cls-2" cx="8.182" cy="2.727" rx="8.182" ry="2.727" transform="translate(2.727 1.818)"/>
+        <path id="Path_6288" data-name="Path 6288" class="cls-2" d="M19.091,10.909c0,1.509-3.636,2.727-8.182,2.727s-8.182-1.218-8.182-2.727"/>
+        <path id="Path_6289" data-name="Path 6289" class="cls-2" d="M2.727,4.545V17.273C2.727,18.782,6.364,20,10.909,20s8.182-1.218,8.182-2.727V4.545"/>
+      </g>
+    </g>
+  </g>
+</svg>

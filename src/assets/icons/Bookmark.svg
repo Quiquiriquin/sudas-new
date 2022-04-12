@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Bookmark);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Bookmark">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Bookmark" class="cls-1">
+    <g id="Group_1975" data-name="Group 1975">
+      <path id="bookmark-2" data-name="bookmark" class="cls-2" d="M19,21l-7-5L5,21V5A2,2,0,0,1,7,3H17a2,2,0,0,1,2,2Z"/>
+    </g>
+  </g>
+</svg>

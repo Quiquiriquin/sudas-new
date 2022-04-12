@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-crosshair);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-crosshair">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="crosshair" class="cls-1">
+    <g id="Group_2022" data-name="Group 2022">
+      <g id="crosshair-2" data-name="crosshair" transform="translate(1.091 1.091)">
+        <circle id="Ellipse_575" data-name="Ellipse 575" class="cls-2" cx="9.091" cy="9.091" r="9.091" transform="translate(1.818 1.818)"/>
+        <line id="Line_305" data-name="Line 305" class="cls-2" x1="3.636" transform="translate(16.364 10.909)"/>
+        <line id="Line_306" data-name="Line 306" class="cls-2" x1="3.636" transform="translate(1.818 10.909)"/>
+        <line id="Line_307" data-name="Line 307" class="cls-2" y1="3.636" transform="translate(10.909 1.818)"/>
+        <line id="Line_308" data-name="Line 308" class="cls-2" y1="3.636" transform="translate(10.909 16.364)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-more-vertical);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-more-vertical">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="more-vertical" class="cls-1">
+    <g id="Group_2108" data-name="Group 2108">
+      <g id="more-vertical-2" data-name="more-vertical" transform="translate(-1.333 -1.333)">
+        <circle id="Ellipse_605" data-name="Ellipse 605" class="cls-2" cx="1.111" cy="1.111" r="1.111" transform="translate(12.222 12.222)"/>
+        <circle id="Ellipse_606" data-name="Ellipse 606" class="cls-2" cx="1.111" cy="1.111" r="1.111" transform="translate(12.222 4.444)"/>
+        <circle id="Ellipse_607" data-name="Ellipse 607" class="cls-2" cx="1.111" cy="1.111" r="1.111" transform="translate(12.222 20)"/>
+      </g>
+    </g>
+  </g>
+</svg>

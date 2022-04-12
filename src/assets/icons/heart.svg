@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-heart);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-heart">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="heart" class="cls-1">
+    <g id="Group_2068" data-name="Group 2068">
+      <path id="heart-2" data-name="heart" class="cls-2" d="M18.2,4.026a4.8,4.8,0,0,0-6.794,0l-.926.926-.926-.926a4.8,4.8,0,0,0-6.794,6.794l.926.926,6.794,6.794,6.794-6.794.926-.926a4.8,4.8,0,0,0,0-6.794Z" transform="translate(1.521 1.422)"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-sunrise);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-sunrise">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="sunrise" class="cls-1">
+    <g id="Group_2171" data-name="Group 2171">
+      <g id="sunrise-2" data-name="sunrise" transform="translate(2 2)">
+        <path id="Path_6439" data-name="Path 6439" class="cls-2" d="M14.167,15a4.167,4.167,0,1,0-8.333,0"/>
+        <line id="Line_468" data-name="Line 468" class="cls-2" y2="5.833" transform="translate(10 1.667)"/>
+        <line id="Line_469" data-name="Line 469" class="cls-2" x2="1.183" y2="1.183" transform="translate(3.517 8.517)"/>
+        <line id="Line_470" data-name="Line 470" class="cls-2" x2="1.667" transform="translate(0.833 15)"/>
+        <line id="Line_471" data-name="Line 471" class="cls-2" x2="1.667" transform="translate(17.5 15)"/>
+        <line id="Line_472" data-name="Line 472" class="cls-2" y1="1.183" x2="1.183" transform="translate(15.3 8.517)"/>
+        <line id="Line_473" data-name="Line 473" class="cls-2" x1="18.333" transform="translate(0.833 18.333)"/>
+        <path id="Path_6440" data-name="Path 6440" class="cls-2" d="M6.667,5,10,1.667,13.333,5"/>
+      </g>
+    </g>
+  </g>
+</svg>

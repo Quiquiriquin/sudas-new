@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-eye);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-eye">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="eye" class="cls-1">
+    <g id="Group_2039" data-name="Group 2039">
+      <g id="eye-2" data-name="eye" transform="translate(2 2)">
+        <path id="Path_6304" data-name="Path 6304" class="cls-2" d="M.833,10S4.167,3.333,10,3.333,19.167,10,19.167,10,15.833,16.667,10,16.667.833,10,.833,10Z"/>
+        <circle id="Ellipse_583" data-name="Ellipse 583" class="cls-2" cx="2.5" cy="2.5" r="2.5" transform="translate(7.5 7.5)"/>
+      </g>
+    </g>
+  </g>
+</svg>

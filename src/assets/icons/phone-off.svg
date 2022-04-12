@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-phone-off);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-phone-off">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="phone-off" class="cls-1">
+    <g id="Group_2125" data-name="Group 2125">
+      <g id="phone-off-2" data-name="phone-off" transform="translate(2.333 2.334)">
+        <path id="Path_6384" data-name="Path 6384" class="cls-2" d="M8.6,10.722a12.888,12.888,0,0,0,2.747,2.094l1.023-1.023a1.611,1.611,0,0,1,1.7-.362,10.343,10.343,0,0,0,2.264.564,1.611,1.611,0,0,1,1.386,1.611v2.417a1.611,1.611,0,0,1-1.756,1.611A15.941,15.941,0,0,1,9.014,15.16a15.643,15.643,0,0,1-2.682-2.151m-2.151-2.69A15.941,15.941,0,0,1,1.708,3.367a1.611,1.611,0,0,1,1.6-1.756H5.727A1.611,1.611,0,0,1,7.338,3,10.343,10.343,0,0,0,7.9,5.26a1.611,1.611,0,0,1-.362,1.7L6.517,7.983"/>
+        <line id="Line_419" data-name="Line 419" class="cls-2" x1="17.722" y2="17.722" transform="translate(0.806 0.806)"/>
+      </g>
+    </g>
+  </g>
+</svg>

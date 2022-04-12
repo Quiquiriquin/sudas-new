@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-cloud);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-cloud">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="cloud" class="cls-1">
+    <g id="Group_2002" data-name="Group 2002">
+      <path id="cloud-2" data-name="cloud" class="cls-2" d="M14.994,8.33h-1.05A6.664,6.664,0,1,0,7.5,16.66h7.5a4.165,4.165,0,1,0,0-8.33Z" transform="translate(2.008 2.009)"/>
+    </g>
+  </g>
+</svg>

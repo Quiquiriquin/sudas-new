@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Cast);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Cast">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Cast" class="cls-1">
+    <g id="Group_1981" data-name="Group 1981">
+      <g id="cast-2" data-name="cast" transform="translate(1.26 1.098)">
+        <path id="Path_6235" data-name="Path 6235" class="cls-2" d="M1.8,14.518A4.509,4.509,0,0,1,5.32,18.035M1.8,10.866a8.116,8.116,0,0,1,7.169,7.169M1.8,7.214V5.41a1.8,1.8,0,0,1,1.8-1.8H18.035a1.8,1.8,0,0,1,1.8,1.8V16.231a1.8,1.8,0,0,1-1.8,1.8h-5.41"/>
+        <line id="Line_270" data-name="Line 270" class="cls-2" x2="0.009" transform="translate(1.803 18.035)"/>
+      </g>
+    </g>
+  </g>
+</svg>

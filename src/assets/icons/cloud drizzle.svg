@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-cloud_drizzle);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-cloud_drizzle">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="cloud_drizzle" data-name="cloud drizzle" class="cls-1">
+    <g id="Group_1997" data-name="Group 1997">
+      <g id="cloud-drizzle" transform="translate(2.123 2.084)">
+        <line id="Line_274" data-name="Line 274" class="cls-2" y2="1.653" transform="translate(6.612 15.704)"/>
+        <line id="Line_275" data-name="Line 275" class="cls-2" y2="1.653" transform="translate(6.612 10.745)"/>
+        <line id="Line_276" data-name="Line 276" class="cls-2" y2="1.653" transform="translate(13.224 15.704)"/>
+        <line id="Line_277" data-name="Line 277" class="cls-2" y2="1.653" transform="translate(13.224 10.745)"/>
+        <line id="Line_278" data-name="Line 278" class="cls-2" y2="1.653" transform="translate(9.918 17.357)"/>
+        <line id="Line_279" data-name="Line 279" class="cls-2" y2="1.653" transform="translate(9.918 12.398)"/>
+        <path id="Path_6250" data-name="Path 6250" class="cls-2" d="M16.53,13.7a4.133,4.133,0,0,0-1.653-7.918H13.836A6.612,6.612,0,1,0,3.306,12.6"/>
+      </g>
+    </g>
+  </g>
+</svg>

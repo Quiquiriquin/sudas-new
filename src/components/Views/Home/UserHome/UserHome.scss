@@ -1,0 +1,58 @@
+.user-dashboard {
+  background: #FFFFFF;
+  border-radius: 5px;
+  padding: 1rem 1.5rem;
+  height: 100%;
+  //box-shadow: 0 6px 12px #3d4b5c26;
+
+  .coordinator-container {
+    .title {
+      color: #757575;
+    }
+  }
+
+  .subjects-container {
+    margin-top: 1rem;
+    overflow: auto;
+    padding-bottom: 0.8rem;
+    padding-left: 0.5rem;
+    margin-left: -0.5rem;
+    width: 100%;
+  }
+
+  .subject-card {
+    padding: 1rem;
+    box-shadow: 0 6px 12px #3d4b5c26;
+    border-radius: 5px;
+    max-width: 280px;
+    min-width: 280px;
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .title {
+        color: #000;
+        max-width: 250px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+    .information {
+      margin-top: 1.75rem;
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      .label {
+        margin-bottom: -4px;
+        color: #757575;
+        font-size: 0.75rem !important;
+      }
+
+      .answer {
+        font-size: 1rem;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-rotate-cw);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-rotate-cw">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="rotate-cw" class="cls-1">
+    <g id="Group_2143" data-name="Group 2143">
+      <g id="rotate-cw-2" data-name="rotate-cw" transform="translate(0.256 1.393)">
+        <path id="Path_6410" data-name="Path 6410" class="cls-2" d="M20.516,3.568V8.92H15.164"/>
+        <path id="Path_6411" data-name="Path 6411" class="cls-2" d="M18.277,13.38a8.028,8.028,0,1,1-1.891-8.349l4.13,3.889"/>
+      </g>
+    </g>
+  </g>
+</svg>

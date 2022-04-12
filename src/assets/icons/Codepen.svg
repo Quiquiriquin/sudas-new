@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Codepen);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Codepen">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Codepen" class="cls-1">
+    <g id="Group_2004" data-name="Group 2004">
+      <g id="codepen-2" data-name="codepen" transform="translate(1.467 1.467)">
+        <path id="Path_6258" data-name="Path 6258" class="cls-2" d="M10.533,1.756l8.778,5.705v6.144l-8.778,5.705L1.756,13.605V7.461Z"/>
+        <line id="Line_290" data-name="Line 290" class="cls-2" y1="5.705" transform="translate(10.533 13.605)"/>
+        <path id="Path_6259" data-name="Path 6259" class="cls-2" d="M19.311,7.461l-8.778,6.144L1.756,7.461"/>
+        <path id="Path_6260" data-name="Path 6260" class="cls-2" d="M1.756,13.605l8.778-6.144,8.778,6.144"/>
+        <line id="Line_291" data-name="Line 291" class="cls-2" y2="5.705" transform="translate(10.533 1.756)"/>
+      </g>
+    </g>
+  </g>
+</svg>

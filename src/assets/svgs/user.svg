@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-user);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-user">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="user" class="cls-1">
+    <g id="Group_2203" data-name="Group 2203">
+      <g id="user-2" data-name="user">
+        <path id="Path_6468" data-name="Path 6468" class="cls-2" d="M20,21V19a4,4,0,0,0-4-4H8a4,4,0,0,0-4,4v2"/>
+        <circle id="Ellipse_643" data-name="Ellipse 643" class="cls-2" cx="4" cy="4" r="4" transform="translate(8 3)"/>
+      </g>
+    </g>
+  </g>
+</svg>

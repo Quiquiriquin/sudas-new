@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-linkedin);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-linkedin">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="linkedin" class="cls-1">
+    <g id="Group_2083" data-name="Group 2083">
+      <g id="linkedin-2" data-name="linkedin" transform="translate(1.091 1.545)">
+        <path id="Path_6349" data-name="Path 6349" class="cls-2" d="M14.545,7.273A5.455,5.455,0,0,1,20,12.727v6.364H16.364V12.727a1.818,1.818,0,1,0-3.636,0v6.364H9.091V12.727a5.455,5.455,0,0,1,5.455-5.455Z"/>
+        <rect id="Rectangle_840" data-name="Rectangle 840" class="cls-2" width="3.636" height="10.909" transform="translate(1.818 8.182)"/>
+        <circle id="Ellipse_598" data-name="Ellipse 598" class="cls-2" cx="1.818" cy="1.818" r="1.818" transform="translate(1.818 1.818)"/>
+      </g>
+    </g>
+  </g>
+</svg>

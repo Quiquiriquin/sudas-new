@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Box);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Box">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Box" class="cls-1">
+    <g id="Group_1976" data-name="Group 1976">
+      <g id="box-2" data-name="box" transform="translate(1.145 1.122)">
+        <path id="Path_6230" data-name="Path 6230" class="cls-2" d="M19,14.473V7.237a1.809,1.809,0,0,0-.9-1.565L11.76,2.053a1.809,1.809,0,0,0-1.809,0L3.618,5.672a1.809,1.809,0,0,0-.9,1.565v7.237a1.809,1.809,0,0,0,.9,1.565L9.95,19.657a1.809,1.809,0,0,0,1.809,0l6.332-3.618A1.809,1.809,0,0,0,19,14.473Z"/>
+        <path id="Path_6231" data-name="Path 6231" class="cls-2" d="M2.958,6.3l7.9,4.568,7.9-4.568"/>
+        <line id="Line_265" data-name="Line 265" class="cls-2" y1="9.118" transform="translate(10.855 10.855)"/>
+      </g>
+    </g>
+  </g>
+</svg>

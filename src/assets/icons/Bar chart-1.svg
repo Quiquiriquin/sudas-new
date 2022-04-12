@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Bar_chart);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Bar_chart">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Bar_chart" data-name="Bar chart" class="cls-1">
+    <g id="Group_1965" data-name="Group 1965">
+      <g id="bar-chart-2" transform="translate(-1.333 -1.333)">
+        <line id="Line_256" data-name="Line 256" class="cls-2" y1="11.111" transform="translate(20 11.111)"/>
+        <line id="Line_257" data-name="Line 257" class="cls-2" y1="17.778" transform="translate(13.333 4.444)"/>
+        <line id="Line_258" data-name="Line 258" class="cls-2" y1="6.667" transform="translate(6.667 15.556)"/>
+      </g>
+    </g>
+  </g>
+</svg>

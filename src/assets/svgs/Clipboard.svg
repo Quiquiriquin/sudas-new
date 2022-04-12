@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Clipboard);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Clipboard">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Clipboard" class="cls-1">
+    <g id="Group_1995" data-name="Group 1995">
+      <g id="clipboard-2" data-name="clipboard" transform="translate(1.091 1.091)">
+        <path id="Path_6248" data-name="Path 6248" class="cls-2" d="M14.545,3.636h1.818a1.818,1.818,0,0,1,1.818,1.818V18.182A1.818,1.818,0,0,1,16.364,20H5.455a1.818,1.818,0,0,1-1.818-1.818V5.455A1.818,1.818,0,0,1,5.455,3.636H7.273"/>
+        <rect id="Rectangle_825" data-name="Rectangle 825" class="cls-2" width="7.273" height="3.636" rx="0.909" transform="translate(7.273 1.818)"/>
+      </g>
+    </g>
+  </g>
+</svg>

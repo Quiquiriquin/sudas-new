@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-maximize-2);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-maximize-2">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="maximize-2" class="cls-1">
+    <g id="Group_2092" data-name="Group 2092">
+      <g id="maximize-2-2" data-name="maximize-2" transform="translate(0.477 0.477)">
+        <path id="Path_6359" data-name="Path 6359" class="cls-2" d="M14.4,2.881h5.761V8.642"/>
+        <path id="Path_6360" data-name="Path 6360" class="cls-2" d="M8.642,20.165H2.881V14.4"/>
+        <line id="Line_389" data-name="Line 389" class="cls-2" x1="6.722" y2="6.722" transform="translate(13.443 2.881)"/>
+        <line id="Line_390" data-name="Line 390" class="cls-2" y1="6.722" x2="6.722" transform="translate(2.881 13.443)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Crop);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Crop">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Crop" class="cls-1">
+    <g id="Group_2021" data-name="Group 2021">
+      <g id="crop-2" data-name="crop" transform="translate(2.007 2.007)">
+        <path id="Path_6286" data-name="Path 6286" class="cls-2" d="M5.106.833,5,13.329a1.666,1.666,0,0,0,1.666,1.666h12.5"/>
+        <path id="Path_6287" data-name="Path 6287" class="cls-2" d="M.833,5.106,13.329,5a1.666,1.666,0,0,1,1.666,1.666v12.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

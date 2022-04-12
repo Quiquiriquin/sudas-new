@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-skip-forward);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-skip-forward">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="skip-forward" class="cls-1">
+    <g id="Group_2160" data-name="Group 2160">
+      <g id="skip-forward-2" data-name="skip-forward" transform="translate(-1.333 -1.333)">
+        <path id="Path_6429" data-name="Path 6429" class="cls-2" d="M5.556,4.444l11.111,8.889L5.556,22.222Z"/>
+        <line id="Line_445" data-name="Line 445" class="cls-2" y2="15.556" transform="translate(21.111 5.556)"/>
+      </g>
+    </g>
+  </g>
+</svg>

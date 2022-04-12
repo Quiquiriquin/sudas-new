@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-phone-incoming);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-phone-incoming">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="phone-incoming" class="cls-1">
+    <g id="Group_2123" data-name="Group 2123">
+      <g id="phone-incoming-2" data-name="phone-incoming" transform="translate(1.065 2.355)">
+        <path id="Path_6381" data-name="Path 6381" class="cls-2" d="M13.708,1.713v5.14h5.14"/>
+        <line id="Line_416" data-name="Line 416" class="cls-2" x1="5.997" y2="5.997" transform="translate(13.708 0.857)"/>
+        <path id="Path_6382" data-name="Path 6382" class="cls-2" d="M18.848,14.5v2.57a1.713,1.713,0,0,1-1.868,1.713,16.955,16.955,0,0,1-7.394-2.63,16.707,16.707,0,0,1-5.14-5.14,16.955,16.955,0,0,1-2.63-7.428,1.713,1.713,0,0,1,1.7-1.868h2.57A1.713,1.713,0,0,1,7.8,3.187a11,11,0,0,0,.6,2.407A1.713,1.713,0,0,1,8.019,7.4L6.931,8.49a13.708,13.708,0,0,0,5.14,5.14l1.088-1.088a1.713,1.713,0,0,1,1.808-.386,11,11,0,0,0,2.407.6A1.713,1.713,0,0,1,18.848,14.5Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-shield-off);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-shield-off">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="shield-off" class="cls-1">
+    <g id="Group_2153" data-name="Group 2153">
+      <g id="shield-off-2" data-name="shield-off" transform="translate(2.333 2.334)">
+        <path id="Path_6421" data-name="Path 6421" class="cls-2" d="M15.861,11.277a5.558,5.558,0,0,0,.25-1.611V4.028L9.666,1.611l-2.545.951"/>
+        <path id="Path_6422" data-name="Path 6422" class="cls-2" d="M3.81,3.81l-.588.217V9.666c0,4.833,6.444,8.055,6.444,8.055a16.344,16.344,0,0,0,4.527-3.528"/>
+        <line id="Line_438" data-name="Line 438" class="cls-2" x2="17.722" y2="17.722" transform="translate(0.806 0.806)"/>
+      </g>
+    </g>
+  </g>
+</svg>

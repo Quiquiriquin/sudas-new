@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Battery_charging);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Battery_charging">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Battery_charging" data-name="Battery charging" class="cls-1">
+    <g id="Group_1967" data-name="Group 1967">
+      <g id="battery-charging" transform="translate(2 2)">
+        <path id="Path_6216" data-name="Path 6216" class="cls-2" d="M4.167,15H2.5A1.667,1.667,0,0,1,.833,13.333V6.667A1.667,1.667,0,0,1,2.5,5H5.158M12.5,5h1.667a1.667,1.667,0,0,1,1.667,1.667v6.667A1.667,1.667,0,0,1,14.167,15H11.508"/>
+        <line id="Line_262" data-name="Line 262" class="cls-2" y1="1.667" transform="translate(19.167 9.167)"/>
+        <path id="Path_6217" data-name="Path 6217" class="cls-2" d="M9.167,5,5.833,10h5L7.5,15"/>
+      </g>
+    </g>
+  </g>
+</svg>

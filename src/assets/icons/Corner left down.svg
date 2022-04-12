@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Corner_left_down);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Corner_left_down">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Corner_left_down" data-name="Corner left down" class="cls-1">
+    <g id="Group_2013" data-name="Group 2013">
+      <g id="corner-left-down" transform="translate(-0.809 -1.033)">
+        <path id="Path_6274" data-name="Path 6274" class="cls-2" d="M15.206,16.292,9.775,21.722,4.344,16.292"/>
+        <path id="Path_6275" data-name="Path 6275" class="cls-2" d="M21.722,4.344h-7.6A4.344,4.344,0,0,0,9.775,8.689V21.722"/>
+      </g>
+    </g>
+  </g>
+</svg>

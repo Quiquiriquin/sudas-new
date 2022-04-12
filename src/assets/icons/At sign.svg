@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-At_sign);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-At_sign">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="At_sign" data-name="At sign" class="cls-1">
+    <g id="Group_1963" data-name="Group 1963">
+      <g id="at-sign" transform="translate(1.104 1.104)">
+        <circle id="Ellipse_568" data-name="Ellipse 568" class="cls-2" cx="3.634" cy="3.634" r="3.634" transform="translate(7.268 7.268)"/>
+        <path id="Path_6214" data-name="Path 6214" class="cls-2" d="M14.536,7.268V11.81a2.725,2.725,0,0,0,5.451,0V10.9a9.085,9.085,0,1,0-3.561,7.213"/>
+      </g>
+    </g>
+  </g>
+</svg>

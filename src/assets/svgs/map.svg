@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-map);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #1791E4;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1px;
+      }
+    </style>
+    <clipPath id="clip-map">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="map" class="cls-1">
+    <g id="Group_2091" data-name="Group 2091">
+      <g id="map-2" data-name="map" transform="translate(2 2)">
+        <path id="Path_6358" data-name="Path 6358" class="cls-2" d="M.833,5V18.333L6.667,15l6.667,3.333L19.167,15V1.667L13.333,5,6.667,1.667Z"/>
+        <line id="Line_387" data-name="Line 387" class="cls-2" y2="13.333" transform="translate(6.667 1.667)"/>
+        <line id="Line_388" data-name="Line 388" class="cls-2" y2="13.333" transform="translate(13.333 5)"/>
+      </g>
+    </g>
+  </g>
+</svg>

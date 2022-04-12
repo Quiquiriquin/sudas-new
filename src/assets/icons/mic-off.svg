@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-mic-off);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-mic-off">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="mic-off" class="cls-1">
+    <g id="Group_2098" data-name="Group 2098">
+      <g id="mic-off-2" data-name="mic-off" transform="translate(2.333 2.334)">
+        <line id="Line_397" data-name="Line 397" class="cls-2" x2="17.722" y2="17.722" transform="translate(0.806 0.806)"/>
+        <path id="Path_6361" data-name="Path 6361" class="cls-2" d="M7.25,7.25V9.666a2.417,2.417,0,0,0,4.124,1.708m.709-3.85v-4.3A2.417,2.417,0,0,0,7.3,2.739"/>
+        <path id="Path_6362" data-name="Path 6362" class="cls-2" d="M13.694,13.654A5.639,5.639,0,0,1,4.028,9.666V8.055m11.277,0V9.666a5.639,5.639,0,0,1-.089.991"/>
+        <line id="Line_398" data-name="Line 398" class="cls-2" y2="3.222" transform="translate(9.666 15.305)"/>
+        <line id="Line_399" data-name="Line 399" class="cls-2" x2="6.444" transform="translate(6.444 18.527)"/>
+      </g>
+    </g>
+  </g>
+</svg>

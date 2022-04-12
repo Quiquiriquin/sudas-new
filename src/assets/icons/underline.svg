@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-underline);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-underline">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="underline" class="cls-1">
+    <g id="Group_2195" data-name="Group 2195">
+      <g id="underline-2" data-name="underline">
+        <path id="Path_6456" data-name="Path 6456" class="cls-2" d="M6,3v7a6,6,0,1,0,12,0V3"/>
+        <line id="Line_487" data-name="Line 487" class="cls-2" x2="16" transform="translate(4 21)"/>
+      </g>
+    </g>
+  </g>
+</svg>

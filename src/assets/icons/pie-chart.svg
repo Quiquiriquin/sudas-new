@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-pie-chart);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-pie-chart">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="pie-chart" class="cls-1">
+    <g id="Group_2128" data-name="Group 2128">
+      <g id="pie-chart-2" data-name="pie-chart" transform="translate(1.098 1.094)">
+        <path id="Path_6387" data-name="Path 6387" class="cls-2" d="M19.275,14.44a9.088,9.088,0,1,1-12-11.869"/>
+        <path id="Path_6388" data-name="Path 6388" class="cls-2" d="M19.993,10.905a9.088,9.088,0,0,0-9.088-9.088v9.088Z"/>
+      </g>
+    </g>
+  </g>
+</svg>

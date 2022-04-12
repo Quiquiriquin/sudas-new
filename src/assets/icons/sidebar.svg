@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-sidebar);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-sidebar">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="sidebar" class="cls-1">
+    <g id="Group_2158" data-name="Group 2158">
+      <g id="sidebar-2" data-name="sidebar">
+        <rect id="Rectangle_850" data-name="Rectangle 850" class="cls-2" width="18" height="18" rx="2" transform="translate(3 3)"/>
+        <line id="Line_443" data-name="Line 443" class="cls-2" y2="18" transform="translate(9 3)"/>
+      </g>
+    </g>
+  </g>
+</svg>

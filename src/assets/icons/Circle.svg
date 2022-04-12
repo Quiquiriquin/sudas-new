@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Circle);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Circle">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Circle" class="cls-1">
+    <g id="Group_1994" data-name="Group 1994">
+      <circle id="circle-2" data-name="circle" class="cls-2" cx="9.091" cy="9.091" r="9.091" transform="translate(2.909 2.909)"/>
+    </g>
+  </g>
+</svg>

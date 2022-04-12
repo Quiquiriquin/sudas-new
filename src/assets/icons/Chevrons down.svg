@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Chevrons_down);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Chevrons_down">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Chevrons_down" data-name="Chevrons down" class="cls-1">
+    <g id="Group_1989" data-name="Group 1989">
+      <g id="chevrons-down" transform="translate(-4.65 -4.363)">
+        <path id="Path_6240" data-name="Path 6240" class="cls-2" d="M9.713,18.038l6.938,6.938,6.938-6.938"/>
+        <path id="Path_6241" data-name="Path 6241" class="cls-2" d="M9.713,8.325l6.938,6.938,6.938-6.938"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-trending-up);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-trending-up">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="trending-up" class="cls-1">
+    <g id="Group_2187" data-name="Group 2187">
+      <g id="trending-up-2" data-name="trending-up" transform="translate(2.333 2.334)">
+        <path id="Path_6451" data-name="Path 6451" class="cls-2" d="M18.527,4.833l-7.653,7.653L6.847,8.458.806,14.5"/>
+        <path id="Path_6452" data-name="Path 6452" class="cls-2" d="M13.694,4.833h4.833V9.666"/>
+      </g>
+    </g>
+  </g>
+</svg>

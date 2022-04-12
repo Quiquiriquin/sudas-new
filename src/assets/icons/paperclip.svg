@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-paperclip);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-paperclip">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="paperclip" class="cls-1">
+    <g id="Group_2116" data-name="Group 2116">
+      <path id="paperclip-2" data-name="paperclip" class="cls-2" d="M18.965,9.774,10.836,17.9a5.31,5.31,0,1,1-7.51-7.51l8.129-8.129a3.54,3.54,0,1,1,5.007,5.007L8.324,15.4a1.77,1.77,0,1,1-2.5-2.5l7.51-7.5" transform="translate(1.449 1.657)"/>
+    </g>
+  </g>
+</svg>

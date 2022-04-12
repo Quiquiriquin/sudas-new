@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-trash-2);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-trash-2">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="trash-2" class="cls-1">
+    <g id="Group_2183" data-name="Group 2183">
+      <g id="trash-2-2" data-name="trash-2" transform="translate(1.091 1.091)">
+        <path id="Path_6445" data-name="Path 6445" class="cls-2" d="M2.727,5.455H19.091"/>
+        <path id="Path_6446" data-name="Path 6446" class="cls-2" d="M17.273,5.455V18.182A1.818,1.818,0,0,1,15.455,20H6.364a1.818,1.818,0,0,1-1.818-1.818V5.455m2.727,0V3.636A1.818,1.818,0,0,1,9.091,1.818h3.636a1.818,1.818,0,0,1,1.818,1.818V5.455"/>
+        <line id="Line_483" data-name="Line 483" class="cls-2" y2="5.455" transform="translate(9.091 10)"/>
+        <line id="Line_484" data-name="Line 484" class="cls-2" y2="5.455" transform="translate(12.727 10)"/>
+      </g>
+    </g>
+  </g>
+</svg>

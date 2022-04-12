@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-dribbble);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-dribbble">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="dribbble" class="cls-1">
+    <g id="Group_2032" data-name="Group 2032">
+      <g id="dribbble-2" data-name="dribbble" transform="translate(1.091 1.091)">
+        <circle id="Ellipse_582" data-name="Ellipse 582" class="cls-2" cx="9.091" cy="9.091" r="9.091" transform="translate(1.818 1.818)"/>
+        <path id="Path_6296" data-name="Path 6296" class="cls-2" d="M7.782,2.5c3.973,5.482,5.473,8.564,7.3,16.109M17.391,4.627C14.009,8.582,9.264,9.773,2.045,9.945m17.727,1.727a14.006,14.006,0,0,0-8.127,0c-2.345.836-4.555,2.6-6.764,5.745"/>
+      </g>
+    </g>
+  </g>
+</svg>

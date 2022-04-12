@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-feather);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-feather">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="feather" class="cls-1">
+    <g id="Group_2042" data-name="Group 2042">
+      <g id="feather-2" data-name="feather" transform="translate(1.482 1.115)">
+        <path id="Path_6307" data-name="Path 6307" class="cls-2" d="M18.053,10.918a5.355,5.355,0,1,0-7.573-7.573L4.46,9.366v7.582h7.582Z"/>
+        <line id="Line_323" data-name="Line 323" class="cls-2" x1="12.487" y2="12.487" transform="translate(1.784 7.136)"/>
+        <line id="Line_324" data-name="Line 324" class="cls-2" x1="7.582" transform="translate(8.028 13.379)"/>
+      </g>
+    </g>
+  </g>
+</svg>

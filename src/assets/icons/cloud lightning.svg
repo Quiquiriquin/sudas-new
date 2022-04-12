@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-cloud_lightning);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-cloud_lightning">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="cloud_lightning" data-name="cloud lightning" class="cls-1">
+    <g id="Group_1998" data-name="Group 1998">
+      <g id="cloud-lightning" transform="translate(2.192 1.999)">
+        <path id="Path_6251" data-name="Path 6251" class="cls-2" d="M15.583,13.86a4.1,4.1,0,0,0-.82-8.119H13.729A6.561,6.561,0,1,0,4.2,13.122"/>
+        <path id="Path_6252" data-name="Path 6252" class="cls-2" d="M10.662,9.022,7.381,13.942H12.3L9.022,18.863"/>
+      </g>
+    </g>
+  </g>
+</svg>

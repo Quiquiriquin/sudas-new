@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-move);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-move">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="move" class="cls-1">
+    <g id="Group_2110" data-name="Group 2110">
+      <g id="move-2" data-name="move" transform="translate(1.091 1.091)">
+        <path id="Path_6369" data-name="Path 6369" class="cls-2" d="M4.545,8.182,1.818,10.909l2.727,2.727"/>
+        <path id="Path_6370" data-name="Path 6370" class="cls-2" d="M8.182,4.545l2.727-2.727,2.727,2.727"/>
+        <path id="Path_6371" data-name="Path 6371" class="cls-2" d="M13.636,17.273,10.909,20,8.182,17.273"/>
+        <path id="Path_6372" data-name="Path 6372" class="cls-2" d="M17.273,8.182,20,10.909l-2.727,2.727"/>
+        <line id="Line_408" data-name="Line 408" class="cls-2" x2="18.182" transform="translate(1.818 10.909)"/>
+        <line id="Line_409" data-name="Line 409" class="cls-2" y2="18.182" transform="translate(10.909 1.818)"/>
+      </g>
+    </g>
+  </g>
+</svg>

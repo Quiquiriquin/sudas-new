@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-log-in);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-log-in">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="log-in" class="cls-1">
+    <g id="Group_2087" data-name="Group 2087">
+      <g id="log-in-2" data-name="log-in">
+        <path id="Path_6351" data-name="Path 6351" class="cls-2" d="M15,3h4a2,2,0,0,1,2,2V19a2,2,0,0,1-2,2H15"/>
+        <path id="Path_6352" data-name="Path 6352" class="cls-2" d="M10,17l5-5L10,7"/>
+        <line id="Line_385" data-name="Line 385" class="cls-2" x1="12" transform="translate(3 12)"/>
+      </g>
+    </g>
+  </g>
+</svg>

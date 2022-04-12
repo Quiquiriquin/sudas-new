@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-mail);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-mail">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="mail" class="cls-1">
+    <g id="Group_2089" data-name="Group 2089">
+      <g id="mail-2" data-name="mail" transform="translate(1.467 1.467)">
+        <path id="Path_6355" data-name="Path 6355" class="cls-2" d="M3.511,3.511H17.555a1.761,1.761,0,0,1,1.756,1.756V15.8a1.761,1.761,0,0,1-1.756,1.756H3.511A1.761,1.761,0,0,1,1.756,15.8V5.267A1.761,1.761,0,0,1,3.511,3.511Z"/>
+        <path id="Path_6356" data-name="Path 6356" class="cls-2" d="M19.311,5.267l-8.778,6.144L1.756,5.267"/>
+      </g>
+    </g>
+  </g>
+</svg>

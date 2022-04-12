@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-video);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-video">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="video" class="cls-1">
+    <g id="Group_2206" data-name="Group 2206">
+      <g id="video-2" data-name="video" transform="translate(2 2)">
+        <path id="Path_6473" data-name="Path 6473" class="cls-2" d="M19.167,5.833,13.333,10l5.833,4.167Z"/>
+        <rect id="Rectangle_863" data-name="Rectangle 863" class="cls-2" width="12.5" height="11.667" rx="1.667" transform="translate(0.833 4.167)"/>
+      </g>
+    </g>
+  </g>
+</svg>

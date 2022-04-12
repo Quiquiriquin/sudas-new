@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-rss);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-rss">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="rss" class="cls-1">
+    <g id="Group_2144" data-name="Group 2144">
+      <g id="rss-2" data-name="rss" transform="translate(-1.333 -1.333)">
+        <path id="Path_6412" data-name="Path 6412" class="cls-2" d="M4.444,12.222a10,10,0,0,1,10,10"/>
+        <path id="Path_6413" data-name="Path 6413" class="cls-2" d="M4.444,4.444A17.778,17.778,0,0,1,22.222,22.222"/>
+        <circle id="Ellipse_617" data-name="Ellipse 617" class="cls-2" cx="1.111" cy="1.111" r="1.111" transform="translate(4.444 20)"/>
+      </g>
+    </g>
+  </g>
+</svg>

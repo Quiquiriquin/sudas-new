@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Award);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Award">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Award" class="cls-1">
+    <g id="Group_1964" data-name="Group 1964">
+      <g id="award-2" data-name="award" transform="translate(2 2)">
+        <circle id="Ellipse_569" data-name="Ellipse 569" class="cls-2" cx="5.833" cy="5.833" r="5.833" transform="translate(4.167 0.833)"/>
+        <path id="Path_6215" data-name="Path 6215" class="cls-2" d="M6.842,11.575,5.833,19.167,10,16.667l4.167,2.5-1.008-7.6"/>
+      </g>
+    </g>
+  </g>
+</svg>

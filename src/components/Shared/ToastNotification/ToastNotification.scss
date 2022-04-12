@@ -1,0 +1,64 @@
+.teament-notification {
+  max-height: 80px;
+  overflow: auto;
+  .notification-close {
+    //padding: 2px;
+    border-radius: 50%;
+    max-width: 24px;
+    max-height: 24px;
+    min-width: 24px;
+    min-height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    z-index: 10;
+  }
+
+  .notification-header {
+    .who {
+      font-size: 0.875rem;
+      font-weight: 700;
+    }
+    .date {
+      font-size: 0.5rem;
+      color: #757575;
+    }
+  }
+  .notification-event {
+    font-size: 10px;
+    color: #757575;
+  }
+
+  .message {
+    font-size: 12px;
+  }
+
+  .leaf-container,
+  .profile-container {
+    margin-right: 1rem;
+  }
+
+  .leaf-container {
+    max-width: 36px;
+    max-height: 36px;
+  }
+  .profile-container {
+    max-height: 48px;
+    max-width: 48px;
+    height: 48px;
+    width: 48px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-width: 2px;
+    border-style: solid;
+  }
+  .notification-body-container {
+    font-size: 0.875rem;
+    color: #000;
+  }
+}

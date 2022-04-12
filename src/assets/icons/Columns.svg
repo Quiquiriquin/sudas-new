@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Columns);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Columns">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Columns" class="cls-1">
+    <g id="Group_2007" data-name="Group 2007">
+      <path id="columns-2" data-name="columns" class="cls-2" d="M12,3h7a2,2,0,0,1,2,2V19a2,2,0,0,1-2,2H12M12,3H5A2,2,0,0,0,3,5V19a2,2,0,0,0,2,2h7M12,3V21"/>
+    </g>
+  </g>
+</svg>

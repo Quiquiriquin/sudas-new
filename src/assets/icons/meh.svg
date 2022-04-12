@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-meh);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-meh">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="meh" class="cls-1">
+    <g id="Group_2094" data-name="Group 2094">
+      <g id="meh-2" data-name="meh" transform="translate(1.091 1.091)">
+        <circle id="Ellipse_600" data-name="Ellipse 600" class="cls-2" cx="9.091" cy="9.091" r="9.091" transform="translate(1.818 1.818)"/>
+        <line id="Line_391" data-name="Line 391" class="cls-2" x2="7.273" transform="translate(7.273 13.636)"/>
+        <line id="Line_392" data-name="Line 392" class="cls-2" x2="0.009" transform="translate(8.182 8.182)"/>
+        <line id="Line_393" data-name="Line 393" class="cls-2" x2="0.009" transform="translate(13.636 8.182)"/>
+      </g>
+    </g>
+  </g>
+</svg>

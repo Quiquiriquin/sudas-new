@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-percent);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-percent">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="percent" class="cls-1">
+    <g id="Group_2120" data-name="Group 2120">
+      <g id="percent-2" data-name="percent" transform="translate(-1.333 -1.333)">
+        <line id="Line_414" data-name="Line 414" class="cls-2" x1="15.556" y2="15.556" transform="translate(5.556 5.556)"/>
+        <circle id="Ellipse_612" data-name="Ellipse 612" class="cls-2" cx="2.778" cy="2.778" r="2.778" transform="translate(4.444 4.444)"/>
+        <circle id="Ellipse_613" data-name="Ellipse 613" class="cls-2" cx="2.778" cy="2.778" r="2.778" transform="translate(16.667 16.667)"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clip-Arrow_right_ircle);
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 1.5px;
+      }
+    </style>
+    <clipPath id="clip-Arrow_right_ircle">
+      <rect width="24" height="24"/>
+    </clipPath>
+  </defs>
+  <g id="Arrow_right_ircle" data-name="Arrow right ircle" class="cls-1">
+    <g id="Group_1957" data-name="Group 1957">
+      <g id="arrow-right-circle" transform="translate(1.091 1.091)">
+        <circle id="Ellipse_566" data-name="Ellipse 566" class="cls-2" cx="9.091" cy="9.091" r="9.091" transform="translate(1.818 1.818)"/>
+        <path id="Path_6208" data-name="Path 6208" class="cls-2" d="M10.909,14.545l3.636-3.636L10.909,7.273"/>
+        <line id="Line_250" data-name="Line 250" class="cls-2" x2="7.273" transform="translate(7.273 10.909)"/>
+      </g>
+    </g>
+  </g>
+</svg>
