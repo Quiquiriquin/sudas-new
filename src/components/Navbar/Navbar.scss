@@ -75,7 +75,6 @@
     top: 0.5rem;
     left: 50%;
     height: 30px;
-    width: 50px;
     text-align: center;
     line-height: 50px;
     transform: translateX(-50%);
@@ -124,6 +123,7 @@
         transition: all 0.4s ease;
         color: #FFFFFF;
         max-height: 50px;
+        padding-left: 13px;
         span {
           visibility: hidden;
           pointer-events: none;
