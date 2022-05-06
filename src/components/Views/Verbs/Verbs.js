@@ -1,37 +1,26 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import './Verbs.scss';
 import { useTable } from 'react-table';
 import { toast } from 'react-toastify';
 import { useForm } from 'react-hook-form';
+import { useQuery } from 'react-query';
 import users from '../../../assets/svgs/users.svg';
 import UserHome from '../Home/UserHome/UserHome';
 import { GeneralContext } from '../../../context/GeneralContext';
 import { SessionContext } from '../../../context/SessionContext';
 import Button from '../../Shared/Buttons/Button';
 import Input from '../../Shared/Inputs/Input';
+import { GET_VERBS } from '../../../helpers/VerbsEndpoints';
 
 const Verbs = () => {
-  const { register, watch } = useForm();
+  const { register, watch, getValues, formState, ...form } =
+    useForm();
   const { user, dispatch } = useContext(GeneralContext);
   const { session } = useContext(SessionContext);
   const { name, firstSurname } = session;
-  const [data] = useState([
-    {
-      description: 'Agarrar',
-      actions: 'EDIT, SAVE',
-      id: 1,
-    },
-    {
-      description: 'Correr',
-      actions: 'EDIT, SAVE',
-      id: 2,
-    },
-    {
-      description: 'Comer',
-      actions: 'EDIT, SAVE',
-      id: 3,
-    },
-  ]);
+  const { data: dataService } = useQuery(['verbs'], GET_VERBS);
+  console.log(dataService);
+  const [data, setData] = useState([]);
   const [columns] = useState([
     {
       Header: 'Verbo',
@@ -52,15 +41,26 @@ const Verbs = () => {
   } = tableInstance;
   const save = async (id) => {
     try {
-      const input = document.getElementById(`verbo-${id}`);
-      const { value } = input;
-      console.log(value);
+      const values = getValues();
+      console.log(values[`verbo-${id}`]);
       toast.success('Cambios guardados correctamente');
     } catch (e) {
       console.log(e);
       toast.error('Ocurrió un error al intentar guardar los cambios');
     }
   };
+
+  useEffect(() => {
+    if (dataService) {
+      const { data: verbs } = dataService;
+      const aux = verbs.map(({ id, description }) => ({
+        id,
+        description,
+        actions: 'EDIT, SAVE',
+      }));
+      setData(aux);
+    }
+  }, [dataService]);
 
   return (
     <div className="flex flex-col flex-1 bg-platinum space-y-10">
@@ -106,24 +106,25 @@ const Verbs = () => {
                     {
                       // Loop over the rows cells
                       row.cells.map((cell, index) => {
-                        // Apply the cell prop
+                        // Apply the cell pro
                         const { row: innerRow } = cell;
-                        console.log(cell);
+                        console.log(innerRow);
                         const currentDesc = watch(
-                          `verbo-${innerRow.values.id}`
+                          `verbo-${innerRow.original.id}`
                         );
-                        let isEditing = false;
+                        console.log(currentDesc);
                         if (cell.column.Header === 'Acciones') {
                           return (
                             <td>
                               <div className="flex gap-2">
                                 <Button
                                   onClick={() =>
-                                    save(innerRow.values.id)
+                                    save(innerRow.original.id)
                                   }
                                   disabled={
-                                    currentDesc !==
-                                    data[index].description
+                                    !formState.dirtyFields[
+                                      `verbo-${innerRow.original.id}`
+                                    ]
                                   }
                                   style={{
                                     maxWidth: 'max-content',
@@ -148,20 +149,17 @@ const Verbs = () => {
                         }
                         return (
                           <td {...cell.getCellProps()}>
-                            <form>
+                            <form {...form}>
                               <Input
-                                id={`verbo-${innerRow.values.id}`}
+                                id={`verbo-${innerRow.original.id}`}
                                 small
                                 type="borderless"
                                 defaultValue={
                                   innerRow.values.description
                                 }
                                 {...register(
-                                  `verbo-${innerRow.values.id}`
+                                  `verbo-${innerRow.original.id}`
                                 )}
-                                onFocus={() => {
-                                  isEditing = true;
-                                }}
                               />
                             </form>
                           </td>

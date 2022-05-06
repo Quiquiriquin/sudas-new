@@ -1,18 +1,18 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { GeneralInput } from './GeneralInput';
 import SearchInput from './SearchInput';
 import { BorderlessInput } from './BorderlessInput';
 
-const Input = ({ children, type = '', ...props }) => {
+const Input = forwardRef(({ children, type = '', ...props }, ref) => {
   if (type === 'search') {
-    return <SearchInput {...props} />;
+    return <SearchInput ref={ref} {...props} />;
   }
 
   if (type === 'borderless') {
-    return <BorderlessInput type="text" {...props} />;
+    return <BorderlessInput ref={ref} type="text" {...props} />;
   }
 
-  return <GeneralInput type={type} {...props} />;
-};
+  return <GeneralInput ref={ref} type={type} {...props} />;
+});
 
 export default Input;
