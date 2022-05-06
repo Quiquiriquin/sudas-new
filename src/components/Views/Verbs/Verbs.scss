@@ -1,0 +1,21 @@
+.verbs-container {
+  background: #FFFFFF;
+  height: 100%;
+  border-radius: 5px;
+
+  .verbs-table {
+    width: 100%;
+    //border-collapse: separate;
+    //border-spacing: 10px;
+    border: 1px solid #F2F2F2;
+    tr {
+      th {
+        text-align: left;
+      }
+      td {
+        text-align: left;
+      }
+    }
+  }
+
+}

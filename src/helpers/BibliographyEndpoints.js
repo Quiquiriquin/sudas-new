@@ -26,7 +26,7 @@ export const GET_EDITORIALS = async () => {
   try {
     return apiClient({
       method: 'get',
-      url: '/author',
+      url: '/editorial',
     });
   } catch (e) {
     throw new Error(e);

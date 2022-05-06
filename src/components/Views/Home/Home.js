@@ -24,7 +24,8 @@ const StatusCards = styled.div`
   max-width: 250px;
   height: 150px;
   border-radius: 5px;
-  border: 1px solid #3d4b5c26;
+  border: 1px solid #f2f2f2;
+  box-shadow: 0px 6px 12px #3d4b5c1a;
   padding: 1.5rem;
   text-align: center;
   display: flex;
@@ -52,8 +53,8 @@ const SectionCard = styled(NavLink)`
   width: 100%;
   height: 140px;
   border-radius: 10px;
-  background: #fffff;
-  border: 1px solid #ccc;
+  background: #ffffff;
+  border: 1px solid #f2f2f2;
   box-shadow: 0px 3px 6px #3d4b5c26;
   color: #000;
   padding: 1.5rem;
@@ -68,7 +69,7 @@ const SectionCard = styled(NavLink)`
   &:hover {
     cursor: pointer;
     color: #243a62;
-    box-shadow: 0px 6px 12px #3d4b5c26;
+    box-shadow: 0px 6px 12px #3d4b5c1a;
     border: 1px solid #243a62;
   }
 `;
@@ -143,6 +144,44 @@ const Home = () => {
                 <label className="text-lg">Usuarios</label>
                 <label className="text-sm ">
                   Cantidad: {dashboardResponse?.data?.users || 0}
+                </label>
+              </div>
+            </SectionCard>
+            <SectionCard to="/unidades-aprendizaje">
+              <img src={users} alt="Usuarios" />
+              <div className="flex flex-col justify-between h-full py-2">
+                <label
+                  className="text-lg"
+                  style={{
+                    whiteSpace: 'nowrap',
+                    textOverflow: 'ellipsis',
+                    overflow: 'hidden',
+                    maxWidth: '165px',
+                  }}
+                >
+                  Unidades de Aprendizaje
+                </label>
+                <label className="text-sm">
+                  Cantidad: {dashboardResponse?.data?.subjects || 0}
+                </label>
+              </div>
+            </SectionCard>
+            <SectionCard to="/verbos">
+              <img src={users} alt="Usuarios " />
+              <div className="flex flex-col justify-between h-full py-2">
+                <label
+                  className="text-lg"
+                  style={{
+                    whiteSpace: 'nowrap',
+                    textOverflow: 'ellipsis',
+                    overflow: 'hidden',
+                    maxWidth: '165px',
+                  }}
+                >
+                  Verbos
+                </label>
+                <label className="text-sm ">
+                  Cantidad: {dashboardResponse?.data?.verbs || 0}
                 </label>
               </div>
             </SectionCard>

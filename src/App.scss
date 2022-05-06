@@ -264,3 +264,12 @@ SCROLL BAR STYL
   }
 }
 
+
+.box-shadow {
+  box-shadow: 0px 3px 6px #3d4b5c1a;
+  &.enabled {
+    &:hover {
+      box-shadow: 0px 6px 12px #3d4b5c1a;
+    }
+  }
+}
