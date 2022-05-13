@@ -23,7 +23,7 @@ const PreviewPurposeIntetion = () => {
   ]);
   const verb = watch('verb', '');
   const connector = watch('connector', '');
-  const purposeText = `${verb.label} ${object} ${connector.label} ${quality}`;
+  const purposeText = `${verb?.label || ''} ${object} ${connector?.label || ''} ${quality}`;
 
   const getTextCheckBox = (a, a2) => {
     let text = '';
