@@ -1,10 +1,11 @@
+@import "src/assets/styles/colors";
 .verbs-container {
   background: #FFFFFF;
   height: 100%;
   border-radius: 5px;
 
   .new-verb {
-    border: ;
+    border: 1px solid $primary;
   }
 
   .verbs-table {
