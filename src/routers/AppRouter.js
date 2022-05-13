@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 
 import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 import { GeneralContext } from '../context/GeneralContext';
 import AuthRouter from './AuthRouter';
 import DashboardRouter from './DashboardRouter';

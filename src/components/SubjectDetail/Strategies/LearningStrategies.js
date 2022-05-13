@@ -65,8 +65,6 @@ const LearningStrategies = () => {
       console.log(unitStrategies);
       const pushPromises = [];
       unitStrategies.forEach((unit, index) => {
-        console.log(unit);
-        console.log(methods[index]);
         pushPromises.push(
           updateCompetence({
             id: unit?.id,
@@ -77,15 +75,7 @@ const LearningStrategies = () => {
         );
       });
       const ans = await Promise.all(pushPromises);
-      console.log(
-        unitStrategies.map((unit, index) => ({
-          ...unit,
-          method:
-            methods[index]?.method !== undefined
-              ? methods[index].method
-              : unit.method,
-        }))
-      );
+
       setUnitStrategies(
         unitStrategies.map((unit, index) => ({
           ...unit,

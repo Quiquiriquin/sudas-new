@@ -15,11 +15,11 @@ import FormInput from '../Shared/FormInputs/FormInput';
 
 const Purpose = () => {
   const { subject } = useContext(SubjectContext);
-  const verbId = subject?.purpose?.verbId || 1;
-  const connectorId = subject?.purpose?.connectorId || 1;
+  const verbId = subject?.purpose?.verbId;
+  const connectorId = subject?.purpose?.connectorId;
   const objectText = subject?.purpose?.object || '';
   const qualityText = subject?.purpose?.quality || '';
-
+  console.log(subject);
   return (
     <>
       <p>

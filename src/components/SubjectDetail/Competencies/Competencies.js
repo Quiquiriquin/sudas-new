@@ -64,8 +64,8 @@ const Competencies = () => {
         competenciesValues[index];
       const isVerbId = (element) => element === verb;
       const isConnectorId = (element) => element === connector;
-      const verbId = verbs.findIndex(isVerbId) + 1;
-      const connectorId = connectors.findIndex(isConnectorId) + 1;
+      const verbId = verb.value;
+      const connectorId = connector.value;
       try {
         if (unit.purpose) {
           const ans = await updatePurpose({

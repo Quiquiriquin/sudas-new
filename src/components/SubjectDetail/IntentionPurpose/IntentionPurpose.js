@@ -63,10 +63,11 @@ const IntentionPurpose = () => {
   const onSubmit = async (data) => {
     const { educationalIntention, verb, object, connector, quality } =
       data;
+
     const isVerbId = (element) => element === verb;
     const isConnectorId = (element) => element === connector;
-    const verbId = verbs.findIndex(isVerbId) + 1;
-    const connectorId = connectors.findIndex(isConnectorId) + 1;
+    const verbId = verb.value;
+    const connectorId = connector.value;
     try {
       const ans = await updateEduIntention({
         id: subject.id,

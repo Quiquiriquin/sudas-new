@@ -21,6 +21,7 @@ const CompetenceForm = ({
 
   const verbValue = verbs[verbId - 1] || '';
   const connectorValue = connectors[connectorId - 1] || '';
+  console.log('VERB VALUE', verbValue, verbId, verbs);
   useEffect(() => {
     setValue(`competencies.${index}.object`, objectText);
     setValue(`competencies.${index}.quality`, qualityText);
@@ -35,9 +36,7 @@ const CompetenceForm = ({
               name={`competencies.${index}.verb`}
               label="Verbo"
               defaultValue={verbValue || ''}
-              placeholder={
-                verbValue === '' ? 'Selecciona...' : verbValue
-              }
+              placeholder="Selecciona..."
               className="w-48"
             />
           </div>
@@ -60,9 +59,7 @@ const CompetenceForm = ({
             name={`competencies.${index}.connector`}
             label="Conector"
             defaultValue={connectorValue || ''}
-            placeholder={
-              connectorValue === '' ? 'Selecciona...' : connectorValue
-            }
+            placeholder="Selecciona..."
             className="w-48"
           />
         </div>

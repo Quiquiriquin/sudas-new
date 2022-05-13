@@ -1,4 +1,9 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, {
+  useContext,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import './Verbs.scss';
 import { useTable } from 'react-table';
 import { toast } from 'react-toastify';
@@ -21,6 +26,7 @@ const Verbs = () => {
   const { data: dataService } = useQuery(['verbs'], GET_VERBS);
   console.log(dataService);
   const [data, setData] = useState([]);
+  const [newVerb, setNewVerb] = useState(false);
   const [columns] = useState([
     {
       Header: 'Verbo',
@@ -62,6 +68,15 @@ const Verbs = () => {
     }
   }, [dataService]);
 
+  const toggleNew = () => setNewVerb((prev) => !prev);
+  const newVerbRef = useRef();
+  const saveNewVerb = async () => {
+    try {
+      console.log(newVerbRef.current.value);
+    } catch (e) {
+      console.log(e);
+    }
+  };
   return (
     <div className="flex flex-col flex-1 bg-platinum space-y-10">
       <div className="bg-white rounded box-shadow px-6 py-4 flex-initial">
@@ -70,6 +85,34 @@ const Verbs = () => {
         </h1>
       </div>
       <div className="px-6 py-4 verbs-container">
+        <div className="flex justify-between items-center mb-4">
+          <p className="text-lg sofia-bold">Verbos</p>
+          <Button
+            onClick={toggleNew}
+            xs
+            primary
+            style={{ maxWidth: 'max-content' }}
+          >
+            Agregar verbo
+          </Button>
+        </div>
+        {newVerb && (
+          <div className="new-verb flex justify-between items-center">
+            <Input
+              placeholder="Escribe el nuevo verbo"
+              type="borderless"
+              ref={newVerbRef}
+            />
+            <Button
+              style={{ maxWidth: 'max-content' }}
+              secondary
+              xs
+              onClick={saveNewVerb}
+            >
+              Crear
+            </Button>
+          </div>
+        )}
         <table className="verbs-table" {...getTableProps()}>
           <thead>
             {
@@ -81,11 +124,17 @@ const Verbs = () => {
                     // Loop over the headers in each row
                     headerGroup.headers.map((column) => (
                       // Apply the header cell props
-                      <th {...column.getHeaderProps()}>
+                      <th
+                        className={`${
+                          column.Header === 'Acciones' ? 'short' : ''
+                        }`}
+                        {...column.getHeaderProps()}
+                      >
                         {
                           // Render the heade
                           column.render('Header')
                         }
+                        {console.log(column)}
                       </th>
                     ))
                   }

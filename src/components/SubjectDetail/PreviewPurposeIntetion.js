@@ -23,9 +23,7 @@ const PreviewPurposeIntetion = () => {
   ]);
   const verb = watch('verb', '');
   const connector = watch('connector', '');
-  const verbValue = verb?.value ?? '';
-  const connectorValue = connector?.value ?? '';
-  const purposeText = `${verbValue} ${object} ${connectorValue} ${quality}`;
+  const purposeText = `${verb.label} ${object} ${connector.label} ${quality}`;
 
   const getTextCheckBox = (a, a2) => {
     let text = '';
@@ -67,7 +65,8 @@ const PreviewPurposeIntetion = () => {
         <p className="font-bold text-xl text-center">
           PROPÓSITO DE LA UNIDAD DE APRENDIZAJE
         </p>
-        {verbValue.length === 0 && connectorValue.length === 0 ? (
+        {verb?.label?.length === 0 &&
+        connector?.label?.length === 0 ? (
           ''
         ) : (
           <p>{purposeText}</p>

@@ -8,6 +8,7 @@ import './App.scss';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import NiceModal from '@ebay/nice-modal-react';
 import { ThemeProvider } from 'styled-components';
+import { ToastContainer } from 'react-toastify';
 import authReducer from './auth/authReducer';
 import {
   GeneralContext,
@@ -18,6 +19,7 @@ import {
   SessionContext,
   SessionProvider,
 } from './context/SessionContext';
+import 'react-toastify/dist/ReactToastify.css';
 import { getSessionCookie } from './helpers/Sessions';
 
 const App = () => {
@@ -42,6 +44,7 @@ const App = () => {
       <NiceModal.Provider>
         <GeneralProvider>
           <AppRouter />
+          <ToastContainer />
         </GeneralProvider>
       </NiceModal.Provider>
     </ThemeProvider>

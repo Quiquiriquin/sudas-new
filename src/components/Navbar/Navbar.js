@@ -29,15 +29,15 @@ const Navbar = () => {
         </div>
         <box-icon onClick={openNavbar} id="menu" name="menu" />
         <ul className="nav-list">
+          <li>
+            <NavLink to="/" exact activeClassName="active">
+              <box-icon type="solid" name="grid-alt" />
+              <span className="links_name">Dashboard</span>
+            </NavLink>
+            <span className="tooltip">Dashboard</span>
+          </li>
           {user && user.role === 'ADMIN' && (
             <>
-              <li>
-                <NavLink to="/" exact activeClassName="active">
-                  <box-icon type="solid" name="grid-alt" />
-                  <span className="links_name">Dashboard</span>
-                </NavLink>
-                <span className="tooltip">Dashboard</span>
-              </li>
               <li>
                 <NavLink to="/usuarios" activeClassName="active">
                   <box-icon type="solid" name="user-detail" />
@@ -70,6 +70,13 @@ const Navbar = () => {
                 <span className="tooltip">
                   Unidades de aprendizaje
                 </span>
+              </li>
+              <li>
+                <NavLink to="/verbos" activeClassName="active">
+                  <box-icon type="solid" name="quote-single-right" />
+                  <span className="links_name">Verbos</span>
+                </NavLink>
+                <span className="tooltip">Verbos</span>
               </li>
             </>
           )}

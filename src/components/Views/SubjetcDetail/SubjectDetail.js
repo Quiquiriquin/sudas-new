@@ -74,13 +74,17 @@ const SubjectDetail = () => {
 
   useEffect(() => {
     if (verbsResponse && connectorsResponse) {
-      const newVerbs = verbsResponse?.data.map(({ description }) => ({
-        value: description,
-        label: description,
-      }));
+      const newVerbs = verbsResponse?.data.map(
+        // eslint-disable-next-line no-shadow
+        ({ id, description }) => ({
+          value: id,
+          label: description,
+        })
+      );
       const newConnectors = connectorsResponse.data.map(
-        ({ description }) => ({
-          value: description,
+        // eslint-disable-next-line no-shadow
+        ({ id, description }) => ({
+          value: id,
           label: description,
         })
       );
@@ -105,7 +109,6 @@ const SubjectDetail = () => {
 
   return (
     <div className="flex flex-col border-white flex-1 bg-platinum overflow-hidden">
-      <ToastContainer />
       <div className="bg-white rounded px-6 py-4 shadow flex-initial">
         <h1 className="text-lg font-bold">
           {subject.name} | Semestre {subject.semester}

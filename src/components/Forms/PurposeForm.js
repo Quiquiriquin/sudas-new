@@ -17,12 +17,12 @@ const PurposeForm = ({
 }) => {
   const { setValue } = useFormContext();
   const { verbs, connectors } = useContext(SubjectContext);
-
-  const verbValue = verbs[verbId - 1]?.value || '';
-  const connectorValue = connectors[connectorId - 1]?.value || '';
+  console.log(verbs, verbId, verbs[verbId - 1]);
   useEffect(() => {
     setValue('object', objectText);
     setValue('quality', qualityText);
+    setValue('verb', verbs[verbId - 1]);
+    setValue('connector', connectors[connectorId - 1]);
   }, [verbs, connectors, objectText, qualityText]);
   return (
     <div className="w-full">
@@ -33,10 +33,8 @@ const PurposeForm = ({
               options={verbs}
               name="verb"
               label="Verbo"
-              defaultValue={verbValue || ''}
-              placeholder={
-                verbValue === '' ? 'Selecciona...' : verbValue
-              }
+              defaultValue={verbs[verbId - 1]}
+              placeholder="Selecciona..."
               className="w-48"
             />
           </div>
@@ -58,10 +56,8 @@ const PurposeForm = ({
             options={connectors}
             name="connector"
             label="Conector"
-            defaultValue={connectorValue || ''}
-            placeholder={
-              connectorValue === '' ? 'Selecciona...' : connectorValue
-            }
+            defaultValue={connectors[connectorId - 1]}
+            placeholder="Selecciona..."
             className="w-48"
           />
         </div>

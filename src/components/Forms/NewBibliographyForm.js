@@ -20,11 +20,10 @@ const NewBibliographyForm = ({ close }) => {
     GET_BIBLIOGRAPHIES_NAMES
   );
   const { data: editorialData } = useQuery(
-    ['editorials'],
+    ['editorials-2'],
     GET_EDITORIALS
   );
   const { data: authorData } = useQuery(['authors'], GET_AUTHORS);
-  console.log(biblioData);
 
   const [types] = useState([
     {
@@ -60,6 +59,7 @@ const NewBibliographyForm = ({ close }) => {
   useEffect(() => {
     if (editorialData) {
       const { data } = editorialData;
+      console.log('Esta es la data: ', data);
       setEditorialOptions(
         data.map(({ name, id }) => ({
           value: id,

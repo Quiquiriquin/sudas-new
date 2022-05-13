@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react';
 import { NavLink, useHistory, useRouteMatch } from 'react-router-dom';
 import { useMutation } from 'react-query';
+import { toast } from 'react-toastify';
 import FormWrapper from '../Forms/FormWrapper';
 import LoginForm from '../Forms/LoginForm';
 import SignupForm from '../Forms/SignupForm';
@@ -28,28 +29,47 @@ const AuthContainer = () => {
   const { mutateAsync: mutateAsyncRegster } =
     useMutation(SIGNUP_MAIL);
 
+  const setUserInfo = (info) => {
+    const { data: userInfo, status } = info;
+    console.log(userInfo);
+    setSessionCookie(
+      JSON.stringify({
+        ...userInfo,
+      })
+    );
+    updateUser({
+      ...userInfo,
+    });
+    updateSession(getSessionCookie());
+    history.push('/');
+  };
+
   const onSubmit = async (values) => {
     try {
       const ans = await mutateAsync(values);
-      const { data: userInfo, status } = ans;
-      console.log(userInfo);
-      setSessionCookie(
-        JSON.stringify({
-          ...userInfo,
-        })
-      );
-      updateUser({
-        ...userInfo,
-      });
-      updateSession(getSessionCookie());
-      history.push('/');
+      setUserInfo(ans);
     } catch (e) {
       console.log('Error');
     }
   };
 
   const onSubmitRegister = async (values) => {
-    const ans = await mutateAsyncRegster(values);
+    try {
+      const body = {
+        ...values,
+        academicGrade: values.academicGrade.value,
+      };
+      await mutateAsyncRegster(body);
+      const ans = mutateAsync({
+        email: body.email,
+        password: body.password,
+      });
+      setUserInfo(ans);
+      toast.success('Usuario registrado exitosamente');
+    } catch (e) {
+      console.log(e);
+      toast.error('Ocurrió un error al registrarse');
+    }
   };
 
   return (
