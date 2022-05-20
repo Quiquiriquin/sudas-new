@@ -73,7 +73,7 @@ const Navbar = () => {
               </li>
               <li>
                 <NavLink to="/verbos" activeClassName="active">
-                  <box-icon type="solid" name="quote-single-right" />
+                  <box-icon name="message-square-dots" />
                   <span className="links_name">Verbos</span>
                 </NavLink>
                 <span className="tooltip">Verbos</span>

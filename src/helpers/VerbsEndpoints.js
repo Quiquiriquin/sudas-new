@@ -10,3 +10,27 @@ export const GET_VERBS = async () => {
     return e;
   }
 };
+
+export const CREATE_VERB = async (data) => {
+  console.log(data);
+  try {
+    return await apiClient({
+      url: '/verb',
+      method: 'post',
+      data,
+    });
+  } catch (e) {
+    return e;
+  }
+};
+
+export const DELETE_VERB = async (data) => {
+  try {
+    return await apiClient({
+      url: `/verb/${data}`,
+      method: 'delete',
+    });
+  } catch (e) {
+    return e;
+  }
+};

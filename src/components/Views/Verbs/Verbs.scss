@@ -6,6 +6,8 @@
 
   .new-verb {
     border: 1px solid $primary;
+    border-radius: 5px;
+    padding: 0 0.5rem;
   }
 
   .verbs-table {
@@ -14,6 +16,7 @@
     //border-spacing: 10px;
     border: 1px solid #F2F2F2;
     border-radius: 5px;
+    margin-top: 1rem;
     tr {
       padding: 0 1rem;
       th {

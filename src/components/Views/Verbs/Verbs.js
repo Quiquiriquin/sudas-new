@@ -8,22 +8,33 @@ import './Verbs.scss';
 import { useTable } from 'react-table';
 import { toast } from 'react-toastify';
 import { useForm } from 'react-hook-form';
-import { useQuery } from 'react-query';
+import { useMutation, useQuery, useQueryClient } from 'react-query';
 import users from '../../../assets/svgs/users.svg';
 import UserHome from '../Home/UserHome/UserHome';
 import { GeneralContext } from '../../../context/GeneralContext';
 import { SessionContext } from '../../../context/SessionContext';
 import Button from '../../Shared/Buttons/Button';
 import Input from '../../Shared/Inputs/Input';
-import { GET_VERBS } from '../../../helpers/VerbsEndpoints';
+import {
+  CREATE_VERB,
+  DELETE_VERB,
+  GET_VERBS,
+} from '../../../helpers/VerbsEndpoints';
 
 const Verbs = () => {
+  const queryClient = useQueryClient();
   const { register, watch, getValues, formState, ...form } =
     useForm();
   const { user, dispatch } = useContext(GeneralContext);
   const { session } = useContext(SessionContext);
   const { name, firstSurname } = session;
   const { data: dataService } = useQuery(['verbs'], GET_VERBS);
+  const { mutateAsync: createVerb } = useMutation((body) =>
+    CREATE_VERB(body)
+  );
+  const { mutateAsync: deleteMethod } = useMutation((body) =>
+    DELETE_VERB(body)
+  );
   console.log(dataService);
   const [data, setData] = useState([]);
   const [newVerb, setNewVerb] = useState(false);
@@ -70,13 +81,31 @@ const Verbs = () => {
 
   const toggleNew = () => setNewVerb((prev) => !prev);
   const newVerbRef = useRef();
+
   const saveNewVerb = async () => {
     try {
-      console.log(newVerbRef.current.value);
+      const description = newVerbRef.current.value;
+      const ans = await createVerb({ description });
+      console.log(ans);
+      queryClient.invalidateQueries(['verbs']);
+      toast.success('Verbo creado correctamente');
     } catch (e) {
       console.log(e);
+      toast.error('Ocurrió un error al crear el verbo');
     }
   };
+
+  const deleteVerb = async (id) => {
+    try {
+      await deleteMethod(id);
+      queryClient.invalidateQueries(['verbs']);
+      toast.success('Verbo eliminado correctamente');
+    } catch (e) {
+      console.log(e);
+      toast.error('Ocurrió un error al eliminar el verbo');
+    }
+  };
+
   return (
     <div className="flex flex-col flex-1 bg-platinum space-y-10">
       <div className="bg-white rounded box-shadow px-6 py-4 flex-initial">
@@ -93,7 +122,7 @@ const Verbs = () => {
             primary
             style={{ maxWidth: 'max-content' }}
           >
-            Agregar verbo
+            {newVerb ? 'Cerrar' : 'Agregar verbo'}
           </Button>
         </div>
         {newVerb && (
@@ -101,6 +130,7 @@ const Verbs = () => {
             <Input
               placeholder="Escribe el nuevo verbo"
               type="borderless"
+              small
               ref={newVerbRef}
             />
             <Button
@@ -184,6 +214,9 @@ const Verbs = () => {
                                   Guardar
                                 </Button>
                                 <Button
+                                  onClick={() =>
+                                    deleteVerb(innerRow.original.id)
+                                  }
                                   style={{
                                     maxWidth: 'max-content',
                                   }}

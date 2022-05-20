@@ -5,6 +5,7 @@ import { useQuery } from 'react-query';
 import { GeneralContext } from '../../../context/GeneralContext';
 import menuSVG from '../../../assets/icons/menu.svg';
 import users from '../../../assets/svgs/users.svg';
+import verbs from '../../../assets/svgs/verbs.svg';
 import types from '../../../types/types';
 import unidades from '../../../assets/icons/graduation-cap.png';
 import openBook from '../../../assets/icons/open-book.png';
@@ -167,7 +168,7 @@ const Home = () => {
               </div>
             </SectionCard>
             <SectionCard to="/verbos">
-              <img src={users} alt="Usuarios " />
+              <img src={verbs} alt="Verbos " />
               <div className="flex flex-col justify-between h-full py-2">
                 <label
                   className="text-lg"
