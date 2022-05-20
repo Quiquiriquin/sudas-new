@@ -35,7 +35,7 @@ export default NiceModal.create(({ subject }) => {
         library,
         author: authorSelect.value,
         editorial: editorialSelect.value,
-        title: titleSelect.value,
+        title: titleSelect?.label,
         subjectId: subject?.id,
       };
       const ans = await createBibliography(finalBody);

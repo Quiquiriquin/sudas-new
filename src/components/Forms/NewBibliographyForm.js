@@ -47,12 +47,18 @@ const NewBibliographyForm = ({ close }) => {
   useEffect(() => {
     if (biblioData) {
       const { data } = biblioData;
-      setBiblioOptions(
-        data.map(({ title, id }) => ({
-          value: id,
-          label: title,
-        }))
-      );
+      const auxSet = new Set([]);
+      const auxOptions = [];
+      data.forEach(({ title, id }) => {
+        if (!auxSet.has(title)) {
+          auxSet.add(title);
+          auxOptions.push({
+            value: id,
+            label: title,
+          });
+        }
+      });
+      setBiblioOptions(auxOptions);
     }
   }, [biblioData]);
 

@@ -22,6 +22,7 @@ export default NiceModal.create(
         if (type === 'new') {
           setUnitStrategies(
             unitStrategies.map((unit, index) => {
+              console.log(unit);
               return index === unitIndex - 1
                 ? {
                     ...unit,

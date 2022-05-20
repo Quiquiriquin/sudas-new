@@ -71,6 +71,7 @@ const SubjectProvider = ({ children }) => {
       // eslint-disable-next-line no-shadow
       const { data: competencesInfo } = competencesData;
       if (competencesInfo) {
+        console.log('Competencias: ', competencesInfo);
         const auxCompetences = competencesInfo.map(
           ({ id, method, activities }) => ({
             id,
