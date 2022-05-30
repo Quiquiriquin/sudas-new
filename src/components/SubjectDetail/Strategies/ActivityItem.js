@@ -11,6 +11,7 @@ const ActivityItem = ({
   activityIndex,
   unitStrategies,
   setUnitStrategies,
+  id,
 }) => {
   const openModal = () => {
     NiceModal.show(DeleteActivityModal, {
@@ -18,6 +19,7 @@ const ActivityItem = ({
       setUnitStrategies,
       unitIndex,
       activityIndex,
+      id,
     });
   };
 

@@ -6,6 +6,7 @@ import FormWrapper from '../../Forms/FormWrapper';
 import NewUserForm from '../../Forms/NewUserForm';
 import { REGISTER_USER_DASHBOARD } from '../../../helpers/EnpointsUser';
 import NewActivityForm from '../../Forms/NewActivityForm';
+import { SET_ACTIVITY } from '../../../helpers/ActivityEndpoint';
 
 export default NiceModal.create(
   ({
@@ -14,22 +15,31 @@ export default NiceModal.create(
     type,
     unitIndex = -1,
     activityIndex = -1,
+    id,
   }) => {
     const queryClient = useQueryClient();
     const modal = useModal();
     const onSubmit = async (data) => {
+      console.log(data);
       if (data.actividad !== undefined) {
         if (type === 'new') {
+          console.log('Asignando');
+          const { actividad } = data;
+          const { data: activities } = await SET_ACTIVITY(id, {
+            selectedActivities: actividad.value,
+          });
+          console.log('Actividades: ', activities);
           setUnitStrategies(
             unitStrategies.map((unit, index) => {
-              console.log(unit);
+              console.log(
+                'ES la nueva: ',
+                index === unitIndex - 1,
+                unit
+              );
               return index === unitIndex - 1
                 ? {
                     ...unit,
-                    activities: [
-                      ...unit.activities,
-                      data.actividad.label,
-                    ],
+                    activities,
                   }
                 : unit;
             })
@@ -37,6 +47,7 @@ export default NiceModal.create(
           console.log(unitStrategies);
         }
         if (type === 'edit') {
+          console.log('Editando');
           setUnitStrategies(
             unitStrategies.map((unit, index) => {
               console.log(unitIndex, index);

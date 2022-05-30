@@ -5,6 +5,7 @@ import { useForm } from 'react-hook-form';
 import Modal from './Modal';
 import Button from '../Buttons/Button';
 import { UPDATE_COMPETENCE } from '../../../helpers/SubjectEndpoints';
+import { REMOVE_ACTIVITY } from '../../../helpers/ActivityEndpoint';
 
 export default NiceModal.create(
   ({
@@ -12,6 +13,7 @@ export default NiceModal.create(
     setUnitStrategies,
     unitIndex = -1,
     activityIndex = -1,
+    id,
   }) => {
     // const queryClient = useQueryClient();
     const { handleSubmit } = useForm();
@@ -32,15 +34,23 @@ export default NiceModal.create(
 
     const activityToDelete = unitToUpdate?.activities[activityIndex];
 
-    const deleteContent = () => {
+    console.log('Activity to delete: ', activityToDelete);
+
+    const deleteContent = async () => {
+      console.log(id);
+      const { data: activities } = await REMOVE_ACTIVITY(
+        unitToUpdate.id,
+        {
+          remove: [id],
+        }
+      );
+      console.log('Actividades después de eliminar: ', activities);
       setUnitStrategies(
         unitStrategies?.map((unit, index) => {
           return index === unitIndex - 1
             ? {
                 ...unit,
-                activities: unit.activities.filter(
-                  (actity, i) => i !== activityIndex
-                ),
+                activities,
               }
             : unit;
         })
@@ -68,8 +78,8 @@ export default NiceModal.create(
           className="sofia-bold text-center mb-6"
           style={{ fontSize: '1.125rem', marginTop: '1rem' }}
         >
-          ¿Estas seguro de eliminar el contenido y sus subconntenidos:{' '}
-          {activityToDelete}?
+          ¿Estas seguro de eliminar la actividad:{' '}
+          {activityToDelete.title}?
         </div>
         <div className="flex justify-center mt-12">
           <div className="w-48">

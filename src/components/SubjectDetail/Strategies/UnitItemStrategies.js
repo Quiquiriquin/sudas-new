@@ -15,6 +15,7 @@ const UnitItemStrategies = ({
   index,
   unitIndex,
   activities,
+  id,
 }) => {
   const { handleSubmit } = useForm();
   const { unitStrategies, setUnitStrategies } =
@@ -27,6 +28,7 @@ const UnitItemStrategies = ({
       setUnitStrategies,
       type,
       unitIndex,
+      id,
     });
   };
 
@@ -57,12 +59,14 @@ const UnitItemStrategies = ({
         {hidden ? (
           <div>
             <ul>
-              {activities?.map((activity, i) => {
+              {/* eslint-disable-next-line no-shadow */}
+              {activities?.map(({ id, title }, i) => {
                 return (
                   <ActivityItem
                     // eslint-disable-next-line react/no-array-index-key
-                    key={activity + i}
-                    activityName={activity}
+                    key={title}
+                    id={id}
+                    activityName={title}
                     activityIndex={i}
                     unitIndex={unitIndex}
                     unitStrategies={unitStrategies}

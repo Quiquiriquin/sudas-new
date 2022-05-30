@@ -1,74 +1,33 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useFormContext } from 'react-hook-form';
+import { useQuery } from 'react-query';
 import Button from '../Shared/Buttons/Button';
 import FormInput from '../Shared/FormInputs/FormInput';
 import SelectFormInput from '../Shared/FormInputs/SelectFormInput';
+import { LIST_ACTIVITIES } from '../../helpers/ActivityEndpoint';
 
 const NewActivityForm = () => {
   // const {
   //   formState: { isValid, isSubmitting },
   // } = useFormContext();
 
+  const { data: activitiesData } = useQuery(
+    ['activites', 'form'],
+    LIST_ACTIVITIES
+  );
   const [hidden, setHidden] = useState(true);
+  const [options, setOptions] = useState([]);
 
-  const options = [
-    {
-      value: 'Reporte de indagación bibliográfica',
-      label: 'Indagación bibliográfica',
-    },
-    {
-      value: 'Protocolo de investigación',
-      label: 'Problemas resueltos',
-    },
-    {
-      value: 'Elaboración de glosario',
-      label: 'Glosario',
-    },
-    {
-      value: 'Elaboración de cuadro comparativo',
-      label: 'Cuadro comparativo',
-    },
-    {
-      value: 'Solución de cuestionario',
-      label: 'Cuestionario resuelto',
-    },
-    {
-      value: 'Seminario',
-      label: 'Exposición',
-    },
-    {
-      value: 'Cartel',
-      label: 'Poster',
-    },
-    {
-      value: 'Debate',
-      label: 'Conclusiones del debate',
-    },
-    {
-      value: 'Resumen de material bibliográfico',
-      label: 'Resumen',
-    },
-    {
-      value: 'Elaboración de diagrama',
-      label: 'Diagrama',
-    },
-    {
-      value: 'Elaboración de Diario de campo',
-      label: 'Diario de campo',
-    },
-    {
-      value: 'Construcción de mapas de restricción',
-      label: 'Mapas de restricción',
-    },
-    {
-      value: 'Presentación',
-      label: 'Exposición',
-    },
-    // {
-    //   value: '',
-    //   label: '',
-    // },
-  ];
+  useEffect(() => {
+    if (activitiesData) {
+      const { data } = activitiesData;
+      const aux = data.map(({ id, title }) => ({
+        value: id,
+        label: title,
+      }));
+      setOptions(aux);
+    }
+  }, [activitiesData]);
 
   return (
     <div className="w-full flex p-8 mx-auto flex-col">
