@@ -65,7 +65,7 @@ const SubjectDetail = () => {
     isLoading: isLoadingRelatedUnits,
     data: relatedUnitsResponse,
   } = useQuery(
-    ['relatedUnits', id, subject.academicPlanId],
+    ['relatedUnits', subject.semester, subject.academicPlanId],
     GET_RELATED_UNITS,
     {
       enabled: !!subject,

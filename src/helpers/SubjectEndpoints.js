@@ -104,11 +104,11 @@ export const CREATE_UNIT_COMPETENCE = async (data) => {
 };
 
 export const GET_RELATED_UNITS = async ({ queryKey }) => {
-  const [, id, planId] = queryKey;
+  const [, semester, planId] = queryKey;
   try {
     return await apiClient({
       method: 'get',
-      url: `/subject/related/${id}/plan/${planId}`,
+      url: `/subject/related/${semester}/plan/${planId}`,
     });
   } catch (e) {
     console.log(e);
