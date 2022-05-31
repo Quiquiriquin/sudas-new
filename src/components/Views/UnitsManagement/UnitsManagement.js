@@ -9,6 +9,7 @@ import { GET_ACADEMIC_PLANS } from '../../../helpers/AcademicPlanEndpoints';
 import AcademicPlanItem from '../../AcademicPlan/AcademicPlanItem';
 import AddButton from '../../Shared/Buttons/AddButton';
 import NewAcademicPlan from '../../Shared/Modals/NewAcademicPlan';
+import './UnitsManagement.scss';
 
 const UnitsManagement = () => {
   const { session } = useContext(SessionContext);

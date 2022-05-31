@@ -1,3 +1,39 @@
-.dashboard-cards-container {
-  grid-template-rows: minmax(150px, 150px) auto;
+.catalog-subject-form {
+  width: 100%;
+
+  thead {
+    border-bottom: 2px solid #282c34;
+    .semester,
+    .subject{
+      padding: 4px 12px;
+    }
+
+    .semester {
+      text-align: center;
+    }
+
+    .subject {
+      text-align: left;
+    }
+  }
+
+  tbody {
+    tr {
+        td.body {
+          padding: 2px 12px;
+          border-bottom: 1px solid #282c34;
+          select {
+            height: 32px;
+            width: 100%;
+            text-align: center;
+            outline: none;
+            border-radius: 0;
+            &:focus, &:focus-visible {
+              outline: none;
+
+            }
+          }
+        }
+    }
+  }
 }

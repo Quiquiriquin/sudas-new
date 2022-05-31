@@ -1,13 +1,32 @@
-import React from 'react';
-import { useFormContext } from 'react-hook-form';
+import React, { useEffect, useState } from 'react';
+import { useFieldArray, useFormContext } from 'react-hook-form';
 import FormInput from '../Shared/FormInputs/FormInput';
 import SelectFormInput from '../Shared/FormInputs/SelectFormInput';
 import Button from '../Shared/Buttons/Button';
+import Input from '../Shared/Inputs/Input';
+import Select from '../Shared/Inputs/Select';
 
 const NewAcademicPlanForm = () => {
   const {
+    control,
+    watch,
+    register,
     formState: { isValid, isSubmitting },
   } = useFormContext();
+  const [step, setStep] = useState(0);
+  const [options, setOptions] = useState([]);
+  const { fields, append, remove, swap, move, insert } =
+    useFieldArray({
+      control,
+      name: 'subjects',
+    });
+
+  useEffect(() => {
+    append({
+      name: '',
+      semester: 1,
+    });
+  }, []);
 
   const inputs = [
     {
@@ -66,36 +85,122 @@ const NewAcademicPlanForm = () => {
     },
   ];
 
+  useEffect(() => {
+    if (watch('semesters')) {
+      const semesters = parseInt(watch('semesters'), 10);
+      const auxOptions = [];
+      // eslint-disable-next-line no-plusplus
+      for (let i = 0; i < semesters; i++) {
+        auxOptions.push({
+          value: i + 1,
+          label: i + 1,
+        });
+      }
+      setOptions(auxOptions);
+    }
+  }, [watch('semesters')]);
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter' && e.shiftKey) {
+      append({
+        name: '',
+        semester: fields[fields.length - 1].semester,
+      });
+    }
+  };
+
   return (
     <div>
-      <div className="w-full">
-        <FormInput {...inputs[0]} />
-      </div>
-      <div className="flex gap-4">
-        <div className="w-full">
-          <FormInput {...inputs[1]} />
-        </div>
-        <div className="w-full">
-          <FormInput {...inputs[2]} />
-        </div>
-      </div>
-      <div className="flex gap-4">
-        <div className="w-full">
-          <SelectFormInput {...inputs[3]} />
-        </div>
-        <div className="w-full">
-          <FormInput {...inputs[4]} />
-        </div>
-      </div>
-      <div className="flex justify-end">
-        <Button
-          disabled={!isValid || isSubmitting}
-          style={{ maxWidth: '130px' }}
-          type="submit"
-          primary
-        >
-          Crear
-        </Button>
+      {step === 0 && (
+        <>
+          <div className="w-full">
+            <FormInput {...inputs[0]} />
+          </div>
+          <div className="flex gap-4">
+            <div className="w-full">
+              <FormInput {...inputs[1]} />
+            </div>
+            <div className="w-full">
+              <FormInput {...inputs[2]} />
+            </div>
+          </div>
+          <div className="flex gap-4">
+            <div className="w-full">
+              <SelectFormInput {...inputs[3]} />
+            </div>
+            <div className="w-full">
+              <FormInput {...inputs[4]} />
+            </div>
+          </div>
+        </>
+      )}
+      {step === 1 && options && (
+        <table className="catalog-subject-form">
+          {/* eslint-disable-next-line array-callback-return */}
+          <thead>
+            <tr>
+              <th className="subject">Unidad de aprendizaje</th>
+              <th className="semester">Semestre</th>
+            </tr>
+          </thead>
+          <tbody>
+            {fields.map(({ name, id, semester }, index) => (
+              <tr>
+                <td className="body">
+                  <Input
+                    type="borderless"
+                    small
+                    placeholder="Escribe la unidad de aprendizaje"
+                    {...register(`subjects.${index}.name`)}
+                    onKeyUp={handleKeyPress}
+                  />
+                </td>
+                <td className="body">
+                  <select
+                    onKeyUp={handleKeyPress}
+                    placeholder="Selecciona"
+                    {...register(`subjects.${index}.semester`)}
+                  >
+                    {options.map(({ value, label }) => (
+                      <option value={value}>{label}</option>
+                    ))}
+                    ;
+                  </select>
+                </td>
+              </tr>
+            ))}
+
+            <tr>
+              <td style={{ padding: '4px 12px', color: '#b3b3b3' }}>
+                Presiona Shift + Enter para agregar una nueva unidad
+                de aprendizaje
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      )}
+      <div className="flex justify-end mt-6">
+        {step === 0 && (
+          <Button
+            onClick={() => setStep((prev) => prev + 1)}
+            disabled={!isValid || isSubmitting}
+            style={{ maxWidth: '130px' }}
+            type="button"
+            primary
+          >
+            Siguiente
+          </Button>
+        )}
+        {step === 1 && (
+          <Button
+            disabled={!isValid || isSubmitting}
+            style={{ maxWidth: '130px' }}
+            type="submit"
+            primary
+          >
+            Crear
+          </Button>
+        )}
       </div>
     </div>
   );

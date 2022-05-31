@@ -11,14 +11,25 @@ export default NiceModal.create(() => {
   const { mutateAsync: createAcademicPlan } = useMutation(
     CREATE_ACADEMIC_PLAN
   );
-  const submitForm = async (data) => {
+  const submitForm = async ({ subjects: prevSubjects, ...data }) => {
     try {
       console.log(data);
+      const subjects = [];
+      prevSubjects.forEach(({ name, semester }) => {
+        if (name) {
+          subjects.push({
+            name,
+            semester: parseInt(semester, 10),
+          });
+        }
+      });
       const body = {
         ...data,
         modality: data.value,
         period: parseInt(data.period, 10),
+        subjects,
       };
+      console.log(body);
       const ans = await createAcademicPlan(body);
       console.log(ans);
       modal.resolve(true);
@@ -28,7 +39,7 @@ export default NiceModal.create(() => {
     }
   };
   return (
-    <ModalGeneric width="60%">
+    <ModalGeneric width="100%">
       <div
         className="sofia-bold text-center mb-6"
         style={{ fontSize: '1.125rem' }}

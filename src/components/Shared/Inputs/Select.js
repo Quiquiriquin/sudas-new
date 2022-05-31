@@ -33,19 +33,46 @@ const Select = ({ options, ...propsComponent }) => {
       ...base,
       zIndex: 9999,
     }),
+    container: (styles, { isFocused, ...props }) => {
+      return {
+        ...styles,
+        ...(propsComponent.small
+          ? {
+              maxHeight: '32px',
+            }
+          : {}),
+      };
+    },
     control: (styles, { isFocused, ...props }) => {
       return {
         ...styles,
-        border: isFocused
-          ? `1px solid ${themes[selectedTheme].secondary}`
-          : '1px solid #b3b3b3',
-        height: '48px',
+        ...(propsComponent.type === 'borderless'
+          ? { border: 'none !important' }
+          : {
+              border:
+                isFocused && !propsComponent.type
+                  ? `1px solid ${themes[selectedTheme].secondary}`
+                  : '1px solid #b3b3b3',
+            }),
+        height: propsComponent.small ? '32px' : '48px',
+        maxHeight: propsComponent.small ? '32px' : '48px',
+        minHeight: propsComponent.small ? '32px' : '38px',
+        ...(props.type === 'borderless'
+          ? {
+              borderRadius: 0,
+              borderColor: 'none !important',
+            }
+          : {}),
         paddingLeft: '1rem',
-        fontSize: '1rem',
-        ':hover': {
-          boxShadow: '0px 6px 12px #3D4B5C26',
-        },
-        ...(isFocused
+        fontSize: propsComponent.small ? '12px' : '1rem',
+        ...(propsComponent.type === 'borderless'
+          ? {}
+          : {
+              ':hover': {
+                boxShadow: '0px 6px 12px #3D4B5C26',
+              },
+            }),
+        ...(isFocused && !propsComponent.type
           ? {
               outlineColor: isFocused
                 ? `${themes[selectedTheme].secondary}`

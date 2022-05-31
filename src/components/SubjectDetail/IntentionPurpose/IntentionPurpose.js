@@ -60,20 +60,60 @@ const IntentionPurpose = () => {
     },
   });
 
-  const onSubmit = async (data) => {
-    const { educationalIntention, verb, object, connector, quality } =
-      data;
+  const buildFinalRelated = (arr) => {
+    const ans = [];
+    // eslint-disable-next-line array-callback-return
+    arr.map((elem) => {
+      Object.keys(elem).forEach((key) => {
+        const [, keyId] = key.split('_');
+        if (elem[key]) {
+          ans.push(parseInt(keyId, 10));
+        }
+      });
+    });
 
+    return ans;
+  };
+
+  const onSubmit = async (data) => {
+    const {
+      educationalIntention,
+      verb,
+      object,
+      connector,
+      quality,
+      next,
+      prev,
+      same,
+    } = data;
+    console.log('DATAAAA: ', data);
     const isVerbId = (element) => element === verb;
     const isConnectorId = (element) => element === connector;
     const verbId = verb.value;
     const connectorId = connector.value;
     try {
+      let auxFinalPrev = [];
+      let auxFinalSame = [];
+      let auxFinalNext = [];
+      if (prev) {
+        auxFinalPrev = buildFinalRelated(prev);
+      }
+      if (same) {
+        auxFinalSame = buildFinalRelated(same);
+      }
+      if (next) {
+        auxFinalNext = buildFinalRelated(next);
+      }
       const ans = await updateEduIntention({
         id: subject.id,
         data: {
           id: subject.id,
           educationalIntention,
+          relatedUnits: {
+            prev: auxFinalPrev,
+            same: auxFinalSame,
+            next: auxFinalNext,
+          },
         },
       });
       // console.log(ans);

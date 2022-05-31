@@ -17,9 +17,9 @@ const PreviewPurposeIntetion = () => {
     'intention',
     'object',
     'quality',
-    'consequent',
-    'lateral',
-    'predecessor',
+    'next',
+    'same',
+    'prev',
   ]);
   const verb = watch('verb', '');
   const connector = watch('connector', '');
@@ -29,22 +29,24 @@ const PreviewPurposeIntetion = () => {
 
   const getTextCheckBox = (a, a2) => {
     let text = '';
-    a.forEach((x) => {
-      text += `${a2[x].name} ,`;
+    a.forEach((x, index) => {
+      text += `${a2[x].name}`;
+      if (index !== a.length - 1) {
+        text += ',';
+      }
     });
     return text;
   };
 
-  const predecessorOptions = predecessor.reduce(
-    (a, e, i) => (e ? a.concat(i) : a),
-    []
-  );
+  const predecessorOptions = predecessor.reduce((a, e, i) => {
+    return e[Object.keys(e)[0]] ? a.concat(i) : a;
+  }, []);
   const lateralOptions = lateral.reduce(
-    (a, e, i) => (e ? a.concat(i) : a),
+    (a, e, i) => (e[Object.keys(e)[0]] ? a.concat(i) : a),
     []
   );
   const consequentOptions = consequent.reduce(
-    (a, e, i) => (e ? a.concat(i) : a),
+    (a, e, i) => (e[Object.keys(e)[0]] ? a.concat(i) : a),
     []
   );
 
@@ -57,10 +59,16 @@ const PreviewPurposeIntetion = () => {
         <p>{intention}</p>
         <p>
           Esta unidad educativa se relaciona de manera antecedente con{' '}
-          {getTextCheckBox(predecessorOptions, prev)} y de manera
-          lateral con {getTextCheckBox(lateralOptions, same)} y de
-          manera consequente con{' '}
-          {getTextCheckBox(consequentOptions, next)}
+          {getTextCheckBox(predecessorOptions, prev)}{' '}
+          {lateralOptions.length > 0 &&
+            `y de manera
+          lateral con ${getTextCheckBox(lateralOptions, same)}`}{' '}
+          {consequentOptions.length > 0 &&
+            `y de
+          manera consequente con ${getTextCheckBox(
+            consequentOptions,
+            next
+          )}`}
         </p>
       </div>
       <div className="border-2 border-t-0 border-black  p-4">

@@ -23,7 +23,7 @@ const SelectFormInput = ({
           fontSize: '1rem',
           paddingTop: '2px',
         }}
-        className="px-6 gray-color mb-1.5 text-base truncate overflow-hidden"
+        className="px-6 gray-color mb-1 text-base truncate overflow-hidden"
       >
         {label}
       </div>

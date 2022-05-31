@@ -22,8 +22,72 @@ const ChipButton = styled.div`
 `;
 
 const RelatedUnits = () => {
-  const { relatedUnits } = useContext(SubjectContext);
-  const { next, prev, same } = relatedUnits;
+  const { relatedUnits, subject } = useContext(SubjectContext);
+  const [prev, setPrev] = useState([]);
+  const [next, setNext] = useState([]);
+  const [same, setSame] = useState([]);
+
+  const generateSelectedOptions = (arr, compare, ans) => {
+    arr.forEach(({ id, name }) => {
+      const indexOfPrev = compare.findIndex((a) => {
+        console.log(a.id, id);
+        return a.id === id;
+      });
+      if (indexOfPrev >= 0) {
+        ans.push({
+          id,
+          name,
+          value: true,
+        });
+      } else {
+        ans.push({
+          id,
+          name,
+          value: false,
+        });
+      }
+    });
+  };
+
+  useEffect(() => {
+    if (
+      relatedUnits &&
+      relatedUnits.prev &&
+      relatedUnits.same &&
+      relatedUnits.next &&
+      subject
+    ) {
+      const {
+        next: nextSubject,
+        prev: prevSubject,
+        same: sameSubject,
+      } = subject;
+      console.log(prevSubject, relatedUnits.prev);
+      const finalPrev = [];
+      const finalSame = [];
+      const finalNext = [];
+      generateSelectedOptions(
+        relatedUnits.prev,
+        prevSubject,
+        finalPrev
+      );
+      generateSelectedOptions(
+        relatedUnits.same,
+        sameSubject,
+        finalSame
+      );
+      generateSelectedOptions(
+        relatedUnits.next,
+        nextSubject,
+        finalNext
+      );
+
+      setPrev(finalPrev);
+      setSame(finalSame);
+      setNext(finalNext);
+    }
+  }, [relatedUnits, subject]);
+
   return (
     <>
       <div className="p-2 border-2 rounded my-3">
@@ -33,16 +97,17 @@ const RelatedUnits = () => {
         </p>
         <div>
           <ul className="flex flex-wrap">
-            {prev?.map(({ id, name }, index) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <li key={`prev${id}${name}${index}`}>
-                <CheckboxFormInput
-                  name={`predecessor.${index}`}
-                  value={name}
-                  label={name}
-                />
-              </li>
-            ))}
+            {prev &&
+              prev?.map(({ id, name, value }, index) => (
+                // eslint-disable-next-line react/no-array-index-key
+                <li key={`prev${id}${name}${index}`}>
+                  <CheckboxFormInput
+                    name={`prev.${index}.${name}_${id}`}
+                    defaultValue={value}
+                    label={name}
+                  />
+                </li>
+              ))}
           </ul>
         </div>
       </div>
@@ -53,16 +118,17 @@ const RelatedUnits = () => {
         </p>
         <div>
           <ul className="flex flex-wrap">
-            {same?.map(({ id, name }, index) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <li key={`same${id}${name}${index}`}>
-                <CheckboxFormInput
-                  name={`lateral.${index}`}
-                  value={name}
-                  label={name}
-                />
-              </li>
-            ))}
+            {same &&
+              same?.map(({ id, name, value }, index) => (
+                // eslint-disable-next-line react/no-array-index-key
+                <li key={`same${id}${name}${index}`}>
+                  <CheckboxFormInput
+                    name={`same.${index}.${name}_${id}`}
+                    defaultValue={value}
+                    label={name}
+                  />
+                </li>
+              ))}
           </ul>
         </div>
       </div>
@@ -73,16 +139,18 @@ const RelatedUnits = () => {
         </p>
         <div>
           <ul className="flex flex-wrap">
-            {next?.map(({ id, name }, index) => (
-              // eslint-disable-next-line react/no-array-index-key
-              <li key={`next${id}${name}${index}`}>
-                <CheckboxFormInput
-                  name={`consequent.${index}`}
-                  value={name}
-                  label={name}
-                />
-              </li>
-            ))}
+            {next &&
+              next?.map(({ id, name, value }, index) => (
+                // eslint-disable-next-line react/no-array-index-key
+                <li key={`next${id}${name}${index}`}>
+                  {console.log('value next: ', value)}
+                  <CheckboxFormInput
+                    name={`next.${index}.${name}_${id}`}
+                    defaultValue={value}
+                    label={name}
+                  />
+                </li>
+              ))}
           </ul>
         </div>
       </div>

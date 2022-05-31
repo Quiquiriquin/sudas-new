@@ -64,10 +64,17 @@ const SubjectDetail = () => {
   const {
     isLoading: isLoadingRelatedUnits,
     data: relatedUnitsResponse,
-  } = useQuery(['relatedUnits', id], GET_RELATED_UNITS);
+  } = useQuery(
+    ['relatedUnits', id, subject.academicPlanId],
+    GET_RELATED_UNITS,
+    {
+      enabled: !!subject,
+    }
+  );
 
   useEffect(() => {
     if (subjectResponse) {
+      console.log('EL SUBJECT: ', subjectResponse.data);
       setSubject(subjectResponse.data);
     }
   }, [subjectResponse]);
