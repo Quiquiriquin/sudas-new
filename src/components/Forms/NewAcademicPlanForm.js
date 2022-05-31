@@ -6,11 +6,12 @@ import Button from '../Shared/Buttons/Button';
 import Input from '../Shared/Inputs/Input';
 import Select from '../Shared/Inputs/Select';
 
-const NewAcademicPlanForm = () => {
+const NewAcademicPlanForm = ({ submit }) => {
   const {
     control,
     watch,
     register,
+    getValues,
     formState: { isValid, isSubmitting },
   } = useFormContext();
   const [step, setStep] = useState(0);
@@ -101,7 +102,9 @@ const NewAcademicPlanForm = () => {
   }, [watch('semesters')]);
 
   const handleKeyPress = (e) => {
-    if (e.key === 'Enter' && e.shiftKey) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (e.key === 'ArrowDown' && e.shiftKey) {
       append({
         name: '',
         semester: fields[fields.length - 1].semester,
@@ -172,8 +175,8 @@ const NewAcademicPlanForm = () => {
 
             <tr>
               <td style={{ padding: '4px 12px', color: '#b3b3b3' }}>
-                Presiona Shift + Enter para agregar una nueva unidad
-                de aprendizaje
+                Presiona Shift + Flecha hacia abajo para agregar una
+                nueva unidad de aprendizaje
               </td>
             </tr>
           </tbody>
@@ -193,6 +196,7 @@ const NewAcademicPlanForm = () => {
         )}
         {step === 1 && (
           <Button
+            onClick={() => submit(getValues())}
             disabled={!isValid || isSubmitting}
             style={{ maxWidth: '130px' }}
             type="submit"

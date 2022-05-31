@@ -46,8 +46,8 @@ export default NiceModal.create(() => {
       >
         Nuevo plan académico
       </div>
-      <FormWrapper onSubmit={submitForm}>
-        <NewAcademicPlanForm />
+      <FormWrapper>
+        <NewAcademicPlanForm submit={submitForm} />
       </FormWrapper>
     </ModalGeneric>
   );
