@@ -50,6 +50,7 @@ const SubjectProvider = ({ children }) => {
 
   useEffect(() => {
     if (subject) {
+      console.log('EL SUBJECT: ', subject);
       // eslint-disable-next-line no-shadow
       const { strategy } = subject;
       if (strategy) {
@@ -88,6 +89,31 @@ const SubjectProvider = ({ children }) => {
       }
     }
   }, [competencesData]);
+
+  useEffect(() => {
+    if (units && competencies) {
+      units.forEach(({ topics }, index) => {
+        if (topics) {
+          topics.forEach(({ P }) => {
+            const auxP = parseInt(P, 10);
+            let auxC = 0;
+            // eslint-disable-next-line no-shadow
+            units[index].practices.forEach(({ hours }) => {
+              auxC += parseInt(hours, 10);
+            });
+            console.log('auxC', auxC);
+            setPracticeHour((prev) => {
+              const aux = [...prev];
+              aux[index] = auxP - auxC;
+              return aux;
+            });
+          });
+        }
+      });
+    }
+  }, [units]);
+
+  console.log(units);
 
   return (
     <Provider

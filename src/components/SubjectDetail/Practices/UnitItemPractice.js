@@ -34,6 +34,8 @@ const UnitItemPractices = ({ unitName, unitIndex }) => {
     // setTematicUnits([...tematicUnits, unit]);
   };
 
+  console.log('HORAS: ', practiceHour);
+
   return (
     <li>
       <div className="unit-item flex justify-between">
@@ -46,7 +48,14 @@ const UnitItemPractices = ({ unitName, unitIndex }) => {
           </div>
           <div
             className="icon-btn flex items-center justify-center"
-            onClick={openModal}
+            style={{
+              ...(practiceHour[unitIndex - 1] === 0
+                ? { opacity: 0.5, cursor: 'not-allowed' }
+                : { cursor: 'pointer' }),
+            }}
+            onClick={
+              practiceHour[unitIndex - 1] === 0 ? () => {} : openModal
+            }
           >
             <box-icon type="solid" name="file-plus" />
             <p>Agregar Práctica</p>
