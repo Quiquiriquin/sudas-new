@@ -36,3 +36,41 @@ export const REMOVE_ACTIVITY = async (id, data) => {
     throw new Error(e);
   }
 };
+
+export const DELETE_ACTIVITY = async (id) => {
+  try {
+    return apiClient({
+      method: 'delete',
+      url: `/activities/${id}`,
+    });
+  } catch (e) {
+    console.log(e);
+    throw new Error(e);
+  }
+};
+
+export const CREATE_ACTIVITY = async (data) => {
+  try {
+    return apiClient({
+      method: 'post',
+      url: `/activities`,
+      data,
+    });
+  } catch (e) {
+    console.log(e);
+    throw new Error(e);
+  }
+};
+
+export const UPDATE_ACTIVITY = async (data) => {
+  try {
+    return apiClient({
+      method: 'patch',
+      url: `/activities`,
+      data,
+    });
+  } catch (e) {
+    console.log(e);
+    throw new Error(e);
+  }
+};

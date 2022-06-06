@@ -34,3 +34,15 @@ export const DELETE_VERB = async (data) => {
     return e;
   }
 };
+
+export const UPDATE_VERB = async (data) => {
+  try {
+    return await apiClient({
+      url: `/verb`,
+      method: 'patch',
+      data,
+    });
+  } catch (e) {
+    return e;
+  }
+};

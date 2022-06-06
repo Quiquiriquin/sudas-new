@@ -1,0 +1,12 @@
+.activities-container {
+  background: #FFFFFF;
+  height: 100%;
+  border-radius: 5px;
+  max-height: calc(100vh - 164px);
+  overflow: auto;
+
+  .header {
+    background: #FFFFFF;
+  }
+
+}

@@ -16,6 +16,8 @@ import SubjectDetail from '../components/Views/SubjetcDetail/SubjectDetail';
 import { SubjectProvider } from '../context/SubjectContext';
 import { GeneralContext } from '../context/GeneralContext';
 import Verbs from '../components/Views/Verbs/Verbs';
+import Activities from '../components/Views/Activities/Activities';
+import Strategies from '../components/Views/Strategies/Strategies';
 
 const DashboardRouter = () => {
   const { user } = useContext(GeneralContext);
@@ -62,6 +64,8 @@ const DashboardRouter = () => {
             component={Subjects}
           />
           <Route path="/verbos" exact component={Verbs} />
+          <Route path="/actividades" exact component={Activities} />
+          <Route path="/estrategias" exact component={Strategies} />
           <Route path="/detalle-unidad-aprendizaje/:id" exact>
             <SubjectProvider>
               <SubjectDetail />
