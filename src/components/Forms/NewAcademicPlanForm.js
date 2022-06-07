@@ -153,6 +153,7 @@ const NewAcademicPlanForm = ({ information = null, submit }) => {
           append({
             name: subjectName,
             semester,
+            id,
           });
         });
       }

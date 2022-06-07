@@ -23,6 +23,7 @@ import { SubjectContext } from '../../../context/SubjectContext';
 import 'boxicons';
 import './SubjectDetail.scss';
 import BibliographyModal from '../../Shared/Modals/BibliographyModal';
+import Button from '../../Shared/Buttons/Button';
 
 const PanelContent = styled.div`
   background: #fff;
@@ -116,10 +117,24 @@ const SubjectDetail = () => {
 
   return (
     <div className="flex flex-col border-white flex-1 bg-platinum overflow-hidden">
-      <div className="bg-white rounded px-6 py-4 shadow flex-initial">
+      <div className="bg-white rounded px-6 py-4 shadow flex justify-between flex-initial">
         <h1 className="text-lg font-bold">
           {subject.name} | Semestre {subject.semester}
         </h1>
+        <a
+          href={`https://main--mellifluous-sopapillas-f037f0.netlify.app/documento/${subject?.id}`}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Button
+            style={{ maxWidth: 'max-content' }}
+            type="button"
+            primary
+            small
+          >
+            Visualizar PDF
+          </Button>
+        </a>
       </div>
 
       <Tabs className="pb-10">
