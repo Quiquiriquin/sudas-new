@@ -6,12 +6,13 @@ import Button from '../Shared/Buttons/Button';
 import Input from '../Shared/Inputs/Input';
 import Select from '../Shared/Inputs/Select';
 
-const NewAcademicPlanForm = ({ submit }) => {
+const NewAcademicPlanForm = ({ information = null, submit }) => {
   const {
     control,
     watch,
     register,
     getValues,
+    setValue,
     formState: { isValid, isSubmitting },
   } = useFormContext();
   const [step, setStep] = useState(0);
@@ -23,10 +24,12 @@ const NewAcademicPlanForm = ({ submit }) => {
     });
 
   useEffect(() => {
-    append({
-      name: '',
-      semester: 1,
-    });
+    if (!information) {
+      append({
+        name: '',
+        semester: 1,
+      });
+    }
   }, []);
 
   const inputs = [
@@ -86,6 +89,12 @@ const NewAcademicPlanForm = ({ submit }) => {
     },
   ];
 
+  const optionsKeys = {
+    FACE2FACE: 'Escolarizada',
+    ONLINE: 'En línea',
+    MIX: 'Mixto',
+  };
+
   useEffect(() => {
     if (watch('semesters')) {
       const semesters = parseInt(watch('semesters'), 10);
@@ -111,6 +120,44 @@ const NewAcademicPlanForm = ({ submit }) => {
       });
     }
   };
+
+  useEffect(() => {
+    if (information) {
+      const {
+        name,
+        shortName,
+        period,
+        modality,
+        semesters,
+        subjects,
+      } = information;
+      setValue('name', name);
+      setValue('shortName', shortName);
+      setValue('period', period);
+      setValue(
+        'modality',
+        modality
+          ? { value: modality, label: optionsKeys[modality] }
+          : null
+      );
+      setValue('semesters', semesters);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (step === 1) {
+      const { subjects } = information;
+      if (subjects && subjects.length > 0) {
+        subjects.forEach(({ id, name: subjectName, semester }) => {
+          console.log('Apendeando');
+          append({
+            name: subjectName,
+            semester,
+          });
+        });
+      }
+    }
+  }, [step]);
 
   return (
     <div>
@@ -148,7 +195,7 @@ const NewAcademicPlanForm = ({ submit }) => {
           </thead>
           <tbody>
             {fields.map(({ name, id, semester }, index) => (
-              <tr>
+              <tr key={`${id}`}>
                 <td className="body">
                   <Input
                     type="borderless"
@@ -202,7 +249,7 @@ const NewAcademicPlanForm = ({ submit }) => {
             type="submit"
             primary
           >
-            Crear
+            {information ? 'Guardar' : 'Crear'}
           </Button>
         )}
       </div>

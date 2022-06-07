@@ -17,7 +17,7 @@ const PurposeForm = ({
 }) => {
   const { setValue } = useFormContext();
   const { verbs, connectors } = useContext(SubjectContext);
-  console.log(verbs, verbId, verbs[verbId - 1]);
+  console.log(verbs, verbId, verbs[verbId - 1], verbId);
   useEffect(() => {
     setValue('object', objectText);
     setValue('quality', qualityText);

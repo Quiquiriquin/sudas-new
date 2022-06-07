@@ -53,3 +53,16 @@ export const CREATE_ACADEMIC_PLAN = async (data) => {
     return e;
   }
 };
+
+export const UPDATE_ACADEMIC_PLAN = async ({ id, ...data }) => {
+  try {
+    return await apiClient({
+      method: 'patch',
+      url: `/academic-plan/${id}`,
+      data,
+    });
+  } catch (e) {
+    console.log(e);
+    return e;
+  }
+};

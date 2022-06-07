@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { Card } from 'antd';
 import styled from 'styled-components';
 import { nanoid } from 'nanoid';
-import { useModal } from '@ebay/nice-modal-react';
+import NiceModal, { useModal } from '@ebay/nice-modal-react';
 import { GeneralContext } from '../../../context/GeneralContext';
 import {
   GET_ACADEMIC_PLAN,
@@ -15,6 +15,7 @@ import SubjectCard from '../../Shared/SubjectCard/SubjectCard';
 import './AcademicPlanDetail.scss';
 import AddButton from '../../Shared/Buttons/AddButton';
 import NewSubjectModal from '../../Shared/Modals/NewSubjectModal';
+import NewAcademicPlan from '../../Shared/Modals/NewAcademicPlan';
 
 const CardContainer = styled.div`
   border-radius: 5px;
@@ -45,7 +46,7 @@ const AcademicPlanDetail = () => {
     if (academicPlanSubjects && academicPlanSubjects.data) {
       setSubjects(academicPlanSubjects.data);
     }
-  }, [academicPlanData, academicPlanSubjects]);
+  }, [academicPlanSubjects]);
 
   const openSubjectModal = () => {
     modal
@@ -62,12 +63,31 @@ const AcademicPlanDetail = () => {
       });
   };
 
+  const openEditModal = () => {
+    console.log('Editando');
+    console.log(academicPlanData);
+    const { data } = academicPlanData;
+    NiceModal.show(NewAcademicPlan, {
+      edit: true,
+      information: {
+        ...data,
+        subjects: data?.academicPlanSubjects,
+      },
+      planId: id,
+    }).then((res) => {
+      queryClient.invalidateQueries(['academic-plan', 'detail', id]);
+    });
+  };
+
   return (
     <div className="academic-plan-detail flex flex-col border-white flex-1 bg-platinum overflow-hidden">
-      <div className="bg-white rounded px-6 py-4 shadow flex-initial">
+      <div className="bg-white rounded px-6 py-4 shadow flex flex-initial justify-between items-center">
         <h1 className="text-lg">
           Plan académico <strong>{academicPlanName}</strong>
         </h1>
+        <div className="cursor-pointer" onClick={openEditModal}>
+          <box-icon type="solid" name="edit-alt" />
+        </div>
       </div>
       <div
         onClick={openSubjectModal}

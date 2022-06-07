@@ -98,7 +98,7 @@ const SubjectProvider = ({ children }) => {
             const auxP = parseInt(P, 10);
             let auxC = 0;
             // eslint-disable-next-line no-shadow
-            units[index].practices.forEach(({ hours }) => {
+            units[index]?.practices?.forEach(({ hours }) => {
               auxC += parseInt(hours, 10);
             });
             console.log('auxC', auxC);

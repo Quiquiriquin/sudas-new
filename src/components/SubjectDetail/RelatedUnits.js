@@ -55,7 +55,10 @@ const RelatedUnits = () => {
       relatedUnits.prev &&
       relatedUnits.same &&
       relatedUnits.next &&
-      subject
+      subject &&
+      !prev.length > 0 &&
+      !next.length > 0 &&
+      !same.length > 0
     ) {
       const {
         next: nextSubject,
@@ -86,7 +89,7 @@ const RelatedUnits = () => {
       setSame(finalSame);
       setNext(finalNext);
     }
-  }, [relatedUnits, subject]);
+  }, [relatedUnits]);
 
   return (
     <>
