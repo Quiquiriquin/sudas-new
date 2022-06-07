@@ -73,7 +73,7 @@ const Activities = () => {
           queryKey="activities"
           sectionKey="actividad"
           columns={columns}
-          data={[...data, ...data]}
+          data={data}
           save={updateActivity}
           {...{
             ...form,

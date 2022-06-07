@@ -11,6 +11,18 @@ export const GET_BIBLIOGRAPHIES_NAMES = async () => {
   }
 };
 
+export const UPDATE_BIBLIOGRAPHY = async (data) => {
+  try {
+    return apiClient({
+      method: 'patch',
+      url: '/bibliography',
+      data,
+    });
+  } catch (e) {
+    throw new Error(e);
+  }
+};
+
 export const GET_AUTHORS = async () => {
   try {
     return apiClient({
@@ -27,6 +39,18 @@ export const GET_EDITORIALS = async () => {
     return apiClient({
       url: '/editorial',
       method: 'get',
+    });
+  } catch (e) {
+    throw new Error(e);
+  }
+};
+
+export const UPDATE_EDITORIAL = async (data) => {
+  try {
+    return apiClient({
+      url: '/editorial',
+      method: 'patch',
+      data,
     });
   } catch (e) {
     throw new Error(e);
@@ -62,6 +86,18 @@ export const DELETE_BIBLIOGRAPHY = async (id) => {
     return apiClient({
       method: 'delete',
       url: `/bibliography/${id}`,
+    });
+  } catch (e) {
+    throw new Error(e);
+  }
+};
+
+export const UPDATE_AUTHOR = async (data) => {
+  try {
+    return apiClient({
+      method: 'patch',
+      url: `/author`,
+      data,
     });
   } catch (e) {
     throw new Error(e);

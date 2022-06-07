@@ -1,0 +1,45 @@
+@import "src/assets/styles/colors";
+
+.bibliographies-container {
+  background: #FFFFFF;
+  height: 100%;
+  border-radius: 5px;
+  max-height: calc(100vh - 164px);
+  overflow: auto;
+
+  .header {
+    background: #FFFFFF;
+  }
+
+  .information-container {
+    height: calc(100% - 72px);
+    .tabs {
+      display: flex;
+      .tab {
+        padding: 7px 1rem 8px 1rem;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        &.selected {
+          background: $primary;
+          color: #FFFFFF;
+        }
+        label {
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    .tabs-content {
+      border: 1px solid $primary;
+      padding: 0 1rem 1rem 1rem ;
+      border-radius: 0 5px 5px 5px;
+      height: 100%;
+      overflow: auto;
+    }
+  }
+
+}

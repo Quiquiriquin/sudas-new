@@ -71,6 +71,29 @@ const Navbar = () => {
                   Unidades de aprendizaje
                 </span>
               </li>
+
+              <li>
+                <NavLink to="/actividades" activeClassName="active">
+                  <box-icon type="solid" name="notepad" />
+                  <span className="links_name">Actividades</span>
+                </NavLink>
+                <span className="tooltip">Actividades</span>
+              </li>
+              <li>
+                <NavLink to="/estrategias" activeClassName="active">
+                  <box-icon type="solid" name="network-chart" />
+                  <span className="links_name">Estrategias</span>
+                </NavLink>
+                <span className="tooltip">Estrategias</span>
+              </li>
+
+              <li>
+                <NavLink to="/bibliografias" activeClassName="active">
+                  <box-icon type="solid" name="book" />
+                  <span className="links_name">Bibliografías</span>
+                </NavLink>
+                <span className="tooltip">Bibliografías</span>
+              </li>
               <li>
                 <NavLink to="/verbos" activeClassName="active">
                   <box-icon name="message-square-dots" />

@@ -5,6 +5,7 @@ import { useQueryClient } from 'react-query';
 import Button from '../Buttons/Button';
 import Input from '../Inputs/Input';
 import './EditableTable.scss';
+import Select from '../Inputs/Select';
 
 const EditableTable = ({
   columns,
@@ -38,7 +39,10 @@ const EditableTable = ({
       Object.keys(newElement).forEach((key) => {
         const [, field, innerId] = key.split('-');
         if (parseInt(innerId, 10) === id) {
-          body[field] = newElement[key];
+          body[field] =
+            typeof newElement[key] === 'object'
+              ? newElement[key].value
+              : newElement[key];
         }
       });
       await saveMethod(body);
@@ -63,6 +67,13 @@ const EditableTable = ({
   };
 
   console.log(Object.keys(formState.dirtyFields));
+
+  const auxTypes = {
+    BASIC: 'Básica',
+    COMPLEMENTARY: 'Complementaria',
+    CYBER: 'Cibergrafía',
+    DIGITAL: 'Recurso digital',
+  };
 
   return (
     <table className="editable-table" {...getTableProps()}>
@@ -107,9 +118,7 @@ const EditableTable = ({
                   // Loop over the rows cells
                   row.cells.map((cell, index) => {
                     // Apply the cell pro
-                    console.log(row.cells);
                     const { row: innerRow } = cell;
-                    console.log(innerRow, cell);
                     if (cell.column.Header === 'Acciones') {
                       return (
                         <td>
@@ -149,6 +158,50 @@ const EditableTable = ({
                         </td>
                       );
                     }
+
+                    if (cell.column.Header === 'Tipo') {
+                      return (
+                        <td {...cell.getCellProps()}>
+                          <form {...form}>
+                            <Select
+                              id={`${sectionKey}-${innerRow.original.id}`}
+                              small
+                              type="borderless"
+                              defaultValue={{
+                                value:
+                                  innerRow.values[cell.column.id],
+                                label:
+                                  auxTypes[
+                                    innerRow.values[cell.column.id]
+                                  ],
+                              }}
+                              {...register(
+                                `${sectionKey}-${cell.column.id}-${innerRow.original.id}`
+                              )}
+                              options={[
+                                {
+                                  value: 'BASIC',
+                                  label: 'Básica',
+                                },
+                                {
+                                  value: 'COMPLEMENTARY',
+                                  label: 'Complementaria',
+                                },
+                                {
+                                  value: 'CYBER',
+                                  label: 'Cibergrafía',
+                                },
+                                {
+                                  value: 'DIGITAL',
+                                  label: 'Recurso digital',
+                                },
+                              ]}
+                            />
+                          </form>
+                        </td>
+                      );
+                    }
+
                     return (
                       <td {...cell.getCellProps()}>
                         <form {...form}>
