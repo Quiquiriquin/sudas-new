@@ -47,13 +47,16 @@ const TeacherSelector = ({
 
   const selectUser = (id) => {
     const auxAssigned = [...newMembers];
-    const index = auxAssigned.findIndex(
-      ({ id: teacherId }) => teacherId === id
-    );
-    if (index > -1) {
-      auxAssigned.splice(index, 1);
-    } else {
+    console.log(auxAssigned);
+    const index = auxAssigned.findIndex((teacherId) => {
+      console.log(teacherId === id, teacherId, id);
+      return teacherId === id;
+    });
+    console.log(index);
+    if (index === -1) {
       auxAssigned.push(id);
+    } else {
+      auxAssigned.splice(index, 1);
     }
     assignMember(auxAssigned);
   };
@@ -98,7 +101,9 @@ const TeacherSelector = ({
                 />
               ))}
           </div>
-          <Button primary>{updateTitle}</Button>
+          <Button onClick={updateSubject} primary>
+            {updateTitle}
+          </Button>
         </div>
       )}
     >

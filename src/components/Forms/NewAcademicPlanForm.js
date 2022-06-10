@@ -145,7 +145,7 @@ const NewAcademicPlanForm = ({ information = null, submit }) => {
   }, []);
 
   useEffect(() => {
-    if (step === 1) {
+    if (step === 1 && information) {
       const { subjects } = information;
       if (subjects && subjects.length > 0) {
         subjects.forEach(({ id, name: subjectName, semester }) => {

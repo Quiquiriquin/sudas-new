@@ -19,6 +19,8 @@ import Verbs from '../components/Views/Verbs/Verbs';
 import Activities from '../components/Views/Activities/Activities';
 import Strategies from '../components/Views/Strategies/Strategies';
 import Bibliographies from '../components/Views/Bibliographies/Bibliographies';
+import Connectors from '../components/Views/Connectors/Connectors';
+import Methods from '../components/Views/Methods/Methods';
 
 const DashboardRouter = () => {
   const { user } = useContext(GeneralContext);
@@ -67,6 +69,8 @@ const DashboardRouter = () => {
           <Route path="/verbos" exact component={Verbs} />
           <Route path="/actividades" exact component={Activities} />
           <Route path="/estrategias" exact component={Strategies} />
+          <Route path="/conectores" exact component={Connectors} />
+          <Route path="/metodos" exact component={Methods} />
           <Route
             path="/bibliografias"
             exact

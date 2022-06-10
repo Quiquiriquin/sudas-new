@@ -81,16 +81,13 @@ const NewSubjectForm = ({ academicPlanId }) => {
       rules: {
         required: 'Ingresa el no. de horas a la semana',
       },
-      dafaultValue: '0',
+      defaultValue: '0',
     },
     {
       label: 'Horas de práctica a la semana',
       name: 'practiceWeek',
       placeholder: '15',
-      dafaultValue: '0',
-      rules: {
-        required: 'Ingresa el no. de horas a la semana',
-      },
+      defaultValue: '0',
     },
     {
       label: 'Área de formación',
@@ -168,7 +165,7 @@ const NewSubjectForm = ({ academicPlanId }) => {
   }, [practiceWeek]);
 
   useEffect(() => {
-    if (practiceSemester && theorySemester) {
+    if (theorySemester) {
       const autonomousValue =
         autonomous && autonomous > 0 ? autonomous : 0;
       const autoNom =
@@ -180,14 +177,14 @@ const NewSubjectForm = ({ academicPlanId }) => {
       setValue('satca', satca);
       setValue(
         'tepic',
-        parseFloat(practiceWeek) * 2 + parseFloat(theoryWeek)
+        parseFloat(practiceWeek || 0) * 2 + parseFloat(theoryWeek)
       );
     }
     /* Horas de teoría - Semestre 108 texpic - Practicas 1 x hora */
   }, [practiceSemester, theorySemester]);
 
   useEffect(() => {
-    if (practiceSemester && theorySemester) {
+    if (theorySemester) {
       const total =
         parseFloat(theorySemester) + parseFloat(practiceSemester);
       setValue('totalHours', total);
@@ -249,9 +246,9 @@ const NewSubjectForm = ({ academicPlanId }) => {
         </div>
       </div>
       <div className="flex gap-4">
-        <div className="w-full">
-          <FormInput {...inputs[10]} />
-        </div>
+        {/* <div className="w-full"> */}
+        {/*  <FormInput {...inputs[10]} /> */}
+        {/* </div> */}
         <div className="w-full">
           <FormInput {...inputs[11]} />
         </div>

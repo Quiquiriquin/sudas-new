@@ -6,18 +6,16 @@ import UserHeader from '../../Shared/UserHeader/UserHeader';
 import Button from '../../Shared/Buttons/Button';
 import TableSectionHeader from '../../Shared/TableSectionHeader/TableSectionHeader';
 import EditableTable from '../../Shared/EditableTable/EditableTable';
-import {
-  CREATE_ACTIVITY,
-  DELETE_ACTIVITY,
-  LIST_ACTIVITIES,
-  UPDATE_ACTIVITY,
-} from '../../../helpers/ActivityEndpoint';
-import { GET_VERBS } from '../../../helpers/VerbsEndpoints';
-import './Activities.scss';
+import './Methods.scss';
 import Input from '../../Shared/Inputs/Input';
-import { CREATE_STRATEGY } from '../../../helpers/StrategiesEndpoints';
+import {
+  CREATE_METHOD,
+  DELETE_METHOD,
+  GET_METHODS,
+  UPDATE_METHOD,
+} from '../../../helpers/MethodsEndpoints';
 
-const Activities = () => {
+const Methods = () => {
   const queryClient = useQueryClient();
   const {
     register,
@@ -27,26 +25,23 @@ const Activities = () => {
     unregister,
     ...form
   } = useForm();
-  const { mutateAsync: updateActivity } = useMutation((info) =>
-    UPDATE_ACTIVITY(info)
+  const { mutateAsync: updateMethod } = useMutation((info) =>
+    UPDATE_METHOD(info)
   );
-  const { data: dataService } = useQuery(
-    ['activities'],
-    LIST_ACTIVITIES
-  );
+  const { data: dataService } = useQuery(['methods'], GET_METHODS);
   const [formStatus, setFormStatus] = useState({
-    title: '',
+    label: '',
     description: '',
   });
-  const [newActivity, setNewActivity] = useState(false);
+  const [newMethod, setNewMethod] = useState(false);
   const [data, setData] = useState([]);
   const [columns] = useState([
     {
-      Header: 'Actividad',
-      accessor: 'title',
+      Header: 'Método',
+      accessor: 'label',
     },
     {
-      Header: 'Producto esperado',
+      Header: 'Descripción',
       accessor: 'description',
     },
     {
@@ -58,10 +53,10 @@ const Activities = () => {
   useEffect(() => {
     if (dataService) {
       const { data: verbs } = dataService;
-      const aux = verbs.map(({ id, description, title }) => ({
+      const aux = verbs.map(({ id, description, label }) => ({
         id,
         description,
-        title,
+        label,
         actions: 'EDIT, SAVE',
       }));
       console.log(aux);
@@ -69,21 +64,13 @@ const Activities = () => {
     }
   }, [dataService]);
 
-  const onChange = async (e) => {
-    const { value } = e.target;
-    setFormStatus((prev) => ({
-      ...prev,
-      [e.target.id]: value,
-    }));
-  };
-
-  const saveActivity = async () => {
+  const saveStrategy = async () => {
     try {
-      await CREATE_ACTIVITY(formStatus);
-      toast.success('Estrategia creada correctamente');
-      queryClient.invalidateQueries(['activities']);
+      await CREATE_METHOD(formStatus);
+      toast.success('Méotod creado correctamente');
+      queryClient.invalidateQueries(['methods']);
       setFormStatus({
-        title: '',
+        label: '',
         description: '',
       });
       // eslint-disable-next-line no-shadow
@@ -93,30 +80,38 @@ const Activities = () => {
     }
   };
 
+  const onChange = async (e) => {
+    const { value } = e.target;
+    setFormStatus((prev) => ({
+      ...prev,
+      [e.target.id]: value,
+    }));
+  };
+
   return (
     <div className="">
       <UserHeader />
       <div className="px-6 py-4 activities-container mt-6">
         <TableSectionHeader
-          title="Actividades"
-          label="Agregar actividad"
-          newElement={newActivity}
-          setNewElement={setNewActivity}
+          title="Métodos"
+          label="Agregar método"
+          newElement={newMethod}
+          setNewElement={setNewMethod}
         />
-        {newActivity && (
+        {newMethod && (
           <div className="new-verb flex justify-between items-center">
             <Input
-              placeholder="Actividad"
+              placeholder="Método"
               type="borderless"
               small
-              value={formStatus?.title}
-              id="title"
+              value={formStatus?.label}
+              id="label"
               onChange={onChange}
               className="first-input"
             />
             <Input
               id="description"
-              placeholder="Producto esperado"
+              placeholder="Descripción"
               type="borderless"
               small
               value={formStatus?.description}
@@ -126,19 +121,19 @@ const Activities = () => {
               style={{ maxWidth: 'max-content' }}
               secondary
               xs
-              onClick={saveActivity}
+              onClick={saveStrategy}
             >
               Crear
             </Button>
           </div>
         )}
         <EditableTable
-          queryKey="activities"
-          sectionKey="actividad"
+          queryKey="methods"
+          sectionKey="metodos"
           columns={columns}
           data={data}
-          deleteMethod={DELETE_ACTIVITY}
-          save={updateActivity}
+          save={updateMethod}
+          deleteMethod={DELETE_METHOD}
           {...{
             ...form,
             register,
@@ -153,4 +148,4 @@ const Activities = () => {
   );
 };
 
-export default Activities;
+export default Methods;

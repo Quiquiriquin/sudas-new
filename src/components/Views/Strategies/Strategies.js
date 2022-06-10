@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useMutation, useQuery } from 'react-query';
+import { useMutation, useQuery, useQueryClient } from 'react-query';
+import { toast } from 'react-toastify';
 import UserHeader from '../../Shared/UserHeader/UserHeader';
 import Button from '../../Shared/Buttons/Button';
 import TableSectionHeader from '../../Shared/TableSectionHeader/TableSectionHeader';
@@ -11,9 +12,16 @@ import {
 } from '../../../helpers/ActivityEndpoint';
 import { GET_VERBS } from '../../../helpers/VerbsEndpoints';
 import './Strategies.scss';
-import { GET_STRATEGIES } from '../../../helpers/StrategiesEndpoints';
+import {
+  CREATE_STRATEGY,
+  DELETE_STRATEGY,
+  GET_STRATEGIES,
+  UPDATE_STRATEGY,
+} from '../../../helpers/StrategiesEndpoints';
+import Input from '../../Shared/Inputs/Input';
 
 const Strategies = () => {
+  const queryClient = useQueryClient();
   const {
     register,
     watch,
@@ -23,13 +31,17 @@ const Strategies = () => {
     ...form
   } = useForm();
   const { mutateAsync: updateActivity } = useMutation((info) =>
-    UPDATE_ACTIVITY(info)
+    UPDATE_STRATEGY(info)
   );
   const { data: dataService } = useQuery(
     ['strategies'],
     GET_STRATEGIES
   );
-  const [newActivity, setNewActivity] = useState(false);
+  const [formStatus, setFormStatus] = useState({
+    label: '',
+    description: '',
+  });
+  const [newStrategy, setNewStrategy] = useState(false);
   const [data, setData] = useState([]);
   const [columns] = useState([
     {
@@ -60,6 +72,40 @@ const Strategies = () => {
     }
   }, [dataService]);
 
+  const saveStrategy = async () => {
+    try {
+      await CREATE_STRATEGY(formStatus);
+      toast.success('Estrategia creada correctamente');
+      queryClient.invalidateQueries(['strategies']);
+      setFormStatus({
+        label: '',
+        description: '',
+      });
+      // eslint-disable-next-line no-shadow
+    } catch (e) {
+      console.log(e);
+      toast.error('Ocurrió un error al crear la estrategia');
+    }
+  };
+
+  const onChange = async (e) => {
+    const { value } = e.target;
+    setFormStatus((prev) => ({
+      ...prev,
+      [e.target.id]: value,
+    }));
+  };
+
+  const deleteStrategy = async (id) => {
+    try {
+      await DELETE_STRATEGY(id);
+      toast.success('Estrategia eliminada correctamente');
+      queryClient.invalidateQueries(['strategies']);
+    } catch (e) {
+      toast.error('Ocurrió un error al crear la estrategia');
+    }
+  };
+
   return (
     <div className="">
       <UserHeader />
@@ -67,15 +113,45 @@ const Strategies = () => {
         <TableSectionHeader
           title="Estrategias"
           label="Agregar estrategia"
-          newElement={newActivity}
-          setNewElement={setNewActivity}
+          newElement={newStrategy}
+          setNewElement={setNewStrategy}
         />
+        {newStrategy && (
+          <div className="new-verb flex justify-between items-center">
+            <Input
+              placeholder="Estrategia"
+              type="borderless"
+              small
+              value={formStatus?.label}
+              id="label"
+              onChange={onChange}
+              className="first-input"
+            />
+            <Input
+              id="description"
+              placeholder="Producto esperado"
+              type="borderless"
+              small
+              value={formStatus?.description}
+              onChange={onChange}
+            />
+            <Button
+              style={{ maxWidth: 'max-content' }}
+              secondary
+              xs
+              onClick={saveStrategy}
+            >
+              Crear
+            </Button>
+          </div>
+        )}
         <EditableTable
           queryKey="strategies"
           sectionKey="strategias"
           columns={columns}
           data={data}
           save={updateActivity}
+          deleteMethod={DELETE_STRATEGY}
           {...{
             ...form,
             register,

@@ -1,23 +1,21 @@
-import FormWrapper from '../components/Forms/FormWrapper';
 import apiClient from './BaseClient';
 
-export const GET_METHODS = async () => {
+export const GET_CONNECTORS = async () => {
   try {
-    return await apiClient({
+    return apiClient({
       method: 'get',
-      url: `/methods`,
+      url: '/connector',
     });
   } catch (e) {
-    console.log(e);
-    return e;
+    throw new Error(e);
   }
 };
 
-export const SET_METHOD = async (id, data) => {
+export const SET_CONNECTOR = async (id, data) => {
   try {
     return apiClient({
       method: 'post',
-      url: `/methods/unit/${id}`,
+      url: `/connector/unit/${id}`,
       data,
     });
   } catch (e) {
@@ -26,11 +24,11 @@ export const SET_METHOD = async (id, data) => {
   }
 };
 
-export const REMOVE_METHOD = async (id, data) => {
+export const REMOVE_CONNECTOR = async (id, data) => {
   try {
     return apiClient({
       method: 'post',
-      url: `/methods/unit/remove/${id}`,
+      url: `/connector/unit/remove/${id}`,
       data,
     });
   } catch (e) {
@@ -39,11 +37,11 @@ export const REMOVE_METHOD = async (id, data) => {
   }
 };
 
-export const DELETE_METHOD = async (id) => {
+export const DELETE_CONNECTOR = async (id) => {
   try {
     return apiClient({
       method: 'delete',
-      url: `/methods/${id}`,
+      url: `/connector/${id}`,
     });
   } catch (e) {
     console.log(e);
@@ -51,11 +49,11 @@ export const DELETE_METHOD = async (id) => {
   }
 };
 
-export const CREATE_METHOD = async (data) => {
+export const CREATE_CONNECTOR = async (data) => {
   try {
     return apiClient({
       method: 'post',
-      url: `/methods`,
+      url: `/connector`,
       data,
     });
   } catch (e) {
@@ -64,11 +62,11 @@ export const CREATE_METHOD = async (data) => {
   }
 };
 
-export const UPDATE_METHOD = async (data) => {
+export const UPDATE_CONNECTOR = async (data) => {
   try {
     return apiClient({
       method: 'patch',
-      url: `/methods`,
+      url: `/connector`,
       data,
     });
   } catch (e) {

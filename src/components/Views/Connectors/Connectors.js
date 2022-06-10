@@ -4,7 +4,7 @@ import React, {
   useRef,
   useState,
 } from 'react';
-import './Verbs.scss';
+import './Connectors.scss';
 import { useTable } from 'react-table';
 import { toast } from 'react-toastify';
 import { useForm } from 'react-hook-form';
@@ -23,86 +23,68 @@ import {
 } from '../../../helpers/VerbsEndpoints';
 import EditableTable from '../../Shared/EditableTable/EditableTable';
 import UserHeader from '../../Shared/UserHeader/UserHeader';
+import {
+  CREATE_CONNECTOR,
+  DELETE_CONNECTOR,
+  GET_CONNECTORS,
+  UPDATE_CONNECTOR,
+} from '../../../helpers/ConnectorsEndpoints';
 
-const Verbs = () => {
+const Connectors = () => {
   const queryClient = useQueryClient();
-  const {
-    register,
-    watch,
-    getValues,
-    formState,
-    unregister,
-    ...form
-  } = useForm();
+  const { register, watch, getValues, formState, ...form } =
+    useForm();
   const { user, dispatch } = useContext(GeneralContext);
-  const { data: dataService } = useQuery(['verbs'], GET_VERBS);
-  const { mutateAsync: createVerb } = useMutation((body) =>
-    CREATE_VERB(body)
+  const { data: dataService } = useQuery(
+    ['connectors'],
+    GET_CONNECTORS
   );
-  const { mutateAsync: updateVerb } = useMutation((body) =>
-    UPDATE_VERB(body)
+  const { mutateAsync: createConnector } = useMutation((body) =>
+    CREATE_CONNECTOR(body)
+  );
+  const { mutateAsync: updateConnector } = useMutation((body) =>
+    UPDATE_CONNECTOR(body)
   );
   const { mutateAsync: deleteMethod } = useMutation((body) =>
-    DELETE_VERB(body)
+    DELETE_CONNECTOR(body)
   );
 
   const [data, setData] = useState([]);
-  const [newVerb, setNewVerb] = useState(false);
+  const [newConnector, setNewConnector] = useState(false);
   const [columns] = useState([
     {
-      Header: 'Verbo',
+      Header: 'Conector',
       accessor: 'description',
-    },
-    {
-      Header: 'Nivel',
-      accessor: 'level',
     },
     {
       Header: 'Acciones',
       accessor: 'actions',
     },
   ]);
-  // const save = async (id) => {
-  //   try {
-  //     const values = getValues();
-  //     const newVerbToSave = values[`verbo-${id}`];
-  //     console.log(values);
-  //     console.log(newVerbToSave);
-  //     const body = {
-  //       id,
-  //       description: newVerbToSave,
-  //     };
-  //     await updateVerb(body);
-  //     toast.success('Cambios guardados correctamente');
-  //   } catch (e) {
-  //     console.log(e);
-  //     toast.error('Ocurrió un error al intentar guardar los cambios');
-  //   }
-  // };
 
   useEffect(() => {
     if (dataService) {
       const { data: verbs } = dataService;
-      const aux = verbs.map(({ id, description, level }) => ({
+      const aux = verbs.map(({ id, description }) => ({
         id,
         description,
-        level,
         actions: 'EDIT, SAVE',
       }));
       setData(aux);
     }
   }, [dataService]);
 
-  const toggleNew = () => setNewVerb((prev) => !prev);
+  const toggleNew = () => setNewConnector((prev) => !prev);
   const newVerbRef = useRef();
 
   const saveNewVerb = async () => {
     try {
       const description = newVerbRef.current.value;
-      const ans = await createVerb({ description });
+      const ans = await createConnector({ description });
       console.log(ans);
-      queryClient.invalidateQueries(['verbs']);
+      queryClient.invalidateQueries(['connectors']);
       toast.success('Verbo creado correctamente');
+      newVerbRef.current.value = '';
     } catch (e) {
       console.log(e);
       toast.error('Ocurrió un error al crear el verbo');
@@ -126,20 +108,20 @@ const Verbs = () => {
       <UserHeader />
       <div className="px-6 py-4 verbs-container">
         <div className="flex justify-between items-center mb-4">
-          <p className="text-lg sofia-bold">Verbos</p>
+          <p className="text-lg sofia-bold">Conectores</p>
           <Button
             onClick={toggleNew}
             xs
             primary
             style={{ maxWidth: 'max-content' }}
           >
-            {newVerb ? 'Cerrar' : 'Agregar verbo'}
+            {newConnector ? 'Cerrar' : 'Agregar conector'}
           </Button>
         </div>
-        {newVerb && (
+        {newConnector && (
           <div className="new-verb flex justify-between items-center">
             <Input
-              placeholder="Escribe el nuevo verbo"
+              placeholder="Escribe el nuevo conector"
               type="borderless"
               small
               ref={newVerbRef}
@@ -165,13 +147,13 @@ const Verbs = () => {
           columns={columns}
           data={data}
           deleteMethod={deleteMethod}
-          save={updateVerb}
-          sectionKey="verbo"
-          queryKey="verbs"
+          save={updateConnector}
+          sectionKey="conector"
+          queryKey="connectors"
         />
       </div>
     </div>
   );
 };
 
-export default Verbs;
+export default Connectors;

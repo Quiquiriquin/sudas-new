@@ -88,6 +88,13 @@ const Navbar = () => {
               </li>
 
               <li>
+                <NavLink to="/metodos" activeClassName="active">
+                  <box-icon type="solid" name="book-reader" />
+                  <span className="links_name">Métodos</span>
+                </NavLink>
+                <span className="tooltip">Métodos</span>
+              </li>
+              <li>
                 <NavLink to="/bibliografias" activeClassName="active">
                   <box-icon type="solid" name="book" />
                   <span className="links_name">Bibliografías</span>
@@ -100,6 +107,13 @@ const Navbar = () => {
                   <span className="links_name">Verbos</span>
                 </NavLink>
                 <span className="tooltip">Verbos</span>
+              </li>
+              <li>
+                <NavLink to="/conectores" activeClassName="active">
+                  <box-icon name="transfer-alt" />
+                  <span className="links_name">Conectores</span>
+                </NavLink>
+                <span className="tooltip">Conectores</span>
               </li>
             </>
           )}

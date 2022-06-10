@@ -19,6 +19,7 @@ export default NiceModal.create(({ academicPlanId }) => {
           : { academicPlanId: data.academicPlanId.value }),
         trainingArea: data.trainingArea.value,
         type: data.type.value,
+        practiceWeek: data?.practiceWeek || 0,
       });
       console.log(ans);
       console.log(data);

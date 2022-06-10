@@ -171,11 +171,23 @@ const AcademicUnit = () => {
             ) : (
               subject?.Coordinator.map(
                 ({ name, firstSurname, id: userId }) => (
-                  <ProfilePic
-                    size={24}
-                    name={`${name} ${firstSurname}`}
-                    id={userId}
-                  />
+                  <div className="flex gap-2">
+                    <TeacherSelector
+                      subjectId={id}
+                      keyUpdate="coordinator"
+                      updateTitle="Actualizar coordinador"
+                      selectedUsers={subject?.Coordinator.map(
+                        // eslint-disable-next-line no-shadow
+                        ({ id: userId }) => userId
+                      )}
+                      title="Coordinador"
+                    />
+                    <ProfilePic
+                      size={24}
+                      name={`${name} ${firstSurname}`}
+                      id={userId}
+                    />
+                  </div>
                 )
               )
             )}

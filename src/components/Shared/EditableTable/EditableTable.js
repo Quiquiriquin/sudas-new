@@ -59,7 +59,7 @@ const EditableTable = ({
       form.unregister(`${sectionKey}-${id}`);
       await deleteMethod(id);
       queryClient.invalidateQueries([queryKey]);
-      toast.success('Verbo eliminado correctamente');
+      toast.success('Elemento eliminado correctamente');
     } catch (e) {
       console.log(e);
       toast.error('Ocurrió un error al eliminar el verbo');
