@@ -34,10 +34,16 @@ const SubjectProvider = ({ children }) => {
   ]);
   const [practiceHour, setPracticeHour] = useState([0, 0, 0, 0, 0]);
   const [hours, setHours] = useState({
-    totalHours: 108,
-    theorySemester: 54,
-    practiceSemester: 36,
-    autonomousLearning: 18,
+    totalHours: 0,
+    theorySemester: 0,
+    practiceSemester: 0,
+    autonomousLearning: 0,
+  });
+  const [tempHours, setTempHours] = useState({
+    totalHours: 0,
+    theorySemester: 0,
+    practiceSemester: 0,
+    autonomousLearning: 0,
   });
 
   const { data: competencesData } = useQuery(
@@ -60,6 +66,12 @@ const SubjectProvider = ({ children }) => {
           description: strategy.description,
         });
       }
+      setHours({
+        totalHours: subject.totalHours,
+        theorySemester: subject.theorySemester,
+        practiceSemester: subject.practiceSemester,
+        autonomousLearning: subject.autonomousLearning,
+      });
     }
   }, [subject]);
 
@@ -132,6 +144,8 @@ const SubjectProvider = ({ children }) => {
         setCompetencies,
         hours,
         setHours,
+        tempHours,
+        setTempHours,
         unitActivities,
         setUnitActivities,
         strategy,
