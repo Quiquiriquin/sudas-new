@@ -56,6 +56,14 @@ const Resources = () => {
       accessor: 'actions',
     },
   ]);
+
+  const auxTypes = {
+    BASIC: 'Básica',
+    COMPLEMENTARY: 'Complementaria',
+    CYBER: 'Cibergrafía',
+    DIGITAL: 'Recurso digital',
+  };
+
   useEffect(() => {
     if (dataService) {
       console.log(dataService);
@@ -64,9 +72,12 @@ const Resources = () => {
         id,
         title,
         year,
-        type,
+        type: {
+          value: type,
+          label: auxTypes[type],
+        },
         library,
-        actions: 'EDIT, SAVE',
+        actions: 'SAVE',
       }));
       console.log(aux);
       setData(aux);

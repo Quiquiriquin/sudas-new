@@ -1,4 +1,5 @@
 import React from 'react';
+import { Controller } from 'react-hook-form';
 import { useTable } from 'react-table';
 import { toast } from 'react-toastify';
 import { useQueryClient } from 'react-query';
@@ -36,9 +37,12 @@ const EditableTable = ({
       const body = {
         id,
       };
+      console.log(newElement);
       Object.keys(newElement).forEach((key) => {
         const [, field, innerId] = key.split('-');
+        console.log(field);
         if (parseInt(innerId, 10) === id) {
+          console.log(typeof newElement[key], newElement[key], key);
           body[field] =
             typeof newElement[key] === 'object'
               ? newElement[key].value
@@ -163,39 +167,40 @@ const EditableTable = ({
                       return (
                         <td {...cell.getCellProps()}>
                           <form {...form}>
-                            <Select
-                              id={`${sectionKey}-${innerRow.original.id}`}
-                              small
-                              type="borderless"
-                              defaultValue={{
-                                value:
-                                  innerRow.values[cell.column.id],
-                                label:
-                                  auxTypes[
-                                    innerRow.values[cell.column.id]
-                                  ],
-                              }}
-                              {...register(
-                                `${sectionKey}-${cell.column.id}-${innerRow.original.id}`
+                            <Controller
+                              control={form.control}
+                              defaultValue={
+                                innerRow.values[cell.column.id]
+                              }
+                              name={`${sectionKey}-${cell.column.id}-${innerRow.original.id}`}
+                              render={({
+                                field: { ref, ...field },
+                              }) => (
+                                <Select
+                                  id={`${sectionKey}-${innerRow.original.id}`}
+                                  small
+                                  type="borderless"
+                                  options={[
+                                    {
+                                      value: 'BASIC',
+                                      label: 'Básica',
+                                    },
+                                    {
+                                      value: 'COMPLEMENTARY',
+                                      label: 'Complementaria',
+                                    },
+                                    {
+                                      value: 'CYBER',
+                                      label: 'Cibergrafía',
+                                    },
+                                    {
+                                      value: 'DIGITAL',
+                                      label: 'Recurso digital',
+                                    },
+                                  ]}
+                                  {...field}
+                                />
                               )}
-                              options={[
-                                {
-                                  value: 'BASIC',
-                                  label: 'Básica',
-                                },
-                                {
-                                  value: 'COMPLEMENTARY',
-                                  label: 'Complementaria',
-                                },
-                                {
-                                  value: 'CYBER',
-                                  label: 'Cibergrafía',
-                                },
-                                {
-                                  value: 'DIGITAL',
-                                  label: 'Recurso digital',
-                                },
-                              ]}
                             />
                           </form>
                         </td>
