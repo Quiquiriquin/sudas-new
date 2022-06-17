@@ -19,6 +19,24 @@ const Contents = () => {
   useEffect(() => {
     if (unitsResponse) {
       setUnits(unitsResponse.data);
+      let tempTheorySemester = 0;
+      let tempPracticeSemester = 0;
+      let tempAutonomousLearning = 0;
+      unitsResponse.data?.forEach((unit) => {
+        unit?.topics?.forEach((topic) => {
+          tempTheorySemester += +topic?.T;
+          tempPracticeSemester += +topic?.P;
+          tempAutonomousLearning += +topic?.AA;
+        });
+      });
+      setHours({
+        totalHours: subject.totalHours,
+        theorySemester: subject.theorySemester - tempTheorySemester,
+        practiceSemester:
+          subject.practiceSemester - tempPracticeSemester,
+        autonomousLearning:
+          subject.autonomousLearning - tempAutonomousLearning,
+      });
     }
   }, [unitsResponse]);
 

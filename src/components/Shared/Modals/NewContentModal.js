@@ -23,7 +23,6 @@ export default NiceModal.create(
     topicPractice = 0,
     topicAA = 0,
   }) => {
-    console.log(topicName);
     const queryClient = useQueryClient();
     const modal = useModal();
     const { mutateAsync: updateUnit } = useMutation(
@@ -37,6 +36,9 @@ export default NiceModal.create(
     const onSubmit = async (data) => {
       const { name, teoricHours, practicalHours, autonomousHours } =
         data;
+      if (hours.theorySemester < teoricHours) return;
+      if (hours.practiceSemester < practicalHours) return;
+      if (hours.autonomousLearning < autonomousHours) return;
       const unitToUpdate = units.find(
         (unit) => unit.id === units[unitIndex - 1].id
       );
