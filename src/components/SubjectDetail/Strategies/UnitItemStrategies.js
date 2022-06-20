@@ -60,12 +60,13 @@ const UnitItemStrategies = ({
           <div>
             <ul>
               {/* eslint-disable-next-line no-shadow */}
-              {activities?.map(({ id, title }, i) => {
+              {activities?.map(({ id, title, description }, i) => {
                 return (
                   <ActivityItem
                     // eslint-disable-next-line react/no-array-index-key
                     key={title}
                     id={id}
+                    description={description}
                     activityName={title}
                     activityIndex={i}
                     unitIndex={unitIndex}

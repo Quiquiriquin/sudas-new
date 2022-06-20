@@ -46,9 +46,6 @@ const PurposeForm = ({
             defaultValue=""
             placeholder="Objeto..."
             className="w-80"
-            rules={{
-              required: 'Ingresa el objeto',
-            }}
           />
         </div>
         <div>
@@ -68,9 +65,6 @@ const PurposeForm = ({
             defaultValue=""
             placeholder="Condición de calidad..."
             className="w-80"
-            rules={{
-              required: 'Ingresa la condición de calidad',
-            }}
           />
         </div>
       </div>

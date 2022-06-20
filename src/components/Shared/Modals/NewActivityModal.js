@@ -73,7 +73,7 @@ export default NiceModal.create(
           className="sofia-bold text-center mb-6"
           style={{ fontSize: '1.125rem', marginTop: '1rem' }}
         >
-          Nueva Práctica
+          Nueva Actividad
         </div>
         <FormWrapper onSubmit={onSubmit}>
           <NewActivityForm />

@@ -89,8 +89,8 @@ const IntentionPurpose = () => {
     console.log('DATAAAA: ', data);
     const isVerbId = (element) => element === verb;
     const isConnectorId = (element) => element === connector;
-    const verbId = verb.value;
-    const connectorId = connector.value;
+    const verbId = verb?.value;
+    const connectorId = connector?.value;
     try {
       let auxFinalPrev = [];
       let auxFinalSame = [];
@@ -156,7 +156,7 @@ const IntentionPurpose = () => {
           />
           <div className="flex flex-row-reverse">
             <div className="w-44">
-              <Button type="submit" secondary disabled={!isValid}>
+              <Button type="submit" secondary>
                 Guardar
               </Button>
             </div>

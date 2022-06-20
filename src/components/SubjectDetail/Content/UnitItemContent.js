@@ -19,6 +19,7 @@ const UnitItemContent = ({
     setUnits,
     practiceHour,
     setPracticeHour,
+    subject: subject_,
   } = useContext(SubjectContext);
   const openModal = () => {
     NiceModal.show(NewContentModal, {
@@ -30,6 +31,7 @@ const UnitItemContent = ({
       subject,
       practiceHour,
       setPracticeHour,
+      subjectId: subject_?.id,
     });
   };
 

@@ -6,7 +6,10 @@ import Modal from './Modal';
 import FormWrapper from '../../Forms/FormWrapper';
 import NewContentForm from '../../Forms/NewContentForm';
 import Hours from '../../SubjectDetail/Content/Hours';
-import { UPDATE_COMPETENCE } from '../../../helpers/SubjectEndpoints';
+import {
+  UPDATE_COMPETENCE,
+  UPDATE_SUBJECT,
+} from '../../../helpers/SubjectEndpoints';
 
 export default NiceModal.create(
   ({
@@ -22,6 +25,7 @@ export default NiceModal.create(
     topicTeoric = 0,
     topicPractice = 0,
     topicAA = 0,
+    subjectId,
   }) => {
     const queryClient = useQueryClient();
     const modal = useModal();
@@ -34,92 +38,120 @@ export default NiceModal.create(
       }
     );
     const onSubmit = async (data) => {
-      const { name, teoricHours, practicalHours, autonomousHours } =
-        data;
-      if (hours.theorySemester < teoricHours) return;
-      if (hours.practiceSemester < practicalHours) return;
-      if (hours.autonomousLearning < autonomousHours) return;
-      const unitToUpdate = units.find(
-        (unit) => unit.id === units[unitIndex - 1].id
-      );
-      if (type === 'new') {
-        const topics =
-          unitToUpdate.topics === null
-            ? [
-                {
-                  P: practicalHours,
-                  T: teoricHours,
-                  AA: autonomousHours,
-                  title: name,
-                  subTopics: [],
-                },
-              ]
-            : [
-                ...unitToUpdate?.topics,
-                {
-                  P: practicalHours,
-                  T: teoricHours,
-                  AA: autonomousHours,
-                  title: name,
-                  subTopics: [],
-                },
-              ];
-        try {
-          const ans = updateUnit({
-            id: unitToUpdate.id,
-            data: { topics },
-          });
-          console.log(ans);
-        } catch (e) {
-          console.log(e);
-        }
-        setHours({
-          ...hours,
-          theorySemester: hours.theorySemester - teoricHours,
-          practiceSemester: hours.practiceSemester - practicalHours,
-          autonomousLearning:
-            hours.autonomousLearning - autonomousHours,
-        });
-        // console.log(practicalHours);
-        setPracticeHour(
-          practiceHour.map((ph, index) =>
-            index === unitIndex - 1
-              ? parseFloat(ph) + parseFloat(practicalHours)
-              : ph
-          )
+      try {
+        const { name, teoricHours, practicalHours, autonomousHours } =
+          data;
+        if (hours.theorySemester < teoricHours) return;
+        if (hours.practiceSemester < practicalHours) return;
+        // if (hours.autonomousLearning < autonomousHours) return;
+        const unitToUpdate = units.find(
+          (unit) => unit.id === units[unitIndex - 1].id
         );
+        if (type === 'new') {
+          try {
+            const topics =
+              unitToUpdate.topics === null
+                ? [
+                    {
+                      P: practicalHours,
+                      T: teoricHours,
+                      AA: autonomousHours,
+                      title: name,
+                      subTopics: [],
+                    },
+                  ]
+                : [
+                    ...unitToUpdate?.topics,
+                    {
+                      P: practicalHours,
+                      T: teoricHours,
+                      AA: autonomousHours,
+                      title: name,
+                      subTopics: [],
+                    },
+                  ];
+            const ans = await updateUnit({
+              id: unitToUpdate.id,
+              data: { topics },
+            });
+            console.log(ans);
+          } catch (e) {
+            console.log(e);
+          }
+          setHours({
+            ...hours,
+            theorySemester: hours.theorySemester - teoricHours,
+            practiceSemester: hours.practiceSemester - practicalHours,
+            autonomousLearning:
+              hours.autonomousLearning + autonomousHours,
+          });
+          // console.log(practicalHours);
+          setPracticeHour(
+            practiceHour.map((ph, index) =>
+              index === unitIndex - 1
+                ? parseFloat(ph) + parseFloat(practicalHours)
+                : ph
+            )
+          );
+          modal.hide();
+          modal.remove();
+        }
+        if (type === 'edit') {
+          try {
+            const topics = unitToUpdate.topics.map((topic, index) =>
+              index === topicIndex
+                ? {
+                    P: practicalHours,
+                    T: teoricHours,
+                    AA: autonomousHours,
+                    title: name,
+                    subTopics: [],
+                  }
+                : topic
+            );
+            const ans = await updateUnit({
+              id: unitToUpdate.id,
+              data: { topics },
+            });
+            console.log(ans);
+          } catch (e) {
+            console.log(e);
+          }
+          setHours(() => ({
+            ...hours,
+            theorySemester: hours.theorySemester - teoricHours,
+            practiceSemester: hours.practiceSemester - practicalHours,
+            autonomousLearning:
+              hours.autonomousLearning + autonomousHours,
+          }));
+        }
+        console.log(
+          parseFloat(
+            parseFloat(hours.autonomousLearning) -
+              parseFloat(topicAA || 0) +
+              parseFloat(autonomousHours)
+          ).toFixed(1)
+        );
+        console.log(
+          parseFloat(hours.autonomousLearning),
+          parseFloat(topicAA || 0),
+          parseFloat(autonomousHours)
+        );
+        await UPDATE_SUBJECT({
+          id: subjectId,
+          data: {
+            autonomousLearning: parseFloat(
+              parseFloat(hours.autonomousLearning) -
+                parseFloat(topicAA || 0) +
+                parseFloat(autonomousHours)
+            ).toFixed(1),
+          },
+        });
         modal.hide();
+        modal.remove();
+      } catch (e) {
+        console.log('ERROR: ', e);
       }
-      if (type === 'edit') {
-        const topics = unitToUpdate.topics.map((topic, index) =>
-          index === topicIndex
-            ? {
-                P: practicalHours,
-                T: teoricHours,
-                AA: autonomousHours,
-                title: name,
-                subTopics: [],
-              }
-            : topic
-        );
-        try {
-          const ans = updateUnit({
-            id: unitToUpdate.id,
-            data: { topics },
-          });
-          console.log(ans);
-        } catch (e) {
-          console.log(e);
-        }
-        setHours({
-          ...hours,
-          theorySemester: hours.theorySemester - teoricHours,
-          practiceSemester: hours.practiceSemester - practicalHours,
-          autonomousLearning:
-            hours.autonomousLearning - autonomousHours,
-        });
-      }
-      modal.hide();
     };
     return (
       <Modal width="100%">
@@ -132,6 +164,7 @@ export default NiceModal.create(
         <Hours hours={hours} />
         <FormWrapper onSubmit={onSubmit}>
           <NewContentForm
+            {...hours}
             topicName={topicName}
             topicTeoric={topicTeoric}
             topicPractice={topicPractice}

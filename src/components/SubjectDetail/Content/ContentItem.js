@@ -9,7 +9,7 @@ import DeleteTopicModal from '../../Shared/Modals/DeleteTopicModal';
 import 'boxicons';
 
 const ContentItem = ({ topic, topicIndex, unitIndex, units }) => {
-  const { hours, setHours } = useContext(SubjectContext);
+  const { hours, setHours, subject } = useContext(SubjectContext);
   const openModal = () => {
     NiceModal.show(NewContentModal, {
       unitIndex,
@@ -22,6 +22,7 @@ const ContentItem = ({ topic, topicIndex, unitIndex, units }) => {
       topicTeoric: topic.T,
       topicPractice: topic.P,
       topicAA: topic.AA,
+      subjectId: subject?.id,
     });
   };
 

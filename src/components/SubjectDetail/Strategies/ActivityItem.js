@@ -11,6 +11,7 @@ const ActivityItem = ({
   activityIndex,
   unitStrategies,
   setUnitStrategies,
+  description,
   id,
 }) => {
   const openModal = () => {
@@ -28,6 +29,7 @@ const ActivityItem = ({
   return (
     <li className="content-list flex justify-between">
       <p className="font-bold">{activityName}</p>
+      <p className="">{description}</p>
       <div className="flex">
         <div
           className="icon-btn flex items-center justify-center"

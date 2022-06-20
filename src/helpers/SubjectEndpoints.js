@@ -14,6 +14,21 @@ export const GET_SUBJECT = async ({ queryKey }) => {
     throw new Error(e);
   }
 };
+
+export const GET_SUBJECT_BY_ID = async ({ queryKey }) => {
+  const [, id] = queryKey;
+  console.log(id);
+  try {
+    return await apiClient({
+      method: 'get',
+      url: `/subject/resume/${id}`,
+    });
+  } catch (e) {
+    console.log(e);
+    throw new Error(e);
+  }
+};
+
 export const GET_SUBJECTS = async () => {
   try {
     return await apiClient({

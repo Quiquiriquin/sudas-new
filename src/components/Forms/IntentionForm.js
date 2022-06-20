@@ -21,9 +21,6 @@ const IntentionForm = ({ intention }) => {
           label="Intención educativa"
           defaultValue={intention}
           placeholder="La unidad de aprendizaje..."
-          rules={{
-            required: 'Ingresa la intención educativa',
-          }}
         />
       </div>
     </div>

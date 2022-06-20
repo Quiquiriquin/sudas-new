@@ -34,8 +34,7 @@ const Contents = () => {
         theorySemester: subject.theorySemester - tempTheorySemester,
         practiceSemester:
           subject.practiceSemester - tempPracticeSemester,
-        autonomousLearning:
-          subject.autonomousLearning - tempAutonomousLearning,
+        autonomousLearning: tempAutonomousLearning,
       });
     }
   }, [unitsResponse]);

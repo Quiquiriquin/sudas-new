@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
@@ -8,12 +9,14 @@ import { GET_DASHBOARD } from '../../../helpers/DashboardEndpoints';
 import {
   GET_BIBLIO,
   GET_SUBJECT,
+  GET_SUBJECT_BY_ID,
 } from '../../../helpers/SubjectEndpoints';
 import Button from '../../Shared/Buttons/Button';
 import AddButton from '../../Shared/Buttons/AddButton';
 import ProfilePic from '../../Shared/ProfilePic/ProfilePic';
 import { GET_AVAILABLE_TEACHERS } from '../../../helpers/EnpointsUser';
 import TeacherSelector from '../../Shared/Popover/TeacherSelector';
+import { LIST_ACTIVITIES } from '../../../helpers/ActivityEndpoint';
 
 const SectionCard = styled.div`
   width: 100%;
@@ -84,8 +87,23 @@ const AcademicUnit = () => {
   const [selectedContent, setSelectedContent] = useState(0);
   const { data: subjectDetail } = useQuery(
     ['subject', id],
-    GET_SUBJECT
+    GET_SUBJECT_BY_ID
   );
+
+  const { data: activitiesData } = useQuery(
+    ['activities'],
+    LIST_ACTIVITIES
+  );
+
+  const [evaluation, setEvaluation] = useState([]);
+
+  useEffect(() => {
+    if (activitiesData) {
+      setEvaluation(activitiesData?.data?.map((act) => act));
+    }
+  }, [activitiesData]);
+
+  console.log(activitiesData);
 
   const { data: teachersData } = useQuery(
     ['subject', 'teachers'],
@@ -96,9 +114,7 @@ const AcademicUnit = () => {
     ['subject-biblio', id],
     GET_BIBLIO
   );
-  const [selectedEvaluation] = useState(
-    'Diagnóstica,Solución de casos,Problemas resyeltos'
-  );
+  const [selectedEvaluation, setSelectedEvaluation] = useState([]);
   const [selectedOrientacion] = useState('Analógico');
   const [selectedEstrategias] = useState(
     'Estudio de casos,Cooperativo-colaborativo'
@@ -115,39 +131,21 @@ const AcademicUnit = () => {
     'Aprendizaje orientado a proyectos',
     'Cooperativo-colaborativo',
   ]);
-  const [evaluation] = useState([
-    'Diagnóstica',
-    'Solución de casos',
-    'Problemas resueltos',
-    'Reporte de proyectos',
-    'Reportes de indagación',
-    'Reportes de prácticas',
-    'Evaluaciones escritas',
-    'Saberes Previamente Adquiridos',
-    'Organizadores gráficos',
-    'Problemarios',
-    'Exposiciones',
-  ]);
 
   useEffect(() => {
     if (subjectDetail) {
-      setSubject(subjectDetail.data);
+      console.log(subjectDetail?.data);
+      setSubject({
+        ...subjectDetail.data,
+        ...subjectDetail.data.subject,
+      });
+      setSelectedEvaluation(subjectDetail?.data?.activities);
     }
   }, [subjectDetail]);
 
   useEffect(() => {
-    if (bibliographyDetail) {
-      setBibliographies(bibliographyDetail.data);
-    }
-  }, [bibliographyDetail]);
-
-  useEffect(() => {
-    if (teachersData) {
-      setUsersList(teachersData.data);
-    }
-  }, [teachersData]);
-
-  console.log(id);
+    console.log(subject);
+  }, [subject]);
 
   return (
     <div className="flex flex-col border-white flex-1 bg-platinum space-y-6 overflow-scroll">
@@ -158,7 +156,7 @@ const AcademicUnit = () => {
         <div className="flex gap-4">
           <div className="flex gap-2">
             <div className="">Coordinador</div>
-            {subject?.Coordinator.length === 0 ? (
+            {subject?.Coordinator?.length === 0 ? (
               <TeacherSelector
                 subjectId={id}
                 keyUpdate="coordinator"
@@ -169,7 +167,7 @@ const AcademicUnit = () => {
                 title="Coordinador"
               />
             ) : (
-              subject?.Coordinator.map(
+              subject?.Coordinator?.map(
                 ({ name, firstSurname, id: userId }) => (
                   <div className="flex gap-2">
                     <TeacherSelector
@@ -199,13 +197,13 @@ const AcademicUnit = () => {
                 subjectId={id}
                 keyUpdate="collaborators"
                 updateTitle="Actualizar colaboradores"
-                selectedUsers={subject?.Collaborator.map(
+                selectedUsers={subject?.Collaborator?.map(
                   ({ id: userId }) => userId
                 )}
                 title="Colaboradores"
               />
-              {subject?.Collaborator.length > 0 &&
-                subject?.Collaborator.map(
+              {subject?.Collaborator?.length > 0 &&
+                subject?.Collaborator?.map(
                   ({ name, firstSurname, id: userId }) => (
                     <ProfilePic
                       size={24}
@@ -292,7 +290,11 @@ const AcademicUnit = () => {
         <SectionTitle>
           Propósito de la unidad de aprendizaje
         </SectionTitle>
-        <SectionBody>{subject?.objective?.description}</SectionBody>
+        <SectionBody>
+          {subject?.purpose ||
+            'El propósito de la unidad de aprendizaje aún se esta' +
+              ' trabajando'}
+        </SectionBody>
       </SectionCard>
       <SectionCard>
         <SectionTitle>Contenidos</SectionTitle>
@@ -358,10 +360,25 @@ const AcademicUnit = () => {
                 small
                 toggle
                 type="secondary"
-                isActive={selectedEvaluation.includes(elem)}
-                disabled={!selectedEvaluation.includes(elem)}
+                isActive={
+                  selectedEvaluation.findIndex(({ id }) => {
+                    console.log(elem.id === id);
+                    return elem.id === id;
+                  }) !== -1
+                }
+                disabled={
+                  selectedEvaluation.findIndex(
+                    ({ id }) => elem.id === id
+                  ) === -1
+                }
               >
-                {elem}
+                {console.log(
+                  selectedEvaluation.findIndex(({ id }) => {
+                    console.log(elem.id === id);
+                    return elem.id === id;
+                  })
+                )}
+                {elem.title}
               </Button>
             </div>
           ))}
@@ -380,7 +397,10 @@ const AcademicUnit = () => {
                         <p>Autores</p>
                         <p className="font-bold">
                           {/* eslint-disable-next-line no-shadow */}
-                          {authors.map(({ name }) => name).join(', ')}
+                          {authors
+                            // eslint-disable-next-line no-shadow
+                            ?.map(({ name }) => name)
+                            .join(', ')}
                         </p>
                         <p>Título del documento</p>
                         <p className="font-bold">{name}</p>
@@ -403,14 +423,8 @@ const AcademicUnit = () => {
       <SectionCard>
         <SectionTitle>Intención educativa</SectionTitle>
         <SectionBody>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore magna
-          aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit
-          esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum
+          {subject?.educationalIntention ||
+            'Aún no hay intención educativa para mostrar'}
         </SectionBody>
       </SectionCard>
       <div className="flex gap-4">

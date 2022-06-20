@@ -161,6 +161,7 @@ const Verbs = () => {
             watch,
             getValues,
             formState,
+            unregister,
           }}
           columns={columns}
           data={data}
