@@ -60,9 +60,10 @@ const PreviewPurposeIntetion = () => {
         <p>
           Esta unidad educativa se relaciona{' '}
           {`${
-            predecessorOptions.length > 0 &&
-            `de manera antecedente con
+            predecessorOptions.length > 0
+              ? `de manera antecedente con
           ${getTextCheckBox(predecessorOptions, prev)}`
+              : ''
           }`}
           {lateralOptions.length > 0 &&
             `${predecessorOptions.length > 0 ? 'y' : ''} de manera

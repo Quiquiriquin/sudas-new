@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useFormContext } from 'react-hook-form';
 import { useQuery } from 'react-query';
+import { Tooltip } from 'antd';
 import Button from '../Shared/Buttons/Button';
 import FormInput from '../Shared/FormInputs/FormInput';
 import SelectFormInput from '../Shared/FormInputs/SelectFormInput';
@@ -63,18 +64,21 @@ const NewActivityForm = () => {
             />
           </div>
         )}
-        <p className="text-right font-bold p-2">
-          {hidden
-            ? '¿No esta tu actividad?'
-            : '¿Ver actividades propuestas?'}
-        </p>
-        <div className="flex flex-row-reverse mb-10">
-          <div className="w-60">
-            <Button onClick={() => setHidden(!hidden)} secondary>
-              {hidden ? 'Nueva Activdad' : 'Seleccionar Actividad'}
-            </Button>
+        <Tooltip title="Contacta al administrador para añadirla">
+          <div
+            style={{ maxWidth: '180px' }}
+            className="text-right font-bold p-2 ml-auto"
+          >
+            ¿No esta tu actividad?
           </div>
-        </div>
+        </Tooltip>
+        {/* <div className="flex flex-row-reverse mb-10"> */}
+        {/*  <div className="w-60"> */}
+        {/*    <Button onClick={() => setHidden(!hidden)} secondary> */}
+        {/*      {hidden ? 'Nueva Activdad' : 'Seleccionar Actividad'} */}
+        {/*    </Button> */}
+        {/*  </div> */}
+        {/* </div> */}
       </div>
       <div>
         <Button type="submit" primary>

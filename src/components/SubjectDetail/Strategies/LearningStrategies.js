@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import NiceModal from '@ebay/nice-modal-react';
 import { useQuery, useMutation, useQueryClient } from 'react-query';
 import { useFieldArray, useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 import NewTematicUnitModal from '../../Shared/Modals/NewTematicUnitModal';
 import UnitItemStrategies from './UnitItemStrategies';
 import FormWrapper from '../../Forms/FormWrapper';
@@ -85,6 +86,7 @@ const LearningStrategies = () => {
               : unit.method,
         }))
       );
+      toast.success('Cambios guardados correctamente');
     } catch (e) {
       console.log(e);
     }
@@ -119,8 +121,8 @@ const LearningStrategies = () => {
         </p>
         <div>
           <p className="font-bold">
-            Selecciona la estrategia de aprendizaje para la unidad de
-            aprendizaje
+            Selecciona solamente una estrategia de aprendizaje para la
+            unidad de aprendizaje
           </p>
           <StrategiesForm strategy={strategy} />
         </div>
@@ -129,6 +131,14 @@ const LearningStrategies = () => {
             {fields &&
               fields.map(({ id, unit }, index) => (
                 <div key={`${unit.id}divunit`}>
+                  <MethodsForm
+                    index={index}
+                    key={`${unit.id}strategiesForm`}
+                    id={unit.id}
+                    unitName={unit.description}
+                    unitIndex={index + 1}
+                    method={unitStrategies[index].method}
+                  />
                   <UnitItemStrategies
                     index={index}
                     key={unit.id}
@@ -136,12 +146,6 @@ const LearningStrategies = () => {
                     unitName={unit.description}
                     unitIndex={index + 1}
                     activities={unitStrategies[index].activities}
-                  />
-                  <MethodsForm
-                    index={index}
-                    key={`${unit.id}strategiesForm`}
-                    id={unit.id}
-                    method={unitStrategies[index].method}
                   />
                 </div>
               ))}

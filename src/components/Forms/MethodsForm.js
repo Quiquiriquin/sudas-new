@@ -5,8 +5,9 @@ import Button from '../Shared/Buttons/Button';
 import FormInput from '../Shared/FormInputs/FormInput';
 import SelectFormInput from '../Shared/FormInputs/SelectFormInput';
 import { GET_METHODS } from '../../helpers/MethodsEndpoints';
+import romanize from '../../helpers/Romanize';
 
-const MethodsForm = ({ index = 0, method }) => {
+const MethodsForm = ({ index = 0, method, unitIndex, unitName }) => {
   const { data: optionsData } = useQuery(['methods'], GET_METHODS);
   const { watch, setValue } = useFormContext();
   const [options, setOptions] = useState([]);
@@ -37,6 +38,14 @@ const MethodsForm = ({ index = 0, method }) => {
 
   return (
     <div className="w-full">
+      <div className="unit-item flex justify-between">
+        <p>
+          {romanize(unitIndex)}. {unitName}
+        </p>
+        <div className="flex">
+          <div className="icon-btn flex items-center justify-center" />
+        </div>
+      </div>
       <div className="w-full flex justify-between pt-4">
         <SelectFormInput
           options={options}

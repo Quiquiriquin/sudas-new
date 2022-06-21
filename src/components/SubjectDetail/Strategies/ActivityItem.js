@@ -27,9 +27,15 @@ const ActivityItem = ({
   const [hidden, setHidden] = useState(true);
 
   return (
-    <li className="content-list flex justify-between">
-      <p className="font-bold">{activityName}</p>
-      <p className="">{description}</p>
+    <li className="content-list flex justify-between items-center">
+      <div>
+        <p className="text-xs">Actividad</p>
+        <p className="font-bold">{activityName}</p>
+      </div>
+      <div>
+        <p className="text-xs">Producto esperado</p>
+        <p className="font-bold">{description}</p>
+      </div>
       <div className="flex">
         <div
           className="icon-btn flex items-center justify-center"

@@ -34,28 +34,15 @@ const UnitItemStrategies = ({
 
   return (
     <li>
-      <div className="unit-item flex justify-between">
-        <p>
-          {romanize(unitIndex)}. {unitName}
-        </p>
-        <div className="flex">
-          <div
-            className="icon-btn flex items-center justify-center"
-            onClick={openModal}
-          >
-            <box-icon type="solid" name="file-plus" />
-            <p>Agregar Actividad</p>
-          </div>
-          <div className="icon-btn flex items-center justify-center">
-            <box-icon
-              type="solid"
-              name={hidden ? 'chevrons-down' : 'chevrons-left'}
-              onClick={() => setHidden(!hidden)}
-            />
-          </div>
-        </div>
-      </div>
       <div className="mb-10">
+        <div
+          className="icon-btn flex items-center justify-center"
+          onClick={openModal}
+          style={{ maxWidth: '170px' }}
+        >
+          <box-icon type="solid" name="file-plus" />
+          <p>Agregar Actividad</p>
+        </div>
         {hidden ? (
           <div>
             <ul>

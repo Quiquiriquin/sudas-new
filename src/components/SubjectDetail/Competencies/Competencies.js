@@ -6,6 +6,7 @@ import {
   useFormContext,
   useForm,
 } from 'react-hook-form';
+import { toast } from 'react-toastify';
 import { SubjectContext } from '../../../context/SubjectContext';
 import {
   CREATE_PURPOSE,
@@ -89,6 +90,7 @@ const Competencies = () => {
           });
           console.log(ans);
         }
+        toast.success('Cambios guardados correctamente');
       } catch (e) {
         console.log(e);
       }
