@@ -29,6 +29,13 @@ const Select = ({ options, ...propsComponent }) => {
   };
 
   const coloursOption = {
+    menuPortal: (base) => {
+      return {
+        ...base,
+        left: `auto`,
+        top: 'auto',
+      };
+    },
     menu: (base) => ({
       ...base,
       zIndex: 9999,

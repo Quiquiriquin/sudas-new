@@ -194,7 +194,7 @@ const SubjectDetail = () => {
         <TabPanel>
           <PanelContent>
             <SubjectDetailItem
-              title="Estrategias de aprendizaje y métodos de enseñanza"
+              title="Prácticas"
               component={<Practices />}
             />
           </PanelContent>

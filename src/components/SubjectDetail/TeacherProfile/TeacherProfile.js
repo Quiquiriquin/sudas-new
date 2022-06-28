@@ -216,7 +216,7 @@ const TeacherProfile = () => {
             }
           />
           <SubjectDetailItem
-            title="Unidades de aprendizaje relacionadas"
+            title="Habilidades didácticas y actitudes del docente"
             component={
               <SkillsActtitudes
                 skills={skills}

@@ -27,6 +27,8 @@ export default NiceModal.create(({ subject }) => {
         author: authorSelect,
         editorial: editorialSelect,
         title: titleSelect,
+        country,
+        kind,
       } = data;
       console.log('Data del formulario: ', data);
       const finalBody = {
@@ -37,6 +39,8 @@ export default NiceModal.create(({ subject }) => {
         editorial: editorialSelect.value,
         title: titleSelect?.label,
         subjectId: subject?.id,
+        country,
+        kind: kind.value,
       };
       const ans = await createBibliography(finalBody);
       queryClient.invalidateQueries({

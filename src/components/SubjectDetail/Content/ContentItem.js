@@ -66,7 +66,7 @@ const ContentItem = ({ topic, topicIndex, unitIndex, units }) => {
             onClick={openModalSubcontent}
           >
             <box-icon type="solid" name="file-plus" />
-            <p>Agregar subcontenido</p>
+            <p>Agregar subtemas</p>
           </div>
           <div
             className="icon-btn flex items-center justify-center"

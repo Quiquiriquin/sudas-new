@@ -10,6 +10,7 @@ const BibliographyItem = ({
   year,
   author,
   editorial,
+  kind,
 }) => {
   const queryClient = useQueryClient();
   const { mutateAsync } = useMutation(() => DELETE_BIBLIOGRAPHY(id));
@@ -28,6 +29,12 @@ const BibliographyItem = ({
     }
   };
 
+  const kinds = {
+    BOOK: 'Libro',
+    ANTOLOGY: 'Antología',
+    OTHER: 'Otros',
+  };
+
   return (
     <li key={id} className="content-list flex justify-between">
       <p className="font-bold w-96">
@@ -35,7 +42,7 @@ const BibliographyItem = ({
                             ${library}`}
       </p>
       <div>
-        <p>Libro</p>
+        <p>{kinds[kind]}</p>
       </div>
       <div className="flex">
         <div

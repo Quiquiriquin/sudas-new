@@ -49,7 +49,7 @@ const UnitItemContent = ({
             onClick={openModal}
           >
             <box-icon type="solid" name="file-plus" />
-            <p>Agregar contenido</p>
+            <p>Agregar temas</p>
           </div>
           <div className="icon-btn flex items-center justify-center">
             <box-icon

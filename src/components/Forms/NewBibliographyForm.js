@@ -44,6 +44,21 @@ const NewBibliographyForm = ({ close }) => {
     },
   ]);
 
+  const [kinds] = useState([
+    {
+      value: 'BOOK',
+      label: 'Libro',
+    },
+    {
+      value: 'ANTOLOGY',
+      label: 'Antología',
+    },
+    {
+      value: 'OTHER',
+      label: 'Otros',
+    },
+  ]);
+
   useEffect(() => {
     if (biblioData) {
       const { data } = biblioData;
@@ -158,10 +173,36 @@ const NewBibliographyForm = ({ close }) => {
           style={{ minWidth: '220px', maxWidth: '220px' }}
         >
           <FormInput
-            label="ID biblioteca"
+            label="ISBN / ID de la biblioteca"
             name="library"
             defaultValue=""
             placeholder="Escribe el Id"
+          />
+        </div>
+      </div>
+      <div className="flex gap-4 w-full">
+        <div
+          className=""
+          style={{ minWidth: '220px', maxWidth: '220px' }}
+        >
+          <FormInput
+            label="País"
+            name="country"
+            defaultValue=""
+            placeholder="Escribe el país..."
+          />
+        </div>
+        <div
+          className=""
+          style={{ minWidth: '220px', maxWidth: '220px' }}
+        >
+          <SelectFormInput
+            menuPosition="fixed"
+            label="Tipo de recurso"
+            name="kind"
+            defaultValue={{ value: 'BOOK', label: 'Libro' }}
+            placeholder="Selecciona"
+            options={kinds}
           />
         </div>
       </div>
