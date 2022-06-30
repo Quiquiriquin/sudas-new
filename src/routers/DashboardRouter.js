@@ -21,6 +21,7 @@ import Strategies from '../components/Views/Strategies/Strategies';
 import Bibliographies from '../components/Views/Bibliographies/Bibliographies';
 import Connectors from '../components/Views/Connectors/Connectors';
 import Methods from '../components/Views/Methods/Methods';
+import Teacher from '../components/Views/Teacher/Teacher';
 
 const DashboardRouter = () => {
   const { user } = useContext(GeneralContext);
@@ -71,6 +72,7 @@ const DashboardRouter = () => {
           <Route path="/estrategias" exact component={Strategies} />
           <Route path="/conectores" exact component={Connectors} />
           <Route path="/metodos" exact component={Methods} />
+          <Route path="/docente" exact component={Teacher} />
           <Route
             path="/bibliografias"
             exact

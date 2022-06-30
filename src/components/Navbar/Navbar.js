@@ -4,6 +4,7 @@ import { Link, NavLink } from 'react-router-dom';
 import Cookies from 'js-cookie';
 // import Logo from '../Shared/Logos/Logo';
 import './Navbar.scss';
+import { Tooltip } from 'antd';
 import { SessionContext } from '../../context/SessionContext';
 import { GeneralContext } from '../../context/GeneralContext';
 
@@ -30,93 +31,158 @@ const Navbar = () => {
         <box-icon onClick={openNavbar} id="menu" name="menu" />
         <ul className="nav-list">
           <li>
-            <NavLink to="/" exact activeClassName="active">
-              <box-icon type="solid" name="grid-alt" />
-              <span className="links_name">Dashboard</span>
-            </NavLink>
-            <span className="tooltip">Dashboard</span>
+            <Tooltip
+              overlayClassName="nav-tooltip"
+              placement="right"
+              title="Dashboard"
+            >
+              <NavLink to="/" exact activeClassName="active">
+                <box-icon type="solid" name="grid-alt" />
+                <span className="links_name">Dashboard</span>
+              </NavLink>
+            </Tooltip>
           </li>
           {user && user.role === 'ADMIN' && (
             <>
               <li>
-                <NavLink to="/usuarios" activeClassName="active">
-                  <box-icon type="solid" name="user-detail" />
-                  <span className="links_name">Usuarios</span>
-                </NavLink>
-                <span className="tooltip">Usuarios</span>
+                <Tooltip
+                  overlayClassName="nav-tooltip"
+                  placement="right"
+                  title="Usuarios"
+                >
+                  <NavLink to="/usuarios" activeClassName="active">
+                    <box-icon type="solid" name="user-detail" />
+                    <span className="links_name">Usuarios</span>
+                  </NavLink>
+                </Tooltip>
               </li>
               <li>
-                <NavLink
-                  to="/planes-academicos"
-                  activeClassName="active"
+                <Tooltip
+                  overlayClassName="nav-tooltip"
+                  placement="right"
+                  title="Planes académicos"
                 >
-                  <box-icon type="solid" name="map-alt" />
-                  <span className="links_name">
-                    Planes académicos
-                  </span>
-                </NavLink>
-                <span className="tooltip">Planes académicos</span>
+                  <NavLink
+                    to="/planes-academicos"
+                    activeClassName="active"
+                  >
+                    <box-icon type="solid" name="map-alt" />
+                    <span className="links_name">
+                      Planes académicos
+                    </span>
+                  </NavLink>
+                </Tooltip>
               </li>
               <li>
-                <NavLink
-                  to="/unidades-aprendizaje"
-                  activeClassName="active"
+                <Tooltip
+                  overlayClassName="nav-tooltip"
+                  placement="right"
+                  title="Unidades de aprendizaje"
                 >
-                  <box-icon type="solid" name="book-alt" />
-                  <span className="links_name">
-                    Unidades de aprendizaje
-                  </span>
-                </NavLink>
-                <span className="tooltip">
-                  Unidades de aprendizaje
-                </span>
+                  <NavLink
+                    to="/unidades-aprendizaje"
+                    activeClassName="active"
+                  >
+                    <box-icon type="solid" name="book-alt" />
+                    <span className="links_name">
+                      Unidades de aprendizaje
+                    </span>
+                  </NavLink>
+                </Tooltip>
               </li>
 
               <li>
-                <NavLink to="/actividades" activeClassName="active">
-                  <box-icon type="solid" name="notepad" />
-                  <span className="links_name">Actividades</span>
-                </NavLink>
-                <span className="tooltip">Actividades</span>
+                <Tooltip
+                  overlayClassName="nav-tooltip"
+                  placement="right"
+                  title="Actividades"
+                >
+                  <NavLink to="/actividades" activeClassName="active">
+                    <box-icon type="solid" name="notepad" />
+                    <span className="links_name">Actividades</span>
+                  </NavLink>
+                </Tooltip>
               </li>
               <li>
-                <NavLink to="/estrategias" activeClassName="active">
-                  <box-icon type="solid" name="network-chart" />
-                  <span className="links_name">Estrategias</span>
-                </NavLink>
-                <span className="tooltip">Estrategias</span>
+                <Tooltip
+                  overlayClassName="nav-tooltip"
+                  placement="right"
+                  title="Estrategias"
+                >
+                  <NavLink to="/estrategias" activeClassName="active">
+                    <box-icon type="solid" name="network-chart" />
+                    <span className="links_name">Estrategias</span>
+                  </NavLink>
+                </Tooltip>
               </li>
 
               <li>
-                <NavLink to="/metodos" activeClassName="active">
-                  <box-icon type="solid" name="book-reader" />
-                  <span className="links_name">Métodos</span>
-                </NavLink>
-                <span className="tooltip">Métodos</span>
+                <Tooltip
+                  overlayClassName="nav-tooltip"
+                  placement="right"
+                  title="Métodos"
+                >
+                  <NavLink to="/metodos" activeClassName="active">
+                    <box-icon type="solid" name="book-reader" />
+                    <span className="links_name">Métodos</span>
+                  </NavLink>
+                </Tooltip>
               </li>
               <li>
-                <NavLink to="/bibliografias" activeClassName="active">
-                  <box-icon type="solid" name="book" />
-                  <span className="links_name">Bibliografías</span>
-                </NavLink>
-                <span className="tooltip">Bibliografías</span>
+                <Tooltip
+                  overlayClassName="nav-tooltip"
+                  placement="right"
+                  title="Biliografías"
+                >
+                  <NavLink
+                    to="/bibliografias"
+                    activeClassName="active"
+                  >
+                    <box-icon type="solid" name="book" />
+                    <span className="links_name">Bibliografías</span>
+                  </NavLink>
+                </Tooltip>
               </li>
               <li>
-                <NavLink to="/verbos" activeClassName="active">
-                  <box-icon name="message-square-dots" />
-                  <span className="links_name">Verbos</span>
-                </NavLink>
-                <span className="tooltip">Verbos</span>
+                <Tooltip
+                  overlayClassName="nav-tooltip"
+                  placement="right"
+                  title="Verbos"
+                >
+                  <NavLink to="/verbos" activeClassName="active">
+                    <box-icon name="message-square-dots" />
+                    <span className="links_name">Verbos</span>
+                  </NavLink>
+                </Tooltip>
               </li>
               <li>
-                <NavLink to="/conectores" activeClassName="active">
-                  <box-icon name="transfer-alt" />
-                  <span className="links_name">Conectores</span>
-                </NavLink>
-                <span className="tooltip">Conectores</span>
+                <Tooltip
+                  overlayClassName="nav-tooltip"
+                  title="Conectores"
+                  placement="right"
+                >
+                  <NavLink to="/conectores" activeClassName="active">
+                    <box-icon name="transfer-alt" />
+                    <span className="links_name">Conectores</span>
+                  </NavLink>
+                </Tooltip>
+              </li>
+              <li>
+                <Tooltip
+                  overlayClassName="nav-tooltip"
+                  placement="right"
+                  title="Perfil docente"
+                >
+                  <NavLink to="/docente" activeClassName="active">
+                    <box-icon type="solid" name="graduation" />
+                    <span className="links_name">Docente</span>
+                  </NavLink>
+                </Tooltip>
+                <span className="tooltip">Docente</span>
               </li>
             </>
           )}
+
           {user && user.role !== 'ADMIN' && (
             <li>
               <NavLink to="/detalle-unidad-aprendizaje/1">

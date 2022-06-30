@@ -1,0 +1,33 @@
+@import "src/assets/styles/colors";
+.techer-container {
+  background: #FFFFFF;
+  height: 100%;
+  border-radius: 5px;
+  max-height: calc(100vh - 164px);
+  overflow: auto;
+
+  .tab-container {
+    height: calc(100vh - 240px);
+
+    .tabs-elements {
+      display: flex;
+      .tab {
+        cursor: pointer;
+        padding: 7px 1rem 8px 1rem;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+        &.active {
+          background: $primary;
+          color: #FFFFFF;
+        }
+      }
+    }
+    .tab-content {
+      height: 100%;
+      border: 1px solid $primary;
+      padding: 1rem;
+      border-radius: 0 5px 5px;
+    }
+  }
+
+}
