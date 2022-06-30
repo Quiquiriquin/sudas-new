@@ -25,7 +25,13 @@ const UserHome = () => {
         const auxCoor = [];
         const auxColla = [];
         data.forEach((subject, index) => {
-          if (subject?.CoordinatorSubject) {
+          console.log(subject);
+          if (
+            subject?.Coordinator &&
+            subject?.Coordinator?.length > 0 &&
+            subject?.Coordinator[0].id === user?.id
+          ) {
+            console.log('Es coordinador');
             auxCoor.push(data[index]);
           } else {
             auxColla.push(data[index]);
@@ -50,13 +56,18 @@ const UserHome = () => {
         <div className="flex gap-4 flex-nowrap subjects-container">
           {coordinatorSubjects &&
             coordinatorSubjects.map(
-              ({ id, name, semester, modality }) => (
+              ({ id, name, semester, modality, academicPlan }) => (
                 <div className="subject-card">
                   <div
                     onClick={() => goToDetail(id)}
                     className="header"
                   >
-                    <div className="title text-lg">{name}</div>
+                    <div className="title text-lg">
+                      <span className="block sofia-bold">{name}</span>
+                      <span className="text-sm">
+                        {academicPlan?.name}
+                      </span>
+                    </div>
                     <div className="">
                       <img src={chevronRight} alt="detalle" />
                     </div>
@@ -87,13 +98,18 @@ const UserHome = () => {
         <div className="flex gap-4 flex-nowrap subjects-container">
           {collaboratorSubjects &&
             collaboratorSubjects.map(
-              ({ id, name, semester, modality }) => (
+              ({ id, name, semester, modality, academicPlan }) => (
                 <div className="subject-card">
                   <div
                     className="header"
                     onClick={() => goToDetail(id)}
                   >
-                    <div className="title text-lg">{name}</div>
+                    <div className="title text-lg">
+                      <span className="block sofia-bold">{name}</span>
+                      <span className="text-sm">
+                        {academicPlan?.name}
+                      </span>
+                    </div>
                     <div className="">
                       <img src={chevronRight} alt="detalle" />
                     </div>
