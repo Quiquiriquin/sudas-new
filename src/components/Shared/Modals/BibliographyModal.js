@@ -29,6 +29,8 @@ export default NiceModal.create(({ subject }) => {
         title: titleSelect,
         country,
         kind,
+        url,
+        found,
       } = data;
       console.log('Data del formulario: ', data);
       const finalBody = {
@@ -41,7 +43,18 @@ export default NiceModal.create(({ subject }) => {
         subjectId: subject?.id,
         country,
         kind: kind.value,
+        url,
+        found,
       };
+      if (type.value === 'DIGITAL' || type.value === 'CYBER') {
+        delete finalBody.country;
+        delete finalBody.library;
+        delete finalBody.editorial;
+      } else {
+        delete finalBody.url;
+        delete finalBody.found;
+      }
+      console.log(finalBody);
       const ans = await createBibliography(finalBody);
       queryClient.invalidateQueries({
         predicate: ({ queryKey }) =>

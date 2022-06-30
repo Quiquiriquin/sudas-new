@@ -126,7 +126,7 @@ const Select = ({ options, ...propsComponent }) => {
         },
       })}
       menuPlacement="auto"
-      menuPosition="absolute"
+      menuPosition="fixed"
       menuShouldBlockScroll
       styles={coloursOption}
       options={options}
