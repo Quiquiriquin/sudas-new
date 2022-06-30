@@ -150,6 +150,14 @@ const NewSubjectForm = ({ academicPlanId }) => {
         required: 'Ingresa el nombre de la materia',
       },
     },
+    {
+      label: 'Linea curricular*',
+      name: 'curricularLine',
+      placeholder: 'Escribe la línea curricular...',
+      rules: {
+        required: 'Ingresa la línea curricular',
+      },
+    },
   ];
 
   useEffect(() => {
@@ -177,7 +185,7 @@ const NewSubjectForm = ({ academicPlanId }) => {
       setValue('satca', satca);
       setValue(
         'tepic',
-        parseFloat(practiceWeek || 0) * 2 + parseFloat(theoryWeek)
+        parseFloat(theoryWeek) * 2 + parseFloat(practiceWeek || 0)
       );
     }
     /* Horas de teoría - Semestre 108 texpic - Practicas 1 x hora */
@@ -220,6 +228,13 @@ const NewSubjectForm = ({ academicPlanId }) => {
           <SelectFormInput {...inputs[3]} />
         </div>
       </div>
+      {watch('type')?.value === 'OPTATIVA' && (
+        <div className="flex gap-4">
+          <div className="w-full">
+            <FormInput {...inputs[13]} />
+          </div>
+        </div>
+      )}
       <div className="grid grid-cols-3 gap-4">
         <div className="w-full">
           <FormInput {...inputs[4]} />
