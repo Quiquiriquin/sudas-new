@@ -100,6 +100,7 @@ const Competencies = () => {
   useEffect(() => {
     if (competencesResponse) {
       setUnits(competencesResponse.data);
+      console.log('UNITS: ', units);
     }
   }, [competencesResponse]);
 
