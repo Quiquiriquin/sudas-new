@@ -19,10 +19,10 @@ const Hours = ({ hours }) => {
       <span className="rounded border-2 font-bold p-2">
         {practiceSemester}
       </span>{' '}
-      Horas de AA restantes:{' '}
-      <span className="rounded border-2 font-bold p-2">
-        {autonomousLearning}
-      </span>{' '}
+      {/* Horas de AA restantes:{' '} */}
+      {/* <span className="rounded border-2 font-bold p-2"> */}
+      {/*  {autonomousLearning} */}
+      {/* </span>{' '} */}
     </p>
   );
 };

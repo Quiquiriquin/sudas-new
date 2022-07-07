@@ -104,21 +104,37 @@ const SubjectProvider = ({ children }) => {
 
   useEffect(() => {
     if (units && competencies) {
-      units.forEach(({ topics }, index) => {
+      units.forEach(({ topics, ...other }, index) => {
+        console.log('TOPIC: ', topics, other);
         if (topics) {
+          let practice = 0;
+          let practiceAcc = 0;
+          let locaPracticeAcc = 0;
           topics.forEach(({ P }) => {
-            const auxP = parseInt(P, 10);
-            let auxC = 0;
+            practice = parseFloat(parseFloat(P || 0).toFixed(1));
+            console.log('practice: ', practice);
+            practiceAcc += practice;
+            locaPracticeAcc = 0;
             // eslint-disable-next-line no-shadow
-            units[index]?.practices?.forEach(({ hours }) => {
-              auxC += parseInt(hours, 10);
+            units[index]?.practices?.forEach(({ hours, name }) => {
+              console.log('Práctica: ', name);
+              console.log('Horas: ', hours);
+              locaPracticeAcc += parseFloat(
+                parseFloat(hours).toFixed(1)
+              );
             });
-            console.log('auxC', auxC);
-            setPracticeHour((prev) => {
-              const aux = [...prev];
-              aux[index] = auxP - auxC;
-              return aux;
-            });
+            console.log('auxC', locaPracticeAcc);
+          });
+          console.log(
+            'Practice: ',
+            practice,
+            practiceAcc,
+            locaPracticeAcc
+          );
+          setPracticeHour((prev) => {
+            const aux = [...prev];
+            aux[index] = practiceAcc - locaPracticeAcc;
+            return aux;
           });
         }
       });

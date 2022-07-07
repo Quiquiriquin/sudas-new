@@ -146,7 +146,7 @@ const SubjectDetail = () => {
             Competencias
           </Tab>
           <Tab className="bg-secondary basis-1/5 p-3 rounded-t">
-            Contenidos
+            Temas
           </Tab>
           <Tab className="bg-secondary basis-1/5 p-3 rounded-t">
             Estrategias y métodos
@@ -178,7 +178,7 @@ const SubjectDetail = () => {
         <TabPanel>
           <PanelContent>
             <SubjectDetailItem
-              title="Contenidos"
+              title="Temas"
               component={<Contents />}
             />
           </PanelContent>

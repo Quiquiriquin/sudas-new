@@ -29,11 +29,11 @@ const Select = ({ options, ...propsComponent }) => {
   };
 
   const coloursOption = {
-    menuPortal: (base) => {
+    menuPortal: ({ top, left, base }) => {
       return {
         ...base,
-        left: `auto`,
         top: 'auto',
+        left: 'auto',
       };
     },
     menu: (base) => ({

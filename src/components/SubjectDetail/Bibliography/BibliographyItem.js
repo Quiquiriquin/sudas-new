@@ -109,9 +109,6 @@ const BibliographyItem = ({
         >
           <box-icon type="solid" name="trash" />
         </div>
-        <div className="icon-btn flex items-center justify-center">
-          <box-icon type="solid" name="edit" />
-        </div>
       </div>
     </li>
   );

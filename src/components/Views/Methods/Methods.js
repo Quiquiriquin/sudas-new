@@ -94,7 +94,7 @@ const Methods = () => {
       <div className="px-6 py-4 activities-container mt-6">
         <TableSectionHeader
           title="Métodos"
-          label="Agregar método"
+          label="Agregar actividad"
           newElement={newMethod}
           setNewElement={setNewMethod}
         />

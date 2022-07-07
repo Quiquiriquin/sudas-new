@@ -10,6 +10,7 @@ const NewContentForm = ({
   topicAA,
   autonomousLearning,
   theorySemester,
+  theory,
 }) => {
   const {
     formState: { isValid, isSubmitting },
@@ -69,9 +70,9 @@ const NewContentForm = ({
           type="number"
           rules={{
             max: {
-              value: Math.floor(parseFloat(theorySemester) * 0.3),
+              value: Math.floor(parseFloat(theory) * 0.3),
               message: `Las suma de horas de aprendizaje autónomo no pueden ser mayores a ${Math.floor(
-                parseFloat(theorySemester) * 0.3
+                parseFloat(theory) * 0.3
               )} tienes ${Math.floor(
                 parseFloat(autonomousLearning) +
                   parseFloat(watch('autonomousHours') || topicAA || 0)

@@ -57,6 +57,10 @@ const NewBibliographyForm = ({ close }) => {
       label: 'Antología',
     },
     {
+      value: 'MAGAZINE',
+      label: 'Revista',
+    },
+    {
       value: 'OTHER',
       label: 'Otros',
     },

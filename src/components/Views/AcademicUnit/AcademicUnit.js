@@ -17,6 +17,10 @@ import ProfilePic from '../../Shared/ProfilePic/ProfilePic';
 import { GET_AVAILABLE_TEACHERS } from '../../../helpers/EnpointsUser';
 import TeacherSelector from '../../Shared/Popover/TeacherSelector';
 import { LIST_ACTIVITIES } from '../../../helpers/ActivityEndpoint';
+import AcademicUnitHeader from './AcademicUnitHeader';
+import './AcademicUnit.scss';
+import AcademicUnitPurpose from './AcademicUnitPurpose';
+import AcademicUnitContents from './AcademicUnitContents';
 
 const SectionCard = styled.div`
   width: 100%;
@@ -144,7 +148,7 @@ const AcademicUnit = () => {
   }, [subjectDetail]);
 
   useEffect(() => {
-    console.log(subject);
+    console.log('LA MATERIA: ', subject);
   }, [subject]);
 
   return (
@@ -216,99 +220,10 @@ const AcademicUnit = () => {
           </div>
         </div>
       </div>
-      <SectionCard>
-        <div className="flex gap-6">
-          <div className="w-1/2">
-            <div className="flex text-base flex-row justify-around space-x-4">
-              <div className="flex-grow-0 font-bold w-40 truncate">
-                Unidad Academica
-              </div>
-              <div className="flex-grow">
-                Escuela Nacional de Ciencias Biológicas
-              </div>
-            </div>
-            <div className="flex text-base flex-row justify-around space-x-4">
-              <div className="flex-grow-0 font-bold w-40 truncate">
-                Programa Académico
-              </div>
-              <div className="flex-grow">
-                {subject?.academicPlan?.name}
-              </div>
-            </div>
-            <div className="flex text-base flex-row justify-around space-x-4">
-              <div className="flex-grow-0 font-bold w-40 truncate">
-                Semestre
-              </div>
-              <div className="flex-grow">{subject?.semester}</div>
-            </div>
-            <div className="flex text-base flex-row justify-around space-x-4">
-              <div className="flex-grow-0 font-bold w-40 truncate">
-                Tipo
-              </div>
-              <div className="flex-grow">{subject?.type}</div>
-            </div>
-          </div>
-          <div className="w-1/2">
-            <div className="flex text-base flex-row justify-around space-x-4">
-              <div className="flex-grow-0 font-bold w-40 truncate">
-                TEPIC/SATCA
-              </div>
-              <div className="flex-grow">
-                {`${subject?.tepic} / ${subject?.satca}`}
-              </div>
-            </div>
-            <div className="flex text-base flex-row justify-around space-x-4">
-              <div className="flex-grow-0 font-bold w-40 truncate">
-                Modalidad
-              </div>
-              <div className="flex-grow">
-                {subject?.modality === 'FACE2FACE'
-                  ? 'Presencial'
-                  : 'En línea'}
-              </div>
-            </div>
-            <div className="flex text-base flex-row justify-around space-x-4">
-              <div className="flex-grow-0 font-bold w-40 truncate">
-                Horas de práctica
-              </div>
-              <div className="flex-grow">
-                {subject?.practiceSemester}
-              </div>
-            </div>
-            <div className="flex text-base flex-row justify-around space-x-4">
-              <div className="flex-grow-0 font-bold w-40 truncate">
-                Horas de teoría
-              </div>
-              <div className="flex-grow">
-                {subject?.theorySemester || 0}
-              </div>
-            </div>
-          </div>
-        </div>
-      </SectionCard>
-      <SectionCard>
-        <SectionTitle>
-          Propósito de la unidad de aprendizaje
-        </SectionTitle>
-        <SectionBody>
-          {subject?.purpose ||
-            'El propósito de la unidad de aprendizaje aún se esta' +
-              ' trabajando'}
-        </SectionBody>
-      </SectionCard>
-      <SectionCard>
-        <SectionTitle>Contenidos</SectionTitle>
-        <SectionBody>
-          <ul
-            className="m-5"
-            style={{ listStyleType: 'upper-roman' }}
-          >
-            {subject?.contents?.map(({ name }) => (
-              <li>{name}</li>
-            ))}
-          </ul>
-        </SectionBody>
-      </SectionCard>
+      <AcademicUnitHeader subject={subject} />
+      <AcademicUnitPurpose purpose={subject?.purpose} />
+      <AcademicUnitContents contents={subject?.contents} />
+
       <div className="w-full flex gap-6">
         <SectionCard>
           <SectionTitle>Orientación didáctica</SectionTitle>

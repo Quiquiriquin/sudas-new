@@ -31,6 +31,7 @@ const Contents = () => {
       });
       setHours({
         totalHours: subject.totalHours,
+        theory: subject?.theorySemester,
         theorySemester: subject.theorySemester - tempTheorySemester,
         practiceSemester:
           subject.practiceSemester - tempPracticeSemester,
