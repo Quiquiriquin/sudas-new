@@ -18,8 +18,11 @@ export default NiceModal.create(
     setPracticeHour,
   }) => {
     // const queryClient = useQueryClient();
-
     const modal = useModal();
+    const infoPractice = practices.find(
+      (unit, index) => index === unitIndex - 1
+    );
+    const dataPractice = infoPractice?.practices[practiceIndex];
     const onSubmit = async (data) => {
       if (type === 'new') {
         const { name, hours: hoursValue, places } = data;
@@ -52,6 +55,13 @@ export default NiceModal.create(
               : unit
           )
         );
+        setPracticeHour(
+          practiceHour.map((ph, index) =>
+            index === unitIndex - 1
+              ? parseFloat(ph) - parseFloat(hoursValue)
+              : ph
+          )
+        );
       }
       modal.hide();
     };
@@ -61,10 +71,14 @@ export default NiceModal.create(
           className="sofia-bold text-center mb-6"
           style={{ fontSize: '1.125rem', marginTop: '1rem' }}
         >
-          Nueva Práctica
+          {type === 'new' ? 'Nueva Práctica' : 'Editar Práctica'}
         </div>
         <FormWrapper onSubmit={onSubmit}>
-          <NewPracticesForm />
+          <NewPracticesForm
+            namePractice={dataPractice?.name}
+            hours={dataPractice?.hours}
+            place={dataPractice?.place}
+          />
         </FormWrapper>
       </Modal>
     );

@@ -31,7 +31,6 @@ const PanelContent = styled.div`
   padding-bottom: 60px;
   border-radius: 0px 0px 10px;
   height: 100%;
-  min-height: 100vh;
   overflow: auto;
   max-height: calc(100vh - 168px);
 `;

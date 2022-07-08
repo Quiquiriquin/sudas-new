@@ -5,7 +5,11 @@ import Button from '../Shared/Buttons/Button';
 import FormInput from '../Shared/FormInputs/FormInput';
 import SelectFormInput from '../Shared/FormInputs/SelectFormInput';
 
-const NewPracticesForm = () => {
+const NewPracticesForm = ({
+  namePractice = '',
+  hours = 0.0,
+  place = '',
+}) => {
   const { watch } = useFormContext();
   const strategy = watch('method', '');
   const inputs = [
@@ -13,6 +17,7 @@ const NewPracticesForm = () => {
       name: 'name',
       placeholder: 'Nombre de la práctica',
       label: 'Nombre de la practica. ',
+      value: namePractice,
       rules: {
         required: 'Inserta el nombre de la práctica ',
       },
@@ -21,6 +26,7 @@ const NewPracticesForm = () => {
       name: 'hours',
       placeholder: '1.0',
       label: 'horas',
+      value: hours,
       rules: {
         required: 'Inserta las horas de la práctica',
       },
@@ -29,6 +35,7 @@ const NewPracticesForm = () => {
       name: 'place',
       placeholder: 'Laboratorio',
       label: 'Lugar de realización',
+      value: place,
       rules: {
         required: 'Inserta las horas de la práctica',
       },
