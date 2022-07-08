@@ -26,16 +26,16 @@ const ActionCard = styled.div`
   ${(props) =>
     // eslint-disable-next-line no-nested-ternary
     props?.status === 'ACTIVE'
-      ? 'background: #f2f2f2'
+      ? 'background: #34be44'
       : props?.status === 'INACTIVE'
-      ? 'background: #34be44; color: #fff'
+      ? 'background: #ff5858; color: #fff'
       : 'background: #f2d146'};
   ${(props) =>
     // eslint-disable-next-line no-nested-ternary
     props?.status === 'ACTIVE'
-      ? 'background: #f2f2f2'
-      : props?.status === 'INACTIVE'
       ? 'background: #34be44'
+      : props?.status === 'INACTIVE'
+      ? 'background: #ff5858'
       : 'background: #f2d146'};
   ${(props) =>
     // eslint-disable-next-line no-nested-ternary
@@ -69,9 +69,9 @@ const ActionCard = styled.div`
     ${(props) =>
       // eslint-disable-next-line no-nested-ternary
       props?.status === 'ACTIVE' || props.delete
-        ? 'background: #ff5858; color: #FFF'
-        : props?.status === 'INACTIVE'
         ? 'background: #34be44; color: #FFF'
+        : props?.status === 'INACTIVE'
+        ? 'background: #ff5858; color: #FFF'
         : 'background: #f2d146; color: #FFF'};
     ${(props) =>
       // eslint-disable-next-line no-nested-ternary
@@ -125,6 +125,7 @@ const UpdateUserAdminForm = ({ user }) => {
 
   const changeStatus = () => {
     const currStatus = watch('status');
+    console.log(currStatus);
     if (currStatus === 'ACTIVE') {
       setValue('status', 'INACTIVE', {
         shouldDirty: true,
@@ -187,19 +188,6 @@ const UpdateUserAdminForm = ({ user }) => {
           {watchStatus === 'ACTIVE' ? (
             <>
               <img
-                src={userLessW}
-                alt="Desactivar"
-                className="white"
-              />
-              <img
-                src={userLess}
-                alt="Desactivar"
-                className="black"
-              />
-            </>
-          ) : (
-            <>
-              <img
                 src={userPlusW}
                 alt="Desactivar"
                 className="white"
@@ -210,11 +198,24 @@ const UpdateUserAdminForm = ({ user }) => {
                 className="black"
               />
             </>
+          ) : (
+            <>
+              <img
+                src={userLessW}
+                alt="Desactivar"
+                className="white"
+              />
+              <img
+                src={userLess}
+                alt="Desactivar"
+                className="black"
+              />
+            </>
           )}
           {watchStatus === 'ACTIVE' ? (
-            <p className="text-sm mt-1">Desactivar</p>
-          ) : (
             <p className="text-sm mt-1">Activar</p>
+          ) : (
+            <p className="text-sm mt-1">Desactivar</p>
           )}
           <div className="hidden">
             <FormInput
