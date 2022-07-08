@@ -9,6 +9,7 @@ import ActivityItem from './ActivityItem';
 import romanize from '../../../helpers/Romanize';
 import 'boxicons';
 import { SubjectContext } from '../../../context/SubjectContext';
+import CheckboxFormInput from '../../Shared/FormInputs/CheckboxFormInput/CheckboxFormInput';
 
 const UnitItemStrategies = ({
   unitName,
@@ -43,6 +44,7 @@ const UnitItemStrategies = ({
           <box-icon type="solid" name="file-plus" />
           <p>Agregar Actividad</p>
         </div>
+
         {hidden ? (
           <div>
             <ul>

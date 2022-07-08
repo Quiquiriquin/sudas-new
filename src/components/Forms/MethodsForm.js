@@ -6,6 +6,7 @@ import FormInput from '../Shared/FormInputs/FormInput';
 import SelectFormInput from '../Shared/FormInputs/SelectFormInput';
 import { GET_METHODS } from '../../helpers/MethodsEndpoints';
 import romanize from '../../helpers/Romanize';
+import CheckboxFormInput from '../Shared/FormInputs/CheckboxFormInput/CheckboxFormInput';
 
 const MethodsForm = ({ index = 0, method, unitIndex, unitName }) => {
   const { data: optionsData } = useQuery(['methods'], GET_METHODS);
@@ -66,6 +67,14 @@ const MethodsForm = ({ index = 0, method, unitIndex, unitName }) => {
           ) : (
             <p />
           )}
+        </div>
+      </div>
+      <div className="w-full flex flex-row-reverse">
+        <div className="w-64">
+          <CheckboxFormInput
+            className="bg-red"
+            label="¿Evaluación escrita?"
+          />
         </div>
       </div>
     </div>
