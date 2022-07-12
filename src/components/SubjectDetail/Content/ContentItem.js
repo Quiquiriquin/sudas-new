@@ -52,15 +52,15 @@ const ContentItem = ({ topic, topicIndex, unitIndex, units }) => {
   return (
     <li>
       <div className="content-list flex justify-between">
-        <p className="font-bold">
+        <p className="font-bold w-3/6">
           {unitIndex}.{topicIndex + 1} {topic.title}
         </p>
-        <div className="p-2 text-gray-500 rounded">
+        <div className="p-2 text-gray-500 rounded w-2/6">
           <p>Horas Teoría: {topic.T}</p>
           <p>Horas Practica {topic.P}</p>
           <p>Horas AA: {topic.AA}</p>
         </div>
-        <div className="flex">
+        <div className="flex w-1/6 justify-end">
           <div
             className="icon-btn flex items-center justify-center"
             onClick={openModalSubcontent}

@@ -34,16 +34,16 @@ const PracticeItem = ({ practice, practiceIndex, unitIndex }) => {
 
   return (
     <li className="content-list flex justify-between">
-      <p className="font-bold w-60">
+      <p className="font-bold w-60 w-2/6">
         {practiceIndex + 1}. {practice.name}
       </p>
-      <div>
+      <div className="w-1/6">
         <p>{practice.hours} Horas</p>
       </div>
-      <div>
+      <div className="w-1/6">
         <p>{practice.place}</p>
       </div>
-      <div className="flex">
+      <div className="flex w-1/6 justify-end">
         <div
           className="icon-btn flex items-center justify-center"
           onClick={openDeleteModal}
