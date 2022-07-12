@@ -8,6 +8,7 @@ import UserCard from '../../Shared/UserCard/UserCard';
 import { GET_USER, UPDATE_USER } from '../../../helpers/EnpointsUser';
 import FormWrapper from '../../Forms/FormWrapper';
 import UpdateUserAdminForm from '../../Forms/UpdateUserAdminForm';
+import './UserDetailAdmin.scss';
 
 const UserDetailAdmin = () => {
   const history = useHistory();

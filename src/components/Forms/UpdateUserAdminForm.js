@@ -153,7 +153,10 @@ const UpdateUserAdminForm = ({ user }) => {
   };
 
   return (
-    <div className="gap-6 mx-auto" style={{ maxWidth: '632px' }}>
+    <div
+      className="gap-6 mx-auto user-profile"
+      style={{ maxWidth: '632px' }}
+    >
       <div className="flex items-center justify-center gap-4 mb-4">
         <div className="flex items-center justify-center">
           {user?.profilePic ? (
@@ -349,7 +352,7 @@ const UpdateUserAdminForm = ({ user }) => {
           />
         </div>
       </div>
-      <div className="flex justify-end">
+      <div className="flex justify-end sticky-button">
         <div style={{ maxWidth: '220px' }}>
           <Button secondary disabled={!isDirty}>
             Guardar cambios

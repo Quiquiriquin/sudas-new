@@ -1,0 +1,14 @@
+.user-profile {
+  overflow: auto;
+  max-height: 65vh;
+  width: 80vw;
+  padding-right: 1rem;
+  position: relative;
+
+  .sticky-button {
+    position: fixed;
+    bottom: 76px;
+    transform: translateX(220%);
+
+  }
+}
