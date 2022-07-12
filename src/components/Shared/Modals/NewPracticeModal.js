@@ -43,22 +43,28 @@ export default NiceModal.create(
       }
       if (type === 'edit') {
         const { name, hours: hoursValue, places } = data;
+        const prevHours = parseFloat(
+          practices[unitIndex - 1].practices[practiceIndex].hours
+        ).toFixed(2);
+        console.log(prevHours);
         setPractices(
-          practices.map((unit, index) =>
-            index === unitIndex - 1
+          practices.map((unit, index) => {
+            return index === unitIndex - 1
               ? {
                   ...unit,
                   practices: unit.practices.map((p, i) =>
                     i === practiceIndex ? data : p
                   ),
                 }
-              : unit
-          )
+              : unit;
+          })
         );
         setPracticeHour(
-          practiceHour.map((ph, index) =>
+          practiceHour?.map((ph, index) =>
             index === unitIndex - 1
-              ? parseFloat(ph) - parseFloat(hoursValue)
+              ? parseFloat(prevHours) +
+                parseFloat(ph) -
+                parseFloat(hoursValue)
               : ph
           )
         );

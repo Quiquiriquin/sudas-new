@@ -9,7 +9,8 @@ const PracticeItem = ({ practice, practiceIndex, unitIndex }) => {
   const onSubmit = (values) => {
     console.log(values);
   };
-  const { practices, setPractices } = useContext(SubjectContext);
+  const { practices, setPractices, practiceHour, setPracticeHour } =
+    useContext(SubjectContext);
 
   const openModal = () => {
     NiceModal.show(NewPracticeModal, {
@@ -18,6 +19,8 @@ const PracticeItem = ({ practice, practiceIndex, unitIndex }) => {
       practices,
       setPractices,
       practiceIndex,
+      practiceHour,
+      setPracticeHour,
     });
   };
 

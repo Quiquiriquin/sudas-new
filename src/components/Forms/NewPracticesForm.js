@@ -17,7 +17,7 @@ const NewPracticesForm = ({
       name: 'name',
       placeholder: 'Nombre de la práctica',
       label: 'Nombre de la practica. ',
-      value: namePractice,
+      defaultValue: namePractice,
       rules: {
         required: 'Inserta el nombre de la práctica ',
       },
@@ -26,7 +26,7 @@ const NewPracticesForm = ({
       name: 'hours',
       placeholder: '1.0',
       label: 'horas',
-      value: hours,
+      defaultValue: hours,
       rules: {
         required: 'Inserta las horas de la práctica',
       },
@@ -35,7 +35,7 @@ const NewPracticesForm = ({
       name: 'place',
       placeholder: 'Laboratorio',
       label: 'Lugar de realización',
-      value: place,
+      defaultValue: place,
       rules: {
         required: 'Inserta las horas de la práctica',
       },
