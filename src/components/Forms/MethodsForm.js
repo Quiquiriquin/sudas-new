@@ -34,8 +34,6 @@ const MethodsForm = ({ index = 0, method, unitIndex, unitName }) => {
   useEffect(() => {
     setValue(`methods.${index}.method`, method);
   }, [method]);
-  console.log(method);
-  console.log(unitMethod);
 
   return (
     <div className="w-full">

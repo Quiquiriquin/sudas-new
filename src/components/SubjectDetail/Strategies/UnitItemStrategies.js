@@ -49,21 +49,24 @@ const UnitItemStrategies = ({
           <div>
             <ul>
               {/* eslint-disable-next-line no-shadow */}
-              {activities?.map(({ id, title, description }, i) => {
-                return (
-                  <ActivityItem
-                    // eslint-disable-next-line react/no-array-index-key
-                    key={title}
-                    id={id}
-                    description={description}
-                    activityName={title}
-                    activityIndex={i}
-                    unitIndex={unitIndex}
-                    unitStrategies={unitStrategies}
-                    setUnitStrategies={setUnitStrategies}
-                  />
-                );
-              })}
+              {activities
+                ?.slice(0)
+                .reverse()
+                .map(({ id: idActivity, title, description }, i) => {
+                  return (
+                    <ActivityItem
+                      // eslint-disable-next-line react/no-array-index-key
+                      key={title}
+                      id={idActivity}
+                      description={description}
+                      activityName={title}
+                      activityIndex={i}
+                      unitIndex={unitIndex}
+                      unitStrategies={unitStrategies}
+                      setUnitStrategies={setUnitStrategies}
+                    />
+                  );
+                })}
             </ul>
           </div>
         ) : (

@@ -28,15 +28,15 @@ const ActivityItem = ({
 
   return (
     <li className="content-list flex justify-between items-center">
-      <div>
+      <div className="w-3/6">
         <p className="text-xs">Actividad</p>
         <p className="font-bold">{activityName}</p>
       </div>
-      <div>
+      <div className="w-2/6">
         <p className="text-xs">Producto esperado</p>
         <p className="font-bold">{description}</p>
       </div>
-      <div className="flex">
+      <div className="flex w-1/6 justify-end">
         <div
           className="icon-btn flex items-center justify-center"
           onClick={openModal}
