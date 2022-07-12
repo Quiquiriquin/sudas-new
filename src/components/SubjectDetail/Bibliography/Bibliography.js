@@ -12,6 +12,7 @@ import BibliographyItem from './BibliographyItem';
 const Bibliography = () => {
   const { subject } = useContext(SubjectContext);
   const [biblio, setBiblio] = useState({});
+  const [hasAllBasic, setHasAllBasic] = useState(false);
   const { data: biblipographiesData } = useQuery(
     ['bibliography', subject?.id],
     GET_SUBJECT_BIBLIO,
@@ -23,6 +24,7 @@ const Bibliography = () => {
   const openModal = async () => {
     NiceModal.show(BibliographyModal, {
       subject,
+      hasAllBasic,
     });
   };
 
@@ -30,7 +32,22 @@ const Bibliography = () => {
     if (biblipographiesData && biblipographiesData.status !== 204) {
       const { data } = biblipographiesData;
       if (data) {
+        console.log(data);
         setBiblio(data);
+        if (data?.basic) {
+          const currentYear = new Date().getFullYear();
+          let counter = 0;
+          data?.basic?.forEach(({ year }) => {
+            const auxYear = parseInt(year || 0, 10);
+            if (currentYear - auxYear >= 5) {
+              counter += 1;
+            }
+          });
+          if (counter > 2) {
+            setHasAllBasic(() => true);
+          }
+          console.log(counter);
+        }
       }
     }
   }, [biblipographiesData]);

@@ -10,7 +10,7 @@ import NewBibliographyForm from '../../Forms/NewBibliographyForm';
 import { SubjectContext } from '../../../context/SubjectContext';
 import { CREATE_BIBLIOGRAPHY } from '../../../helpers/BibliographyEndpoints';
 
-export default NiceModal.create(({ subject }) => {
+export default NiceModal.create(({ subject, hasAllBasic }) => {
   const queryClient = useQueryClient();
   const context = useContext(SubjectContext);
   const { mutateAsync: createBibliography } = useMutation((data) =>
@@ -81,7 +81,10 @@ export default NiceModal.create(({ subject }) => {
         Nueva bibliografía
       </div>
       <FormWrapper onSubmit={onSubmit}>
-        <NewBibliographyForm close={close} />
+        <NewBibliographyForm
+          hasAllBasic={hasAllBasic}
+          close={close}
+        />
       </FormWrapper>
     </Modal>
   );

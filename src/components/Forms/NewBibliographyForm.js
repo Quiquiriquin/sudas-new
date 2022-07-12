@@ -13,8 +13,8 @@ import FormInput from '../Shared/FormInputs/FormInput';
 import SelectFormInput from '../Shared/FormInputs/SelectFormInput';
 import Button from '../Shared/Buttons/Button';
 
-const NewBibliographyForm = ({ close }) => {
-  const { watch } = useFormContext();
+const NewBibliographyForm = ({ close, hasAllBasic }) => {
+  const { watch, setError, clearErrors } = useFormContext();
   const [biblioOptions, setBiblioOptions] = useState([]);
   const [editorialOptions, setEditorialOptions] = useState([]);
   const [authorOptions, setAuthorOptions] = useState([]);
@@ -157,6 +157,26 @@ const NewBibliographyForm = ({ close }) => {
     }
   }, [authorData]);
 
+  useEffect(() => {
+    if (watch('year')) {
+      console.log(watch('year'));
+      const parsed = parseInt(watch('year'), 10);
+      console.log(parsed);
+      if (
+        parsed <= parseInt(new Date().getFullYear(), 10) - 5 &&
+        hasAllBasic
+      ) {
+        setError('year', {
+          message: 'Solo se permiten 2 mayores a 5 años',
+          type: 'min',
+        });
+      } else {
+        console.log('Limpiando');
+        clearErrors('year');
+      }
+    }
+  }, [watch('year')]);
+
   return (
     <div>
       <div className="flex gap-4 w-full">
@@ -276,13 +296,16 @@ const NewBibliographyForm = ({ close }) => {
                 className=""
                 style={{ minWidth: '220px', maxWidth: '220px' }}
               >
+                {console.log(hasAllBasic)}
                 <FormInput
                   label="Año de publicación"
                   name="year"
                   defaultValue=""
                   placeholder="Escribe el año"
                   type="number"
-                  min={1900}
+                  min={
+                    hasAllBasic ? new Date().getFullYear() - 5 : 1900
+                  }
                   max={new Date().getFullYear()}
                 />
               </div>
@@ -328,10 +351,10 @@ const NewBibliographyForm = ({ close }) => {
                 style={{ minWidth: '220px', maxWidth: '220px' }}
               >
                 <FormInput
-                  label="ISBN / ID de la biblioteca"
+                  label="Identificador"
                   name="library"
                   defaultValue=""
-                  placeholder="Escribe el Id"
+                  placeholder="Escribe el identificador"
                 />
               </div>
             </div>

@@ -48,6 +48,7 @@ const FormInput = memo(
                     {...props}
                   />
                 )}
+                {console.log(errors)}
                 {errors && errors[name] && (
                   <div
                     className="px-6 text-xs absolute"
