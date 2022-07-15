@@ -12,8 +12,12 @@ const MultiSelect = ({
   create = false,
   normalSize,
   placeholder,
+  rules,
 }) => {
-  const { control } = useFormContext();
+  const {
+    control,
+    formState: { errors },
+  } = useFormContext();
   const Option = (props) => {
     return (
       <>
@@ -130,6 +134,7 @@ const MultiSelect = ({
         control={control}
         name={name}
         defaultValue={defaultValue}
+        rules={rules}
         render={({ field: { ref: innerRedf, ...inputState } }) =>
           create ? (
             <ReactCreatable
@@ -171,6 +176,11 @@ const MultiSelect = ({
           )
         }
       />
+      {errors && errors[name] && (
+        <div className="px-6 text-sm" style={{ color: '#FF5858' }}>
+          {errors[name].message}
+        </div>
+      )}
     </div>
   );
 };

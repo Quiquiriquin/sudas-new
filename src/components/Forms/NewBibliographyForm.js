@@ -13,8 +13,17 @@ import FormInput from '../Shared/FormInputs/FormInput';
 import SelectFormInput from '../Shared/FormInputs/SelectFormInput';
 import Button from '../Shared/Buttons/Button';
 
-const NewBibliographyForm = ({ close, hasAllBasic }) => {
-  const { watch, setError, clearErrors } = useFormContext();
+const NewBibliographyForm = ({
+  close,
+  hasAllBasic,
+  completeBasic,
+}) => {
+  const {
+    watch,
+    setError,
+    clearErrors,
+    formState: { isValid },
+  } = useFormContext();
   const [biblioOptions, setBiblioOptions] = useState([]);
   const [editorialOptions, setEditorialOptions] = useState([]);
   const [authorOptions, setAuthorOptions] = useState([]);
@@ -32,6 +41,7 @@ const NewBibliographyForm = ({ close, hasAllBasic }) => {
     {
       value: 'BASIC',
       label: 'Básica',
+      isDisabled: completeBasic,
     },
     {
       value: 'COMPLEMENTARY',
@@ -158,14 +168,13 @@ const NewBibliographyForm = ({ close, hasAllBasic }) => {
   }, [authorData]);
 
   useEffect(() => {
-    if (watch('year')) {
+    if (watch('year') && watch('type')?.value === 'BASIC') {
       console.log(watch('year'));
       const parsed = parseInt(watch('year'), 10);
       console.log(parsed);
-      if (
-        parsed <= parseInt(new Date().getFullYear(), 10) - 5 &&
-        hasAllBasic
-      ) {
+      console.log(parseInt(new Date().getFullYear(), 10) - 5);
+      const minYear = parseInt(new Date().getFullYear(), 10) - 5;
+      if (parsed <= minYear && hasAllBasic) {
         setError('year', {
           message: 'Solo se permiten 2 mayores a 5 años',
           type: 'min',
@@ -184,10 +193,17 @@ const NewBibliographyForm = ({ close, hasAllBasic }) => {
           <SelectFormInput
             label="Tipo de bibliografía"
             name="type"
-            defaultValue={{
-              value: 'BASIC',
-              label: 'Básica',
-            }}
+            defaultValue={
+              completeBasic
+                ? {
+                    value: 'COMPLEMENTARY',
+                    label: 'Complementaria',
+                  }
+                : {
+                    value: 'BASIC',
+                    label: 'Básica',
+                  }
+            }
             placeholder="Selecciona"
             options={types}
           />
@@ -221,6 +237,9 @@ const NewBibliographyForm = ({ close, hasAllBasic }) => {
                 label="Autor o autores"
                 options={authorOptions}
                 create
+                rules={{
+                  required: 'Selecciona o crea un autor(es)',
+                }}
               />
             </div>
           </div>
@@ -234,6 +253,9 @@ const NewBibliographyForm = ({ close, hasAllBasic }) => {
                 label="Título"
                 options={biblioOptions}
                 create
+                rules={{
+                  required: 'Selecciona o crea un título',
+                }}
               />
             </div>
             <div className="w-full" style={{ minWidth: '220px' }}>
@@ -242,6 +264,9 @@ const NewBibliographyForm = ({ close, hasAllBasic }) => {
                 name="url"
                 defaultValue=""
                 placeholder="Escribe el URL del recurso"
+                rules={{
+                  required: 'Escribe la URL del recurso',
+                }}
               />
             </div>
           </div>
@@ -272,6 +297,9 @@ const NewBibliographyForm = ({ close, hasAllBasic }) => {
                 type="number"
                 min={1900}
                 max={new Date().getFullYear()}
+                rules={{
+                  required: 'Escribe el año de publicación',
+                }}
               />
             </div>
           </div>
@@ -290,13 +318,15 @@ const NewBibliographyForm = ({ close, hasAllBasic }) => {
                   label="Título"
                   options={biblioOptions}
                   create
+                  rules={{
+                    required: 'Selecciona o crea un título',
+                  }}
                 />
               </div>
               <div
                 className=""
                 style={{ minWidth: '220px', maxWidth: '220px' }}
               >
-                {console.log(hasAllBasic)}
                 <FormInput
                   label="Año de publicación"
                   name="year"
@@ -304,9 +334,24 @@ const NewBibliographyForm = ({ close, hasAllBasic }) => {
                   placeholder="Escribe el año"
                   type="number"
                   min={
-                    hasAllBasic ? new Date().getFullYear() - 5 : 1900
+                    hasAllBasic && watch('type')?.value === 'BASIC'
+                      ? new Date().getFullYear() - 5
+                      : 1900
                   }
                   max={new Date().getFullYear()}
+                  rules={{
+                    ...(watch('type')?.value === 'BASIC'
+                      ? {
+                          min: {
+                            value:
+                              parseInt(new Date().getFullYear(), 10) -
+                              5,
+                            message:
+                              '2 bibliografías de más de 5 años',
+                          },
+                        }
+                      : {}),
+                  }}
                 />
               </div>
             </div>
@@ -320,6 +365,9 @@ const NewBibliographyForm = ({ close, hasAllBasic }) => {
                   label="Autor o autores"
                   options={authorOptions}
                   create
+                  rules={{
+                    required: 'Selecciona o crea un autor',
+                  }}
                 />
               </div>
               <div
@@ -331,6 +379,9 @@ const NewBibliographyForm = ({ close, hasAllBasic }) => {
                   name="country"
                   defaultValue=""
                   placeholder="Escribe el país..."
+                  rules={{
+                    required: 'Escribe el país',
+                  }}
                 />
               </div>
             </div>
@@ -344,6 +395,34 @@ const NewBibliographyForm = ({ close, hasAllBasic }) => {
                   label="Editorial"
                   options={editorialOptions}
                   create
+                  rules={{
+                    required: 'Selecciona o crea una editorial',
+                  }}
+                />
+              </div>
+              <div className="">
+                <SelectFormInput
+                  menuPosition="fixed"
+                  label="Identificador"
+                  name="idType"
+                  placeholder="Selecciona"
+                  rules={{
+                    required: 'Selecciona un identificador',
+                  }}
+                  options={[
+                    {
+                      value: 'ISBN',
+                      label: 'ISBN',
+                    },
+                    {
+                      value: 'ID',
+                      label: 'ID',
+                    },
+                    {
+                      value: 'ISSN',
+                      label: 'ISSN',
+                    },
+                  ]}
                 />
               </div>
               <div
@@ -351,10 +430,13 @@ const NewBibliographyForm = ({ close, hasAllBasic }) => {
                 style={{ minWidth: '220px', maxWidth: '220px' }}
               >
                 <FormInput
-                  label="Identificador"
+                  label="No. Identificador"
                   name="library"
                   defaultValue=""
                   placeholder="Escribe el identificador"
+                  rules={{
+                    required: 'Ingresa el identificador',
+                  }}
                 />
               </div>
             </div>
@@ -364,7 +446,12 @@ const NewBibliographyForm = ({ close, hasAllBasic }) => {
         <Button onClick={close} style={{ maxWidth: '150px' }}>
           Cancelar
         </Button>
-        <Button type="submit" secondary style={{ maxWidth: '175px' }}>
+        <Button
+          disabled={!isValid}
+          type="submit"
+          secondary
+          style={{ maxWidth: '175px' }}
+        >
           Agregar
         </Button>
       </div>

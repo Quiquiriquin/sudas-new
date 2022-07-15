@@ -44,7 +44,7 @@ const NewSubjectForm = ({ academicPlanId }) => {
       options: [
         {
           value: 'FACE2FACE',
-          label: 'Escrolarizada',
+          label: 'Escolarizada',
         },
         {
           value: 'ONLINE',
@@ -108,7 +108,7 @@ const NewSubjectForm = ({ academicPlanId }) => {
         },
         {
           value: 'TERMINAL',
-          label: 'Terminal y de integracón',
+          label: 'Terminal y de integración',
         },
       ],
     },

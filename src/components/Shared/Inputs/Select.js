@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import ReactSelect, { components } from 'react-select';
 import { GeneralContext } from '../../../context/GeneralContext';
 
-const Select = ({ options, ...propsComponent }) => {
+const Select = ({ options, menuPlacement, ...propsComponent }) => {
   const { selectedTheme, themes } = useContext(GeneralContext);
   const Option = ({ ...props }) => {
+    console.log(props);
     return (
       <>
         <components.Option {...props}>
@@ -125,7 +126,7 @@ const Select = ({ options, ...propsComponent }) => {
           primary: themes[selectedTheme].secondary,
         },
       })}
-      menuPlacement="auto"
+      menuPlacement={menuPlacement || 'auto'}
       menuPosition="fixed"
       menuShouldBlockScroll
       styles={coloursOption}

@@ -61,15 +61,15 @@ const PreviewPurposeIntetion = () => {
           Esta unidad educativa se relaciona{' '}
           {`${
             predecessorOptions.length > 0
-              ? `de manera antecedente con
+              ? ` de manera antecedente con
           ${getTextCheckBox(predecessorOptions, prev)}`
               : ''
           }`}
           {lateralOptions.length > 0 &&
-            `${predecessorOptions.length > 0 ? 'y' : ''} de manera
+            `${predecessorOptions.length > 0 ? ' y' : ''} de manera
           lateral con ${getTextCheckBox(lateralOptions, same)}`}{' '}
           {consequentOptions.length > 0 &&
-            `${lateralOptions.length > 0 ? 'y' : ''} de
+            `${lateralOptions.length > 0 ? ' y' : ''} de
           manera consequente con ${getTextCheckBox(
             consequentOptions,
             next

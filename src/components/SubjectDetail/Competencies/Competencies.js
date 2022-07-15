@@ -153,6 +153,7 @@ const Competencies = () => {
                   />
                   <CompetenceForm
                     index={index}
+                    isLast={index + 1 === fields.length}
                     key={`${unit.id}competenceform`}
                     verbId={unit?.purpose?.verbId}
                     connectorId={unit?.purpose?.connectorId}

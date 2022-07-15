@@ -16,6 +16,7 @@ const BibliographyItem = ({
   url,
   found,
   type,
+  idType,
 }) => {
   const queryClient = useQueryClient();
   const { mutateAsync } = useMutation(() => DELETE_BIBLIOGRAPHY(id));
@@ -55,24 +56,28 @@ const BibliographyItem = ({
       <li key={id} className="content-list flex justify-between">
         <p className="font-bold" style={{ maxWidth: '50%' }}>
           {`${author?.name}. (${year}).`} <i>{title}</i>.{' '}
-          {`EN: ${url}. Recuperado el ${moment(
-            new Date(found),
-            'DD [de] MMMM [de] YYYY',
-            'MX'
-          )
-            .format('DD [de] MMMM [de] YYYY')
-            .replace('January', 'Enero')
-            .replace('February', 'Febrero')
-            .replace('March', 'Marzo')
-            .replace('April', 'Abril')
-            .replace('May', 'Mayo')
-            .replace('June', 'Junio')
-            .replace('July', 'Julio')
-            .replace('August', 'Agosto')
-            .replace('September', 'Septiembre')
-            .replace('October', 'Octubre')
-            .replace('November', 'Noviembre')
-            .replace('December', 'Diciembre')}`}
+          {`En: ${url}. ${
+            found
+              ? `Recuperado el ${moment(
+                  new Date(found),
+                  'DD [de] MMMM [de] YYYY',
+                  'MX'
+                )
+                  .format('DD [de] MMMM [de] YYYY')
+                  .replace('January', 'Enero')
+                  .replace('February', 'Febrero')
+                  .replace('March', 'Marzo')
+                  .replace('April', 'Abril')
+                  .replace('May', 'Mayo')
+                  .replace('June', 'Junio')
+                  .replace('July', 'Julio')
+                  .replace('August', 'Agosto')
+                  .replace('September', 'Septiembre')
+                  .replace('October', 'Octubre')
+                  .replace('November', 'Noviembre')
+                  .replace('December', 'Diciembre')}`
+              : 'S/F'
+          }`}
         </p>
         <div>
           <p>{kinds[kind]}</p>
@@ -96,7 +101,7 @@ const BibliographyItem = ({
     <li key={id} className="content-list flex justify-between">
       <p className="font-bold" style={{ maxWidth: '50%' }}>
         {`${author?.name}. (${year}).`} <i>{title}</i>.{' '}
-        {`${country}: ${editorial?.name}. ISBN
+        {`${country}: ${editorial?.name || 'Sin editorial'}. ${idType}
                             ${library}`}
       </p>
       <div>

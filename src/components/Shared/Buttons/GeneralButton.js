@@ -30,8 +30,9 @@ export const GeneralButton = styled.button`
     box-shadow: 0px 6px 12px #3d4b5c26;
     cursor: pointer;
   }
-  &:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
+  &:disabled,
+  &.disabled {
+    cursor: not-allowed !important;
+    opacity: 0.5 !important;
   }
 `;

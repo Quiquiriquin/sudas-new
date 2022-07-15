@@ -13,6 +13,7 @@ const Bibliography = () => {
   const { subject } = useContext(SubjectContext);
   const [biblio, setBiblio] = useState({});
   const [hasAllBasic, setHasAllBasic] = useState(false);
+  const [completeBasic, setCompleteBasic] = useState(false);
   const { data: biblipographiesData } = useQuery(
     ['bibliography', subject?.id],
     GET_SUBJECT_BIBLIO,
@@ -25,6 +26,7 @@ const Bibliography = () => {
     NiceModal.show(BibliographyModal, {
       subject,
       hasAllBasic,
+      completeBasic,
     });
   };
 
@@ -45,6 +47,9 @@ const Bibliography = () => {
           });
           if (counter > 2) {
             setHasAllBasic(() => true);
+          }
+          if (data?.basic?.length === 5) {
+            setCompleteBasic(true);
           }
           console.log(counter);
         }

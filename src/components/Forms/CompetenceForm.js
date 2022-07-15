@@ -15,6 +15,7 @@ const CompetenceForm = ({
   connectorId,
   objectText,
   qualityText,
+  isLast,
 }) => {
   const { setValue } = useForm();
   const { verbs, connectors } = useContext(SubjectContext);
@@ -40,6 +41,7 @@ const CompetenceForm = ({
               defaultValue={verbValue || ''}
               placeholder={verbValue || 'Selecciona...'}
               className="w-48"
+              {...(isLast ? { menuPlacement: 'top' } : {})}
             />
           </div>
         </div>
@@ -63,6 +65,7 @@ const CompetenceForm = ({
             defaultValue={connectorValue || ''}
             placeholder={connectorValue || 'Selecciona...'}
             className="w-48"
+            {...(isLast ? { menuPlacement: 'top' } : {})}
           />
         </div>
         <div>
