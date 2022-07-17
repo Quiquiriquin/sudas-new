@@ -42,6 +42,9 @@ const Practices = () => {
     UPDATE_COMPETENCE(body)
   );
 
+  console.log(subject, '<---');
+  console.log(practices);
+
   const onSubmit = async (values) => {
     console.log(values);
     try {
@@ -138,6 +141,8 @@ const Practices = () => {
               unitName={unit.description}
               unitIndex={index + 1}
               unitCompetence={unit.unitCompetence}
+              samePlacePractices={subject?.samePlacePractices}
+              practicePlace={subject?.practicePlace}
             />
           ))}
         </ul>

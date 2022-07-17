@@ -5,7 +5,13 @@ import 'boxicons';
 import { SubjectContext } from '../../../context/SubjectContext';
 import DeletePracticeModal from '../../Shared/Modals/DeletePracticeModal';
 
-const PracticeItem = ({ practice, practiceIndex, unitIndex }) => {
+const PracticeItem = ({
+  practice,
+  practiceIndex,
+  unitIndex,
+  samePlacePractices,
+  practicePlace,
+}) => {
   const onSubmit = (values) => {
     console.log(values);
   };
@@ -21,6 +27,8 @@ const PracticeItem = ({ practice, practiceIndex, unitIndex }) => {
       practiceIndex,
       practiceHour,
       setPracticeHour,
+      samePlacePractices,
+      practicePlace,
     });
   };
 

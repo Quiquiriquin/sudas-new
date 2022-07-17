@@ -70,7 +70,9 @@ const MethodsForm = ({ index = 0, method, unitIndex, unitName }) => {
       <div className="w-full flex flex-row-reverse">
         <div className="w-64">
           <CheckboxFormInput
+            name={`methods.${index}.writing`}
             className="bg-red"
+            defaultValue="false"
             label="¿Evaluación escrita?"
           />
         </div>

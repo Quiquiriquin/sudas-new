@@ -12,7 +12,12 @@ import romanize from '../../../helpers/Romanize';
 import { SubjectContext } from '../../../context/SubjectContext';
 import 'boxicons';
 
-const UnitItemPractices = ({ unitName, unitIndex }) => {
+const UnitItemPractices = ({
+  unitName,
+  unitIndex,
+  samePlacePractices,
+  practicePlace,
+}) => {
   const { handleSubmit } = useForm();
   const { practices, setPractices, practiceHour, setPracticeHour } =
     useContext(SubjectContext);
@@ -25,6 +30,8 @@ const UnitItemPractices = ({ unitName, unitIndex }) => {
       setPractices,
       practiceHour,
       setPracticeHour,
+      samePlacePractices,
+      practicePlace,
     });
   };
   const onSubmit = (values) => {
@@ -83,6 +90,8 @@ const UnitItemPractices = ({ unitName, unitIndex }) => {
                         practiceIndex={i}
                         unitIndex={unitIndex}
                         practice={practice}
+                        samePlacePractices={samePlacePractices}
+                        practicePlace={practicePlace}
                       />
                     );
                   }

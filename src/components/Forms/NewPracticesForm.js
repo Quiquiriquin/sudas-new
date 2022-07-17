@@ -9,6 +9,8 @@ const NewPracticesForm = ({
   namePractice = '',
   hours = 0.0,
   place = '',
+  practicePlace = '',
+  samePlacePractices,
 }) => {
   const { watch } = useFormContext();
   const strategy = watch('method', '');
@@ -33,9 +35,10 @@ const NewPracticesForm = ({
     },
     {
       name: 'place',
-      placeholder: 'Laboratorio',
+      placeholder: 'laboratorio',
       label: 'Lugar de realización',
-      defaultValue: place,
+      defaultValue:
+        samePlacePractices === true ? practicePlace : place,
       rules: {
         required: 'Inserta las horas de la práctica',
       },

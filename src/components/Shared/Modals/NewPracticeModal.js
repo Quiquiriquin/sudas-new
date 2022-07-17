@@ -16,6 +16,8 @@ export default NiceModal.create(
     practiceIndex = -1,
     practiceHour,
     setPracticeHour,
+    samePlacePractices,
+    practicePlace,
   }) => {
     // const queryClient = useQueryClient();
     const modal = useModal();
@@ -84,6 +86,8 @@ export default NiceModal.create(
             namePractice={dataPractice?.name}
             hours={dataPractice?.hours}
             place={dataPractice?.place}
+            practicePlace={practicePlace}
+            samePlacePractices={samePlacePractices}
           />
         </FormWrapper>
       </Modal>
