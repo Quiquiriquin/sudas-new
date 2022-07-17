@@ -3,7 +3,7 @@ import { useForm, useFormContext } from 'react-hook-form';
 import FormInput from '../Shared/FormInputs/FormInput';
 import Button from '../Shared/Buttons/Button';
 
-const NewSubontentForm = () => {
+const NewSubontentForm = ({ subtopic = '' }) => {
   const {
     formState: { isValid, isSubmitting },
     watch,
@@ -15,7 +15,7 @@ const NewSubontentForm = () => {
         <FormInput
           name="name"
           label="Nombre"
-          defaultValue=""
+          defaultValue={subtopic}
           placeholder="Nombre del subcontenido..."
           rules={{
             required: 'Ingresa la el nombre del subcontenido',

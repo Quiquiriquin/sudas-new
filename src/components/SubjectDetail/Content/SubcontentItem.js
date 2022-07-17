@@ -1,10 +1,8 @@
 /* eslint-disable react/destructuring-assignment */
 import React, { useEffect, useState } from 'react';
 import NiceModal from '@ebay/nice-modal-react';
-import FormWrapper from '../../Forms/FormWrapper';
-import PurposeForm from '../../Forms/PurposeForm';
-import AddButton from '../../Shared/Buttons/AddButton';
 import DeleteSubtopicModal from '../../Shared/Modals/DeleteSubtopicModal';
+import NewSubContentModal from '../../Shared/Modals/NewSubContentModal';
 import 'boxicons';
 
 const SubcontentItem = ({
@@ -23,6 +21,16 @@ const SubcontentItem = ({
       subtopicIndex,
     });
   };
+  const editModal = () => {
+    NiceModal.show(NewSubContentModal, {
+      type: 'edit',
+      unitIndex,
+      units,
+      topicIndex,
+      subtopicIndex,
+      subtopic,
+    });
+  };
 
   return (
     <li>
@@ -37,7 +45,10 @@ const SubcontentItem = ({
           >
             <box-icon type="solid" name="trash" />
           </div>
-          <div className="icon-btn flex items-center justify-center">
+          <div
+            className="icon-btn flex items-center justify-center"
+            onClick={editModal}
+          >
             <box-icon type="solid" name="edit" />
           </div>
         </div>

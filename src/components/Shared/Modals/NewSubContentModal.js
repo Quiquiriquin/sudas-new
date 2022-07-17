@@ -13,7 +13,14 @@ import NewSubontentForm from '../../Forms/NewSubcontentForm';
 import { UPDATE_COMPETENCE } from '../../../helpers/SubjectEndpoints';
 
 export default NiceModal.create(
-  ({ type, unitIndex = -1, topicIndex, units }) => {
+  ({
+    type,
+    unitIndex = -1,
+    topicIndex,
+    units,
+    subtopicIndex = -1,
+    subtopic,
+  }) => {
     const queryClient = useQueryClient();
     const modal = useModal();
     const { mutateAsync: updateUnit } = useMutation(
@@ -50,11 +57,28 @@ export default NiceModal.create(
         }
       }
       if (type === 'edit') {
-        // setUnits(
-        //   units.map((unit) =>
-        //     unit.id === index ? { ...unit, name: tematicUnit } : unit
-        //   )
-        // );
+        const topics = unitToUpdate.topics.map((topic, index) => {
+          const newSubtopics = topic.subTopics.map((st, i) => {
+            // eslint-disable-next-line no-unused-expressions
+            return i === subtopicIndex ? name : st;
+          });
+          return index === topicIndex
+            ? {
+                ...topic,
+                subTopics: newSubtopics,
+              }
+            : topic;
+        });
+        try {
+          const ans = updateUnit({
+            id: unitToUpdate.id,
+            data: { topics },
+          });
+          console.log(ans);
+        } catch (e) {
+          console.log(e);
+        }
+        modal.hide();
       }
       modal.hide();
     };
@@ -68,7 +92,7 @@ export default NiceModal.create(
           {type === 'new' ? 'Nuevo' : 'Editar'} Subcontenido
         </div>
         <FormWrapper onSubmit={onSubmit}>
-          <NewSubontentForm />
+          <NewSubontentForm subtopic={subtopic} />
         </FormWrapper>
       </Modal>
     );
