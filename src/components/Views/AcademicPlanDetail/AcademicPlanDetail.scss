@@ -2,4 +2,10 @@
   .subject-list {
     grid-auto-rows: minmax(140px, 140px);
   }
+  .click-link {
+    text-decoration: underline;
+    &:hover {
+      cursor: pointer;
+    }
+  }
 }

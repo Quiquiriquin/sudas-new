@@ -66,3 +66,18 @@ export const UPDATE_ACADEMIC_PLAN = async ({ id, ...data }) => {
     return e;
   }
 };
+export const UPDATE_ACADEMIC_PLAN_AUTHORITIES = async ({
+  id,
+  ...data
+}) => {
+  try {
+    return await apiClient({
+      method: 'patch',
+      url: `/academic-plan/authorities/${id}`,
+      data,
+    });
+  } catch (e) {
+    console.log(e);
+    return e;
+  }
+};

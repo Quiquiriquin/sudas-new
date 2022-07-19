@@ -16,6 +16,7 @@ import './AcademicPlanDetail.scss';
 import AddButton from '../../Shared/Buttons/AddButton';
 import NewSubjectModal from '../../Shared/Modals/NewSubjectModal';
 import NewAcademicPlan from '../../Shared/Modals/NewAcademicPlan';
+import AuthoritiesModal from '../../Shared/Modals/AuthoritiesModal';
 
 const CardContainer = styled.div`
   border-radius: 5px;
@@ -79,14 +80,47 @@ const AcademicPlanDetail = () => {
     });
   };
 
+  const openAuthorities = () => {
+    const {
+      data: {
+        designedBy,
+        reviewedBy,
+        approvedBy,
+        authorizedBy,
+        approvedBy2,
+        principal,
+        subPrincipal,
+      },
+    } = academicPlanData;
+    NiceModal.show(AuthoritiesModal, {
+      planAuthorities: {
+        designedBy,
+        reviewedBy,
+        approvedBy,
+        authorizedBy,
+        approvedBy2,
+        principal,
+        subPrincipal,
+      },
+      id,
+    }).then((res) => {
+      console.log(res);
+    });
+  };
+
   return (
     <div className="academic-plan-detail flex flex-col border-white flex-1 bg-platinum overflow-hidden">
       <div className="bg-white rounded px-6 py-4 shadow flex flex-initial justify-between items-center">
         <h1 className="text-lg">
           Plan académico <strong>{academicPlanName}</strong>
         </h1>
-        <div className="cursor-pointer" onClick={openEditModal}>
-          <box-icon type="solid" name="edit-alt" />
+        <div className="flex gap-6 items-center">
+          <div onClick={openAuthorities}>
+            <label className="click-link">Añadir autoridades</label>
+          </div>
+          <div className="cursor-pointer" onClick={openEditModal}>
+            <box-icon type="solid" name="edit-alt" />
+          </div>
         </div>
       </div>
       <div

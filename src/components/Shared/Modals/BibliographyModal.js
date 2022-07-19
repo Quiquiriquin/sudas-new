@@ -47,7 +47,7 @@ export default NiceModal.create(
           kind: kind.value,
           url,
           found,
-          idType,
+          idType: idType.value,
         };
         if (type.value === 'DIGITAL' || type.value === 'CYBER') {
           delete finalBody.country;
