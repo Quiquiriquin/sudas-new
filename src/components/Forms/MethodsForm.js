@@ -8,7 +8,13 @@ import { GET_METHODS } from '../../helpers/MethodsEndpoints';
 import romanize from '../../helpers/Romanize';
 import CheckboxFormInput from '../Shared/FormInputs/CheckboxFormInput/CheckboxFormInput';
 
-const MethodsForm = ({ index = 0, method, unitIndex, unitName }) => {
+const MethodsForm = ({
+  index = 0,
+  method,
+  unitIndex,
+  unitName,
+  writing,
+}) => {
   const { data: optionsData } = useQuery(['methods'], GET_METHODS);
   const { watch, setValue } = useFormContext();
   const [options, setOptions] = useState([]);
@@ -72,7 +78,7 @@ const MethodsForm = ({ index = 0, method, unitIndex, unitName }) => {
           <CheckboxFormInput
             name={`methods.${index}.writing`}
             className="bg-red"
-            defaultValue="false"
+            defaultValue={writing}
             label="¿Evaluación escrita?"
           />
         </div>

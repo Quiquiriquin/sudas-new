@@ -42,9 +42,6 @@ const Practices = () => {
     UPDATE_COMPETENCE(body)
   );
 
-  console.log(subject, '<---');
-  console.log(practices);
-
   const onSubmit = async (values) => {
     console.log(values);
     try {

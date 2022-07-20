@@ -48,6 +48,7 @@ const LearningStrategies = () => {
   });
 
   const onSubmit = async ({ strategy: strategyValue, methods }) => {
+    console.log(methods, '<- **');
     try {
       if (strategyValue) {
         mutateAsync({
@@ -71,6 +72,7 @@ const LearningStrategies = () => {
             id: unit?.id,
             data: {
               methodId: methods[index]?.method?.value,
+              writing: methods[index]?.writing,
             },
           })
         );
@@ -112,6 +114,8 @@ const LearningStrategies = () => {
 
   if (isLoadingUnits) return <p>Cargando...</p>;
 
+  console.log(units, '<----');
+
   return (
     <FormWrapper onSubmit={onSubmit}>
       <div>
@@ -138,6 +142,7 @@ const LearningStrategies = () => {
                     unitName={unit.description}
                     unitIndex={index + 1}
                     method={unitStrategies[index].method}
+                    writing={unit.writing}
                   />
                   <UnitItemStrategies
                     index={index}
