@@ -422,6 +422,10 @@ const NewBibliographyForm = ({
                       value: 'ISSN',
                       label: 'ISSN',
                     },
+                    {
+                      value: 'DOI',
+                      label: 'DOI',
+                    },
                   ]}
                 />
               </div>

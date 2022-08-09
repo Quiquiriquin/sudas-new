@@ -158,6 +158,11 @@ const NewSubjectForm = ({ academicPlanId }) => {
         required: 'Ingresa la línea curricular',
       },
     },
+    {
+      label: 'Optativa para trayectoria',
+      name: 'optionalLine',
+      placeholder: 'Escribe la trayectoria...',
+    },
   ];
 
   useEffect(() => {
@@ -232,6 +237,9 @@ const NewSubjectForm = ({ academicPlanId }) => {
         <div className="flex gap-4">
           <div className="w-full">
             <FormInput {...inputs[13]} />
+          </div>
+          <div className="w-full">
+            <FormInput {...inputs[14]} />
           </div>
         </div>
       )}
