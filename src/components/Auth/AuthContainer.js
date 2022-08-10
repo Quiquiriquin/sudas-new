@@ -30,8 +30,12 @@ const AuthContainer = () => {
     useMutation(SIGNUP_MAIL);
 
   const setUserInfo = (info) => {
-    const { data: userInfo, status } = info;
+    const {
+      data: { a_t, ...userInfo },
+      status,
+    } = info;
     console.log(userInfo);
+    localStorage.setItem('a_t', a_t);
     setSessionCookie(
       JSON.stringify({
         ...userInfo,

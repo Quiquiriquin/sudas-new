@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Cookies from 'js-cookie';
 import { API } from '../Variables/Variables';
 
 const baseApiClient = axios.create({
@@ -12,15 +13,16 @@ const baseApiClient = axios.create({
  */
 baseApiClient.interceptors.request.use((request) => {
   const { url } = request;
-  // if (!url.includes('login') || url.includes('first_login')) {
-  //   request.withCredentials = true;
-  // } else {
-  //   request.withCredentials = false;
-  // }
   request.headers = {
     'Access-Control-Allow-Origin': '*',
     'Content-Type': 'application/json',
   };
+  if (!url.includes('login')) {
+    request.headers = {
+      ...request?.headers,
+      Authorization: `Bearer ${localStorage.getItem('a_t')}`,
+    };
+  }
 
   return request;
 });
@@ -119,7 +121,8 @@ const apiClient = ({ ...options }) => {
       /* // debugger; */
       sessionStorage.clear();
       localStorage.clear();
-      window.location.replace('/login');
+      Cookies.remove('session');
+      window.location.replace('/auth');
     }
 
     throw error;
