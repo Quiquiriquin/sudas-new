@@ -122,12 +122,12 @@ const SubjectDetail = () => {
           {subject.name} | Semestre {subject.semester}
         </h1>
         <a
-          // href={`https://main--mellifluous-sopapillas-f037f0.netlify.app/documento/${
-          //   subject?.id
-          // }?t=${localStorage.getItem('a_t')}`}
-          href={`http://localhost:3001/documento/${
+          href={`https://main--mellifluous-sopapillas-f037f0.netlify.app/documento/${
             subject?.id
           }?t=${localStorage.getItem('a_t')}`}
+          // href={`http://localhost:3001/documento/${
+          //   subject?.id
+          // }?t=${localStorage.getItem('a_t')}`}
           target="_blank"
           rel="noreferrer"
         >
