@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cda70d25.css",
+    "main.js": "/static/js/main.f630f15a.js",
+    "static/media/education.png": "/static/media/education.00af39000f7a1fcd5de3.png",
+    "static/media/open-book.png": "/static/media/open-book.7c22219ebc32efb603c9.png",
+    "static/media/online-learning.png": "/static/media/online-learning.fdc89f11799b09602528.png",
+    "static/media/online-course.png": "/static/media/online-course.269b15756b865baf903a.png",
+    "static/media/graduation-cap.png": "/static/media/graduation-cap.8b2de6c5d2d117f3a232.png",
+    "static/media/freemium.svg": "/static/media/freemium.6cc9d664a84f5db0fd0166915139710f.svg",
+    "static/media/users.svg": "/static/media/users.03ad2ecb7b967e80d2ff754370475d7b.svg",
+    "static/media/user-plus.svg": "/static/media/user-plus.878f03d49f5526c5aa617caffabad820.svg",
+    "static/media/user-plus_w.svg": "/static/media/user-plus_w.7b4e2ffaf5f0455bad11f38aac8f79a7.svg",
+    "static/media/Calendar.svg": "/static/media/Calendar.6585ce86521cc40c8f05a31e542dc68a.svg",
+    "static/media/eye-off.svg": "/static/media/eye-off.362537460823a9352c7b44905599268b.svg",
+    "static/media/user-check.svg": "/static/media/user-check.4a42d7c3de268264c12955571bd114d8.svg",
+    "static/media/user-check_w.svg": "/static/media/user-check_w.724405dc84c983b0fdf90aa0572b43cb.svg",
+    "static/media/trash_white.svg": "/static/media/trash_white.fd90f639c56ac9a724ef1df62caa8399.svg",
+    "static/media/trash.svg": "/static/media/trash.835910465098d190d21c3cf39a6af076.svg",
+    "static/media/eye.svg": "/static/media/eye.387a46ba3c969f8fe51592578dbd091d.svg",
+    "static/media/menu.svg": "/static/media/menu.b153ac1a7d621929c4037083e78a7d27.svg",
+    "static/media/user_w.svg": "/static/media/user_w.d616d98521f61b9ec5038405c1535d1c.svg",
+    "static/media/ChevronRight.svg": "/static/media/ChevronRight.1945757af1df588f3fd0961093949518.svg",
+    "static/media/zap_w.svg": "/static/media/zap_w.c39ebf066d62cfe1b25171c60929c7b0.svg",
+    "index.html": "/index.html",
+    "static/media/close.svg": "/static/media/close.f59918dc6a4b2b3e051330a5f70624a7.svg",
+    "static/media/close_w.svg": "/static/media/close_w.000cc4030e20f76a87f6ad5f9741e4fa.svg",
+    "static/media/verbs.svg": "/static/media/verbs.357d37da2f88a2bdd22d0c03cccdc220.svg",
+    "static/media/search.svg": "/static/media/search.7b3b2ed2146a5d48f5cc33b3c62f8d1c.svg",
+    "static/media/add_plus.svg": "/static/media/add_plus.8fd6890ce38a99e26636a92c2496e864.svg",
+    "main.cda70d25.css.map": "/static/css/main.cda70d25.css.map",
+    "main.f630f15a.js.map": "/static/js/main.f630f15a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cda70d25.css",
+    "static/js/main.f630f15a.js"
+  ]
+}
